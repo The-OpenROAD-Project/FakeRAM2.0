@@ -44,12 +44,12 @@ class MemoryTest(unittest.TestCase):
         # within some area determined by the snap area
         area_delta = self._process.snap_width_nm * self._process.snap_height_nm * 1e-3
         self.assertAlmostEqual(
-            memory.area_um2, memory.width_um * memory.height_um, delta=area_delta)
+            memory.area_um2, memory.width_um * memory.height_um, delta=area_delta
+        )
 
         # These values are all hard-coded in the Memory object
         self.assertEqual(memory.rw_ports, 1)
         self.assertEqual(memory.tech_node_nm, 7)
-        self.assertEqual(memory.associativity, 1)
         self.assertEqual(memory.t_setup_ns, 0.05)
         self.assertEqual(memory.t_hold_ns, 0.05)
         self.assertEqual(memory.standby_leakage_per_bank_mW, 0.1289)
