@@ -141,7 +141,8 @@ def write_internal_power(LIB_file, template_name, slew_indices, dynamic, when=No
 
 
 def write_clk_pin(
-    LIB_file, name, min_driver_in_cap, min_period, slew_indices, clkpindynamic
+    LIB_file, name, min_driver_in_cap, min_period, slew_indices, clkpindynamic,
+        pin_str="clk"    # <-- ADDED: pin_str default "clk" for single port
 ):
     """Writes the clock pin section"""
 
@@ -206,6 +207,8 @@ def write_output_bus(
     load_indices,
     min_slew,
     max_slew,
+    related_clk="clk",
+    addr_bus="addr_in"
 ):
     """Writes the output bus definition"""
 
@@ -219,10 +222,10 @@ def write_output_bus(
     LIB_file.write("        max_capacitance : %.3f;\n" % max_load)
     # Based on 32x inverter being a common max (or near max) inverter
     LIB_file.write("        memory_read() {\n")
-    LIB_file.write("            address : addr_in;\n")
+    LIB_file.write("            address : %s;\n" % addr_bus)
     LIB_file.write("        }\n")
     LIB_file.write("        timing() {\n")
-    LIB_file.write('            related_pin : "clk" ;\n')
+    LIB_file.write('            related_pin : "%s" ;\n' % related_clk)
     LIB_file.write("            timing_type : rising_edge;\n")
     LIB_file.write("            timing_sense : non_unate;\n")
     write_cell_delay(
@@ -250,6 +253,7 @@ def write_pin(
     tsetup,
     thold,
     pindynamic,
+    related_clk="clk"
 ):
     """Writes the enable pin definition"""
 
@@ -257,25 +261,26 @@ def write_pin(
     LIB_file.write("    pin(%s){\n" % pin_name)
     LIB_file.write("        direction : input;\n")
     LIB_file.write("        capacitance : %.3f;\n" % (min_driver_in_cap))
-    write_timing(LIB_file, name, slew_indices, tsetup, thold)
+
+    write_timing(LIB_file, name, slew_indices, tsetup, thold, related_clk)
     write_internal_power(
         LIB_file, name + "_energy_template_sigslew", slew_indices, pindynamic
     )
     LIB_file.write("    }\n")
 
 
-def write_timing(LIB_file, name, slew_indices, tsetup, thold):
+def write_timing(LIB_file, name, slew_indices, tsetup, thold, related_clk):
     """Writes the pin/bus timing section"""
 
     template_name = name + "_constraint_template"
     LIB_file.write("        timing() {\n")
-    LIB_file.write("            related_pin : clk;\n")
+    LIB_file.write("            related_pin : \"%s\";\n" % related_clk)
     LIB_file.write("            timing_type : setup_rising ;\n")
     write_cell_constraint(LIB_file, "rise", template_name, slew_indices, tsetup)
     write_cell_constraint(LIB_file, "fall", template_name, slew_indices, tsetup)
     LIB_file.write("        } \n")
     LIB_file.write("        timing() {\n")
-    LIB_file.write("            related_pin : clk;\n")
+    LIB_file.write("            related_pin : \"%s\";\n" % related_clk)
     LIB_file.write("            timing_type : hold_rising ;\n")
     write_cell_constraint(LIB_file, "rise", template_name, slew_indices, thold)
     write_cell_constraint(LIB_file, "fall", template_name, slew_indices, thold)
@@ -291,6 +296,7 @@ def write_address_bus(
     tsetup,
     thold,
     pindynamic,
+    related_clk="clk"  # <-- ADDED
 ):
     """Writes the address bus"""
 
@@ -298,7 +304,7 @@ def write_address_bus(
     LIB_file.write("        bus_type : %s_ADDRESS;\n" % name)
     LIB_file.write("        direction : input;\n")
     LIB_file.write("        capacitance : %.3f;\n" % (min_driver_in_cap))
-    write_timing(LIB_file, name, slew_indices, tsetup, thold)
+    write_timing(LIB_file, name, slew_indices, tsetup, thold, related_clk)
     write_internal_power(
         LIB_file, name + "_energy_template_sigslew", slew_indices, pindynamic
     )
@@ -314,31 +320,32 @@ def write_data_bus(
     tsetup,
     thold,
     pindynamic,
+    related_clk="clk", addr_bus="addr_in", we_pin="we_in"
 ):
     """Writes the data bus"""
 
     LIB_file.write("    bus(%s)   {\n" % bus_name)
     LIB_file.write("        bus_type : %s_DATA;\n" % name)
     LIB_file.write("        memory_write() {\n")
-    LIB_file.write("            address : addr_in;\n")
-    LIB_file.write('            clocked_on : "clk";\n')
+    LIB_file.write("            address : %s;\n" % addr_bus)
+    LIB_file.write("            clocked_on : \"%s\";\n" % related_clk)
     LIB_file.write("        }\n")
     LIB_file.write("        direction : input;\n")
     LIB_file.write("        capacitance : %.3f;\n" % (min_driver_in_cap))
-    write_timing(LIB_file, name, slew_indices, tsetup, thold)
+    write_timing(LIB_file, name, slew_indices, tsetup, thold, related_clk)
     write_internal_power(
         LIB_file,
         name + "_energy_template_sigslew",
         slew_indices,
         pindynamic,
-        "(! (we_in) )",
+        "(! (%s) )" % we_pin
     )
     write_internal_power(
         LIB_file,
         name + "_energy_template_sigslew",
         slew_indices,
         pindynamic,
-        "(we_in)",
+        "(%s)" % we_pin
     )
     LIB_file.write("    }\n")
 
@@ -379,10 +386,12 @@ def write_cell(
     LIB_file.write("        address_width : %d;\n" % addr_width)
     LIB_file.write("        word_width : %d;\n" % bits)
     LIB_file.write("    }\n")
-    write_clk_pin(
-        LIB_file, name, min_driver_in_cap, min_period, slew_indices, clkpindynamic
-    )
+
+    # single-port
     if num_rwport == 1:
+        write_clk_pin(
+            LIB_file, name, min_driver_in_cap, min_period, slew_indices, clkpindynamic
+        )
         write_output_bus(
             LIB_file,
             mem,
@@ -404,17 +413,16 @@ def write_cell(
             thold,
             pindynamic,
         )
-    write_pin(
-        LIB_file,
-        name,
-        "ce_in",
-        min_driver_in_cap,
-        slew_indices,
-        tsetup,
-        thold,
-        pindynamic,
-    )
-    if num_rwport == 1:
+        write_pin(
+            LIB_file,
+            name,
+            "ce_in",
+            min_driver_in_cap,
+            slew_indices,
+            tsetup,
+            thold,
+            pindynamic,
+        )
         write_address_bus(
             LIB_file,
             name,
@@ -435,6 +443,134 @@ def write_cell(
             thold,
             pindynamic,
         )
+
+    # <-- ADDED begin
+    # dual-port
+    elif num_rwport == 2:
+        # port0
+        write_clk_pin(LIB_file, name, min_driver_in_cap, min_period, slew_indices, clkpindynamic, "clk0")
+        write_output_bus(
+            LIB_file,
+            mem,
+            name,
+            "rd_out0",
+            max_load,
+            slew_indices,
+            load_indices,
+            min_slew,
+            max_slew,
+            related_clk="clk0",
+            addr_bus="addr_in0"
+        )
+        write_pin(
+            LIB_file,
+            name,
+            "we_in0",
+            min_driver_in_cap,
+            slew_indices,
+            tsetup,
+            thold,
+            pindynamic,
+            "clk0",
+        )
+        write_pin(
+            LIB_file,
+            name,
+            "ce_in0",
+            min_driver_in_cap,
+            slew_indices,
+            tsetup,
+            thold,
+            pindynamic,
+            "clk0",
+        )
+        write_address_bus(
+            LIB_file,
+            name,
+            "addr_in0",
+            min_driver_in_cap,
+            slew_indices,
+            tsetup,
+            thold,
+            pindynamic,
+            "clk0",
+        )
+        write_data_bus(
+            LIB_file,
+            name,
+            "wd_in0",
+            min_driver_in_cap,
+            slew_indices,
+            tsetup,
+            thold,
+            pindynamic,
+            "clk0",
+            "addr_in0",
+            "we_in0"
+        )
+        # port1
+        write_clk_pin(LIB_file, name, min_driver_in_cap, min_period, slew_indices, clkpindynamic, "clk1")
+        write_output_bus(
+            LIB_file,
+            mem,
+            name,
+            "rd_out1",
+            max_load,
+            slew_indices,
+            load_indices,
+            min_slew,
+            max_slew,
+            related_clk="clk1",
+            addr_bus="addr_in1"
+        )
+        write_pin(
+            LIB_file,
+            name,
+            "we_in1",
+            min_driver_in_cap,
+            slew_indices,
+            tsetup,
+            thold,
+            pindynamic,
+            "clk1",
+        )
+        write_pin(
+            LIB_file,
+            name,
+            "ce_in1",
+            min_driver_in_cap,
+            slew_indices,
+            tsetup,
+            thold,
+            pindynamic,
+            "clk1",
+        )
+        write_address_bus(
+            LIB_file,
+            name,
+            "addr_in1",
+            min_driver_in_cap,
+            slew_indices,
+            tsetup,
+            thold,
+            pindynamic,
+            "clk1",
+        )
+        write_data_bus(
+            LIB_file,
+            name,
+            "wd_in1",
+            min_driver_in_cap,
+            slew_indices,
+            tsetup,
+            thold,
+            pindynamic,
+            "clk1",
+            "addr_in1",
+            "we_in1"
+        )
+    # <-- ADDED end
+
     LIB_file.write("    cell_leakage_power : %.3f;\n" % (leakage))
     LIB_file.write("}\n")
 
