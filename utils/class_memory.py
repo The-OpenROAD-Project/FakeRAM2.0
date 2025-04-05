@@ -23,7 +23,7 @@ class Memory:
         self.depth = int(sram_data["depth"])
         self.num_banks = int(sram_data["banks"])
         self.cache_type = str(sram_data["type"]) if "type" in sram_data else "cache"
-        self.rw_ports = 1
+        self.rw_ports = int(sram_data["rw_ports"]) if "rw_ports" in sram_data else 1
         self.width_in_bytes = math.ceil(self.width_in_bits / 8.0)
         self.total_size = self.width_in_bytes * self.depth
 
