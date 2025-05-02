@@ -191,8 +191,8 @@ def create_lef(mem, results_dir):
 
     if number_of_spare_tracks < 0:
         raise Exception(
-            "Error: not enough tracks (num pins: %d, available tracks: %d)."
-            % (number_of_pins, number_of_tracks_available)
+            "Error: not enough tracks for %s (num pins: %d, available tracks: %d)."
+            % (name, number_of_pins, number_of_tracks_available)
         )
 
     ## The next few lines of code till "pin_pitch = min.." spreads the pins in higher multiples of pin pitch if there are available tracks

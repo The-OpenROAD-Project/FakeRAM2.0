@@ -27,12 +27,8 @@ class Memory:
         self.width_in_bytes = math.ceil(self.width_in_bits / 8.0)
         self.total_size = self.width_in_bytes * self.depth
 
-        self.tech_node_nm = 7
-
         self.height_um, self.width_um = get_macro_dimensions(process, sram_data)
         self.area_um2 = self.width_um * self.height_um
-
-        self.tech_node_um = self.tech_node_nm / 1000.0
 
         # Adjust to snap
         self.width_um = (
