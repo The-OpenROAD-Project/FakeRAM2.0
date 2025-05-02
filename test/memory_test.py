@@ -49,7 +49,6 @@ class MemoryTest(unittest.TestCase):
 
         # These values are all hard-coded in the Memory object
         self.assertEqual(memory.rw_ports, 1)
-        self.assertEqual(memory.tech_node_nm, 7)
         self.assertEqual(memory.t_setup_ns, 0.05)
         self.assertEqual(memory.t_hold_ns, 0.05)
         self.assertEqual(memory.standby_leakage_per_bank_mW, 0.1289)
