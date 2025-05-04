@@ -137,6 +137,7 @@ def create_signal_pins(fid, mem, bits, addr_width, y_offset, pin_pitch, group_pi
     y_step = (
         y_offset - (y_offset % manufacturing_grid_um) + (mem.process.pin_width_um / 2.0)
     )
+    # --- Single-port signals:
     for i in range(int(bits)):
         y_step = lef_add_pin(fid, mem, "rd_out[%d]" % i, False, y_step, pin_pitch)
 
@@ -153,6 +154,26 @@ def create_signal_pins(fid, mem, bits, addr_width, y_offset, pin_pitch, group_pi
     y_step = lef_add_pin(fid, mem, "ce_in", True, y_step, pin_pitch)
     y_step = lef_add_pin(fid, mem, "clk", True, y_step, pin_pitch)
 
+    # <-- ADDED begin
+    # If dual-port, replicate pins for second port
+    if mem.rw_ports == 2:
+        y_step += group_pitch
+        for i in range(int(bits)):
+            y_step = lef_add_pin(fid, mem, "rd_out1[%d]" % i, False, y_step, pin_pitch)
+
+        y_step += group_pitch
+        for i in range(int(bits)):
+            y_step = lef_add_pin(fid, mem, "wd_in1[%d]" % i, True, y_step, pin_pitch)
+
+        y_step += group_pitch
+        for i in range(int(addr_width)):
+            y_step = lef_add_pin(fid, mem, "addr_in1[%d]" % i, True, y_step, pin_pitch)
+
+        y_step += group_pitch
+        y_step = lef_add_pin(fid, mem, "we_in1", True, y_step, pin_pitch)
+        y_step = lef_add_pin(fid, mem, "ce_in1", True, y_step, pin_pitch)
+        y_step = lef_add_pin(fid, mem, "clk1", True, y_step, pin_pitch)
+    # <-- ADDED end
 
 def create_lef(mem, results_dir):
 
@@ -188,6 +209,11 @@ def create_lef(mem, results_dir):
     number_of_pins = 2 * bits + addr_width + 3
     number_of_tracks_available = math.floor((h - 2 * y_offset) / min_pin_pitch)
     number_of_spare_tracks = number_of_tracks_available - number_of_pins
+
+    # If dual-port
+    if num_rwport == 2:
+        # For second port pins: same pattern => + (2 * bits + addr_width + 3)
+        number_of_pins += (2 * bits + addr_width + 3)
 
     if number_of_spare_tracks < 0:
         raise Exception(
