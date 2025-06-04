@@ -35,34 +35,47 @@ class ProcessTest(unittest.TestCase):
 
         process = Process(self._base_data)
         self.assertIsNotNone(process)
-        self.assertEqual(process.tech_nm, self._base_data["tech_nm"])
-        self.assertTrue(isinstance(process.voltage, str))
-        self.assertEqual(process.voltage, str(self._base_data["voltage"]))
-        self.assertEqual(process.metal_prefix, self._base_data["metal_prefix"])
-        self.assertEqual(process.metal_layer, self._base_data["metal_layer"])
-        self.assertEqual(process.pin_width_nm, self._base_data["pin_width_nm"])
-        self.assertEqual(process.pin_pitch_nm, self._base_data["pin_pitch_nm"])
+        self.assertEqual(process.get_tech_nm(), self._base_data["tech_nm"])
+        self.assertTrue(isinstance(process.get_voltage(), float))
+        self.assertEqual(process.get_voltage(), self._base_data["voltage"])
+        self.assertEqual(process.get_metal_prefix(), self._base_data["metal_prefix"])
+        self.assertEqual(process.get_metal_layer(), self._base_data["metal_layer"])
+        self.assertEqual(process.get_pin_width_nm(), self._base_data["pin_width_nm"])
+        self.assertEqual(process.get_pin_pitch_nm(), self._base_data["pin_pitch_nm"])
         self.assertEqual(
-            process.metal_track_pitch_nm, self._base_data["metal_track_pitch_nm"]
+            process.get_metal_track_pitch_nm(), self._base_data["metal_track_pitch_nm"]
         )
         self.assertEqual(
-            process.contacted_poly_pitch_nm, self._base_data["contacted_poly_pitch_nm"]
+            process.get_contacted_poly_pitch(),
+            self._base_data["contacted_poly_pitch_nm"],
         )
-        self.assertEqual(process.fin_pitch_nm, self._base_data["fin_pitch_nm"])
+        self.assertEqual(process.get_fin_pitch(), self._base_data["fin_pitch_nm"])
         self.assertEqual(
-            process.manufacturing_grid_nm, self._base_data["manufacturing_grid_nm"]
+            process.get_manufacturing_grid_nm(),
+            self._base_data["manufacturing_grid_nm"],
         )
-        self.assertEqual(process.snap_width_nm, self._base_data["snap_width_nm"])
-        self.assertEqual(process.snap_height_nm, self._base_data["snap_height_nm"])
+        self.assertEqual(process.get_snap_width_nm(), self._base_data["snap_width_nm"])
+        self.assertEqual(
+            process.get_snap_height_nm(), self._base_data["snap_height_nm"]
+        )
         # check nm -> um
-        self.assertEqual(process.tech_um, process.tech_nm / 1000.0)
-        self.assertEqual(process.pin_width_um, process.pin_width_nm / 1000.0)
-        self.assertEqual(process.pin_pitch_um, process.pin_pitch_nm / 1000.0)
+        self.assertEqual(process.get_tech_um(), process.get_tech_nm() / 1000.0)
         self.assertEqual(
-            process.metal_track_pitch_um, process.metal_track_pitch_nm / 1000.0
+            process.get_pin_width_um(), process.get_pin_width_nm() / 1000.0
         )
         self.assertEqual(
-            process.manufacturing_grid_um, process.manufacturing_grid_nm / 1000.0
+            process.get_pin_pitch_um(), process.get_pin_pitch_nm() / 1000.0
+        )
+        self.assertEqual(
+            process.get_metal_track_pitch_um(),
+            process.get_metal_track_pitch_nm() / 1000.0,
+        )
+        self.assertEqual(
+            process.get_manufacturing_grid_um(),
+            process.get_manufacturing_grid_nm() / 1000.0,
+        )
+        self.assertEqual(
+            process.get_column_mux_factor(), self._base_data["column_mux_factor"]
         )
 
     def test_process_optional_snap(self):
@@ -72,24 +85,34 @@ class ProcessTest(unittest.TestCase):
         del process_data["snap_width_nm"]
         del process_data["snap_height_nm"]
         process = Process(process_data)
-        self.assertEqual(process.tech_nm, self._base_data["tech_nm"])
-        self.assertEqual(process.voltage, str(self._base_data["voltage"]))
-        self.assertEqual(process.metal_prefix, self._base_data["metal_prefix"])
-        self.assertEqual(process.metal_layer, self._base_data["metal_layer"])
-        self.assertEqual(process.pin_width_nm, self._base_data["pin_width_nm"])
-        self.assertEqual(process.pin_pitch_nm, self._base_data["pin_pitch_nm"])
+        self.assertEqual(process.get_tech_nm(), self._base_data["tech_nm"])
+        self.assertEqual(process.get_voltage(), float(self._base_data["voltage"]))
+        self.assertEqual(process.get_metal_prefix(), self._base_data["metal_prefix"])
+        self.assertEqual(process.get_metal_layer(), self._base_data["metal_layer"])
+        self.assertEqual(process.get_pin_width_nm(), self._base_data["pin_width_nm"])
+        self.assertEqual(process.get_pin_pitch_nm(), self._base_data["pin_pitch_nm"])
         self.assertEqual(
-            process.metal_track_pitch_nm, self._base_data["metal_track_pitch_nm"]
+            process.get_metal_track_pitch_nm(), self._base_data["metal_track_pitch_nm"]
         )
         self.assertEqual(
-            process.contacted_poly_pitch_nm, self._base_data["contacted_poly_pitch_nm"]
+            process.get_contacted_poly_pitch(),
+            self._base_data["contacted_poly_pitch_nm"],
         )
-        self.assertEqual(process.fin_pitch_nm, self._base_data["fin_pitch_nm"])
+        self.assertEqual(process.get_fin_pitch(), self._base_data["fin_pitch_nm"])
         self.assertEqual(
-            process.manufacturing_grid_nm, self._base_data["manufacturing_grid_nm"]
+            process.get_manufacturing_grid_nm(),
+            self._base_data["manufacturing_grid_nm"],
         )
-        self.assertEqual(process.snap_width_nm, 1)
-        self.assertEqual(process.snap_height_nm, 1)
+        self.assertEqual(process.get_snap_width_nm(), 1)
+        self.assertEqual(process.get_snap_height_nm(), 1)
+        self.assertEqual(process.get_x_offset(), process.get_pin_pitch_um())
+        self.assertEqual(process.get_y_offset(), process.get_pin_pitch_um())
+        self.assertEqual(
+            process.get_y_step(),
+            process.get_y_offset()
+            - (process.get_y_offset() % process.get_manufacturing_grid_um())
+            + (process.get_pin_width_um() / 2.0),
+        )
 
     def test_process_misaligned_pin_mfg_grid_pitch(self):
         """
@@ -116,6 +139,19 @@ class ProcessTest(unittest.TestCase):
 
         with self.assertRaises(Exception):
             process = Process(process_data)
+
+    def test_bitcell_override(self):
+        """Tests when bitcell size overrides computation"""
+
+        process_data = self._base_data.copy()
+        process_data["bitcell_width_um"] = 123.0
+        process_data["bitcell_height_um"] = 456.0
+        process = Process(process_data)
+
+        self.assertTrue(process.has_defined_bitcell_size())
+        (bitcell_width, bitcell_height) = process.get_bitcell_dimensions()
+        self.assertEqual(bitcell_width, process_data["bitcell_width_um"])
+        self.assertEqual(bitcell_height, process_data["bitcell_height_um"])
 
 
 if __name__ == "__main__":

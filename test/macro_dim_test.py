@@ -7,7 +7,6 @@ import unittest
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "utils")))
 from class_process import Process
 from test_utils import TestUtils
-import area
 
 
 class MacroDimTest(unittest.TestCase):
@@ -35,9 +34,12 @@ class MacroDimTest(unittest.TestCase):
                 "depth": 2048,
                 "banks": num_banks,
             }
-            (height, width) = area.get_macro_dimensions(self._process, sram_data)
+            (width, height) = self._process.get_macro_dimensions(
+                sram_data["width"], sram_data["depth"], sram_data["banks"]
+            )
             exp_height = base_height / num_banks
             exp_width = base_width * num_banks
+            self.assertFalse(self._process.has_defined_bitcell_size())
             self.assertAlmostEqual(height, exp_height, delta=self._delta)
             self.assertAlmostEqual(width, exp_width, delta=self._delta)
 
@@ -50,7 +52,34 @@ class MacroDimTest(unittest.TestCase):
             "banks": 8,
         }
         with self.assertRaises(Exception):
-            (height, width) = area.get_macro_dimensions(self._process, sram_data)
+            (width, height) = self._process.get_macro_dimensions(
+                sram_data["width"], sram_data["depth"], sram_data["banks"]
+            )
+
+    def test_macro_dim_bitcell_override(self):
+        """Tests when bitcell dimensions are provided"""
+
+        process_data = TestUtils.get_base_process_data().copy()
+        process_data["bitcell_width_um"] = 123.0
+        process_data["bitcell_height_um"] = 456.0
+        process = Process(process_data)
+
+        sram_data = {
+            "width": 32,
+            "depth": 256,
+            "banks": 1,
+        }
+        exp_width = 4723.2
+        exp_height = 140083.2
+        (width, height) = process.get_macro_dimensions(
+            sram_data["width"], sram_data["depth"], sram_data["banks"]
+        )
+        self.assertTrue(process.has_defined_bitcell_size())
+        (bitcell_width, bitcell_height) = process.get_bitcell_dimensions()
+        self.assertEqual(bitcell_width, process_data["bitcell_width_um"])
+        self.assertEqual(bitcell_height, process_data["bitcell_height_um"])
+        self.assertAlmostEqual(width, exp_width, delta=self._delta)
+        self.assertAlmostEqual(height, exp_height, delta=self._delta)
 
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import os
 
 class TestUtils:
     @staticmethod
@@ -20,3 +21,17 @@ class TestUtils:
             "snap_width_nm": 190,
             "snap_height_nm": 1400,
         }
+
+    @staticmethod
+    def get_exec_name(exec_name):
+        """
+        Returns the exec name, which includes the coverage command, if
+        coverage is enabled
+        """
+
+        if "COVERAGE_RUN" in os.environ:
+            exec_cmd = "coverage run --parallel-mode " + exec_name
+        else: #pragma: nocover
+            exec_cmd = exec_name
+        return exec_cmd
+        
