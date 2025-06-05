@@ -30,26 +30,14 @@ def get_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def get_memory_type(json_data):
-    if "memory_type" in json_data:
-        return json_data["memory_type"]
-    return "RAM"
-
-
-def get_port_config(json_data):
-    if "port_configuration" in json_data:
-        return json_data["port_configuration"]
-    return "SP"
-
-
 def main(args: argparse.Namespace):
     json_data = RunUtils.get_config(args.config)
     # Create a process object (shared by all srams)
     process = Process(json_data)
     timing_data = TimingData(json_data)
 
-    memory_type = get_memory_type(json_data)
-    port_config = get_port_config(json_data)
+    memory_type = json_data.get("memory_type", "RAM")
+    port_config = json_data.get("port_configuration", "SP")
 
     # Go through each sram and generate the lib, lef and v files
     for sram_data in json_data["srams"]:

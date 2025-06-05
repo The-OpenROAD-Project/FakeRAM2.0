@@ -63,11 +63,8 @@ class Process:
             + (self.pin_width_um / 2.0)
         )
 
-        if "bitcell_width_um" in json_data and "bitcell_height_um" in json_data:
-            self.bitcell_width_um = float(json_data["bitcell_width_um"])
-            self.bitcell_height_um = float(json_data["bitcell_height_um"])
-        else:
-            self.bitcell_width_um = self.bitcell_height_um = None
+        self.bitcell_width_um = json_data.get("bitcell_width_um", None)
+        self.bitcell_height_um = json_data.get("bitcell_height_um", None)
 
     def has_defined_bitcell_size(self):
         return self.bitcell_width_um and self.bitcell_height_um
