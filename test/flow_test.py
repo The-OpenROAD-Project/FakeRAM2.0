@@ -6,6 +6,7 @@ import math
 import shutil
 import unittest
 import subprocess
+from test_utils import TestUtils
 
 
 class FlowTest(unittest.TestCase):
@@ -215,8 +216,9 @@ class FlowTest(unittest.TestCase):
     def test_example_input(self):
         """Tests the example input run"""
 
+        exec_cmd = TestUtils.get_exec_name(self._exec)
         cmd = (
-            self._exec
+            exec_cmd
             + " "
             + os.path.join(self._script_dir, "example_input_file.cfg")
             + " --output_dir "
