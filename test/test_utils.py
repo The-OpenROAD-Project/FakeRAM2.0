@@ -2,6 +2,7 @@
 
 import os
 
+
 class TestUtils:
     @staticmethod
     def get_base_process_data():
@@ -31,7 +32,6 @@ class TestUtils:
 
         if "COVERAGE_RUN" in os.environ:
             exec_cmd = "coverage run --parallel-mode " + exec_name
-        else: #pragma: nocover
+        else:  # pragma: nocover
             exec_cmd = exec_name
         return exec_cmd
-        

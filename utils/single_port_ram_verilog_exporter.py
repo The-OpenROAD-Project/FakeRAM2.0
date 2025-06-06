@@ -116,7 +116,7 @@ class SinglePortRAMVerilogExporter(VerilogExporter):
         addr_bus_msb = mem.get_addr_bus_msb()
         data_bus_msb = mem.get_data_bus_msb()
         self.export_bb_header(out_fh)
-        out_fh.write(f"   output reg [31:0] rd_out,\n")
+        out_fh.write(f"   output reg [{data_bus_msb}:0] rd_out,\n")
         out_fh.write(f"   input [{addr_bus_msb}:0] addr_in,\n")
         out_fh.write("   input we_in,\n")
         out_fh.write(f"   input [{data_bus_msb}:0] wd_in,\n")
