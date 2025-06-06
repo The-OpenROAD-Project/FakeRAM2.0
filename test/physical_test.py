@@ -15,7 +15,6 @@ class PhysicalDataTest(unittest.TestCase):
     def setUp(self):
         """Sets up base_data with example config data"""
 
-
     def test_empty_physical(self):
         """Tests physical field defaults"""
 
@@ -39,7 +38,7 @@ class PhysicalDataTest(unittest.TestCase):
         # Can't snap before setting extents
         with self.assertRaises(Exception):
             physical.snap_to_grid(1000, 1000)
-            
+
         # Set extents and verify values
         physical.set_extents(width, height)
         self.assertEqual(physical.get_width(False), width)
@@ -73,13 +72,13 @@ class PhysicalDataTest(unittest.TestCase):
         # Can't set pin pitches before setting height
         with self.assertRaises(Exception):
             physical.set_pin_pitches("bogus", num_pins, min_pin_pitch, y_offset)
-            
+
         # Try again after setting height
         physical.set_extents(height, height)
         physical.snap_to_grid(1, 1)
         with self.assertRaises(Exception):
             physical.set_pin_pitches("bogus", num_pins, min_pin_pitch, y_offset)
-    
-        
+
+
 if __name__ == "__main__":
     unittest.main()
