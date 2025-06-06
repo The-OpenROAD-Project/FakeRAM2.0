@@ -5039,7 +5039,7 @@ module spsram_256x256
 endmodule
 (* blackbox *)
 module spsram_256x256 (
-   output reg [31:0] rd_out,
+   output reg [255:0] rd_out,
    input [7:0] addr_in,
    input we_in,
    input [255:0] wd_in,

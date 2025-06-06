@@ -20,8 +20,8 @@ class Process:
         self.pin_width_nm = int(json_data["pin_width_nm"])
         self.pin_pitch_nm = int(json_data["pin_pitch_nm"])
         self.metal_track_pitch_nm = int(json_data["metal_track_pitch_nm"])
-        self.contacted_poly_pitch_nm = int(json_data["contacted_poly_pitch_nm"])
-        self.fin_pitch_nm = int(json_data["fin_pitch_nm"])
+        self.contacted_poly_pitch_nm = json_data.get("contacted_poly_pitch_nm", None)
+        self.fin_pitch_nm = json_data.get("fin_pitch_nm", None)
         self.manufacturing_grid_nm = int(json_data["manufacturing_grid_nm"])
         self.column_mux_factor = int(json_data["column_mux_factor"])
 
