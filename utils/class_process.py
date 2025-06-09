@@ -20,8 +20,8 @@ class Process:
         self.pin_width_nm = int(json_data["pin_width_nm"])
         self.pin_pitch_nm = int(json_data["pin_pitch_nm"])
         self.metal_track_pitch_nm = int(json_data["metal_track_pitch_nm"])
-        self.contacted_poly_pitch_nm = int(json_data["contacted_poly_pitch_nm"])
-        self.fin_pitch_nm = int(json_data["fin_pitch_nm"])
+        self.contacted_poly_pitch_nm = json_data.get("contacted_poly_pitch_nm", None)
+        self.fin_pitch_nm = json_data.get("fin_pitch_nm", None)
         self.manufacturing_grid_nm = int(json_data["manufacturing_grid_nm"])
         self.column_mux_factor = int(json_data["column_mux_factor"])
 
@@ -57,14 +57,20 @@ class Process:
         self.y_offset = 1 * self.pin_pitch_um
         # as told by MSK
 
-        self.y_step = (
-            self.y_offset
-            - (self.y_offset % self.manufacturing_grid_um)
-            + (self.pin_width_um / 2.0)
-        )
-
+        self._calc_y_step()
         self.bitcell_width_um = json_data.get("bitcell_width_um", None)
         self.bitcell_height_um = json_data.get("bitcell_height_um", None)
+
+    def _calc_y_step(self):
+        """
+        Calculates y_step, which is really the y location for the center of
+        the first pin
+        """
+
+        offset_snap = round(self.y_offset % self.manufacturing_grid_um, 2)
+        if offset_snap < self.manufacturing_grid_um:
+            offset_snap = 0
+        self.y_step = self.y_offset - offset_snap + (self.pin_width_um / 2.0)
 
     def has_defined_bitcell_size(self):
         return self.bitcell_width_um and self.bitcell_height_um

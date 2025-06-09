@@ -153,6 +153,29 @@ class ProcessTest(unittest.TestCase):
         self.assertEqual(bitcell_width, process_data["bitcell_width_um"])
         self.assertEqual(bitcell_height, process_data["bitcell_height_um"])
 
+    def test_y_step_calc(self):
+        """
+        Tests y_step calculation
+
+        y_step = pin_pitch (snapped to grid) + pin_width / 2
+        """
+
+        process = Process(self._base_data)
+        process._calc_y_step()
+        # 0.048 + (0.024 / 2) = 0.06
+        self.assertEqual(process.get_y_step(), 0.06)
+
+        # change to different pitch that previously didn't get snapped right
+        # and try again
+        base_data = self._base_data.copy()
+        base_data["metal_track_pitch_nm"] = 23
+        base_data["pin_pitch_nm"] = 2 * base_data["metal_track_pitch_nm"]
+        base_data["pin_width_nm"] = 12
+        process = Process(base_data)
+        # 0.046 + (0.024 / 2) = 0.06
+        process._calc_y_step()
+        self.assertEqual(process.get_y_step(), 0.052)
+
 
 if __name__ == "__main__":
     unittest.main()
