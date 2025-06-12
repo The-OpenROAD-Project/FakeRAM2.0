@@ -9,6 +9,7 @@ import unittest
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "utils")))
 from single_port_ram_verilog_exporter import SinglePortRAMVerilogExporter
 from memory_factory import MemoryFactory
+from memory_config import MemoryConfig
 from class_process import Process
 from timing_data import TimingData
 from test_utils import TestUtils
@@ -47,8 +48,9 @@ class SVBBoxDataTest(unittest.TestCase):
 
     def _check_bbox(self, words, depth):
         name = f"fakeram_16_{depth}"
+        mem_config = MemoryConfig(name, words, depth, 4, 0)
         mem = MemoryFactory.create(
-            name, words, depth, 4, "RAM", "SP", self._process, self._timing_data
+            mem_config, "RAM", "SP", self._process, self._timing_data
         )
         exporter = SinglePortRAMVerilogExporter(mem)
         strm = io.StringIO()
