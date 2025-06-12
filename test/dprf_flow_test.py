@@ -22,6 +22,7 @@ class DPRFFlowTest(FlowTestBase):
         expected_ram_list = [
             "dprf_256x256",
             "dprf_256x32",
+            "dprf_256x32_h",
         ]
         self._execute_run(self._tag, expected_ram_list)
 
