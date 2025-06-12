@@ -21,13 +21,16 @@ class DualPortRAM(RAM):
     input                      clk,
     """
 
-    def __init__(
-        self, name, width_in_bits, depth, num_banks, process_data, timing_data
-    ):
-        """Initializer"""
-        RAM.__init__(
-            self, name, width_in_bits, depth, num_banks, process_data, timing_data
-        )
+    def __init__(self, mem_config, process_data, timing_data):
+        """
+        Initializer
+
+        Parameters:
+        mem_config (MemoryConfig): memory parameter container
+        process_data (Process): process data container
+        timing_data (TimingData): timing data container
+        """
+        RAM.__init__(self, mem_config, process_data, timing_data)
         self.num_rw_ports = 2
 
     def get_num_pins(self):
