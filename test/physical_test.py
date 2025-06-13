@@ -14,6 +14,7 @@ class PhysicalDataTest(unittest.TestCase):
 
     def setUp(self):
         """Sets up base_data with example config data"""
+        pass
 
     def test_empty_physical(self):
         """Tests physical field defaults"""
@@ -27,7 +28,7 @@ class PhysicalDataTest(unittest.TestCase):
         self.assertIsNone(physical.get_group_pitch())
 
     def test_set_extents_and_snapping(self):
-        """Tests physical field defaults"""
+        """Tests physical field extents and snapping results"""
 
         physical = PhysicalData()
         width = 123.4
