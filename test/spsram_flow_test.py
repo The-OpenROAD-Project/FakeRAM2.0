@@ -22,6 +22,7 @@ class SPSRAMFlowTest(FlowTestBase):
         expected_ram_list = [
             "spsram_256x256",
             "spsram_256x32",
+            "spsram_256x32_h",
         ]
         self._execute_run(self._tag, expected_ram_list)
 

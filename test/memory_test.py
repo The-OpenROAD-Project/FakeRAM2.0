@@ -9,6 +9,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "u
 from class_memory import Memory
 from class_process import Process
 from memory_factory import MemoryFactory
+from memory_config import MemoryConfig
 from timing_data import TimingData
 from test_utils import TestUtils
 
@@ -35,11 +36,9 @@ class MemoryTest(unittest.TestCase):
         """
 
         timing_data = TimingData()
+        mem_config = MemoryConfig.from_json(self._sram_data)
         memory = MemoryFactory.create(
-            self._sram_data["name"],
-            self._sram_data["width"],
-            self._sram_data["depth"],
-            self._sram_data["banks"],
+            mem_config,
             "RAM",
             "SP",
             self._process,
@@ -49,6 +48,7 @@ class MemoryTest(unittest.TestCase):
         self.assertEqual(memory.get_width(), self._sram_data["width"])
         self.assertEqual(memory.get_depth(), self._sram_data["depth"])
         self.assertEqual(memory.get_num_banks(), self._sram_data["banks"])
+        self.assertEqual(memory.get_additional_height(), 0)
         self.assertEqual(
             memory.get_width_in_bytes(), math.ceil(memory.get_width() / 8.0)
         )

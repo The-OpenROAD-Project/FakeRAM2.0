@@ -1803,7 +1803,7 @@ cell(dpsram_256x32) {
             }
         }
         internal_power(){
-            when : "(! (we_in) )";
+            when : "(! (we_a) )";
             rise_power(dpsram_256x32_energy_template_sigslew) {
                 index_1 ("0.009, 0.227");
                 values ("0.013, 0.013")
@@ -1814,7 +1814,7 @@ cell(dpsram_256x32) {
             }
         }
         internal_power(){
-            when : "(we_in)";
+            when : "(we_a)";
             rise_power(dpsram_256x32_energy_template_sigslew) {
                 index_1 ("0.009, 0.227");
                 values ("0.013, 0.013")
@@ -2020,7 +2020,7 @@ cell(dpsram_256x32) {
             }
         }
         internal_power(){
-            when : "(! (we_in) )";
+            when : "(! (we_b) )";
             rise_power(dpsram_256x32_energy_template_sigslew) {
                 index_1 ("0.009, 0.227");
                 values ("0.013, 0.013")
@@ -2031,7 +2031,7 @@ cell(dpsram_256x32) {
             }
         }
         internal_power(){
-            when : "(we_in)";
+            when : "(we_b)";
             rise_power(dpsram_256x32_energy_template_sigslew) {
                 index_1 ("0.009, 0.227");
                 values ("0.013, 0.013")

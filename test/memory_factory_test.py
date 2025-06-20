@@ -7,6 +7,7 @@ import unittest
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "utils")))
 from class_process import Process
 from memory_factory import MemoryFactory
+from memory_config import MemoryConfig
 from timing_data import TimingData
 from test_utils import TestUtils
 
@@ -29,11 +30,9 @@ class MemoryFactoryTest(unittest.TestCase):
         for memory_type in ["RAM", "RF"]:
             for port_config in ["SP", "DP"]:
                 name = (f"{port_config}{memory_type}",)
+                mem_config = MemoryConfig(name, 32, 256, 1, 0)
                 memory = MemoryFactory.create(
-                    name,
-                    32,
-                    256,
-                    1,
+                    mem_config,
                     memory_type,
                     port_config,
                     self._process,
@@ -42,8 +41,9 @@ class MemoryFactoryTest(unittest.TestCase):
                 self.assertIsNotNone(memory)
                 self.assertEqual(memory.get_name(), name)
         with self.assertRaises(Exception):
+            bogus_config = MemoryConfig("bogus", 32, 256, 1, 0)
             memory = MemoryFactory.create(
-                bogus, 32, 256, 1, "unknown", "unknown", self._process, timing_data
+                bogus_config, "unknown", "unknown", self._process, timing_data
             )
 
 

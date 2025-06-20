@@ -9,13 +9,16 @@ from ram_liberty_exporter import RAMLibertyExporter
 class RAM(Memory):
     """Base class for RAMs"""
 
-    def __init__(
-        self, name, width_in_bits, depth, num_banks, process_data, timing_data
-    ):
-        """Initializer"""
-        Memory.__init__(
-            self, name, width_in_bits, depth, num_banks, process_data, timing_data
-        )
+    def __init__(self, mem_config, process_data, timing_data):
+        """
+        Initializer
+
+        Parameters:
+        mem_config (MemoryConfig): memory parameter container
+        process_data (Process): process data container
+        timing_data (TimingData): timing data container
+        """
+        Memory.__init__(self, mem_config, process_data, timing_data)
 
     def write_verilog_file(self, out_file_name, is_blackbox=False):
         """

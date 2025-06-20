@@ -23,7 +23,7 @@ class RAMLibertyExporter(LibertyExporter):
         for i in range(0, self._memory.get_num_rw_ports()):
             suffix = chr(ord("a") + i)
             self.write_rw_pin_set(out_fh, name, suffix, True)
-        self.write_clk_pin(out_fh)
+        self.write_clk_pin("clk", out_fh)
 
     def write_memory_section(self, out_fh):
         """Writes the memory section to the output stream"""
