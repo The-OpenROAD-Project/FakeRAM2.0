@@ -83,5 +83,5 @@ class VerilogExporter(Exporter):
         for i in range(0, self.get_memory().get_num_rw_ports()):
             suffix = chr(ord("a") + i)
             self.export_bb_port_decl_set(suffix, out_fh)
-        out_fh.write("    clk,\n")
+        out_fh.write("    clk\n")
         self.export_bb_footer(out_fh)

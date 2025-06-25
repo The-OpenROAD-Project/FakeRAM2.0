@@ -17,19 +17,16 @@ class FactoryBase:
         self._registry[self.get_key(memory_type, port_config)] = klass
 
     @classmethod
-    def create(
-        self,
-        name,
-        width_in_bits,
-        depth,
-        num_banks,
-        memory_type,
-        port_config,
-        process,
-        timing_data,
-    ):
+    def create(self, mem_config, memory_type, port_config, process, timing_data):
         """
         Creates and returns the requested object based on the factory registry
+
+        Parameters:
+        mem_config (MemoryConfig): memory parameter container
+        memory_type (str): type of memory to create (RAM or RF)
+        port_config (str): port configuration (SP or DP)
+        process_data (Process): process data container
+        timing_data (TimingData): timing data container
         """
         key = self.get_key(memory_type, port_config)
         klass = self._registry.get(key)
@@ -37,4 +34,4 @@ class FactoryBase:
             raise ValueError(
                 f"No class registered under key: {memory_type} {port_config}"
             )
-        return klass(name, width_in_bits, depth, num_banks, process, timing_data)
+        return klass(mem_config, process, timing_data)

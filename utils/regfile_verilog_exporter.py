@@ -19,7 +19,7 @@ class RegFileVerilogExporter(VerilogExporter):
         for i in range(0, self.get_memory().get_num_rw_ports()):
             suffix = chr(ord("a") + i)
             self.write_rw_port_decl_set(suffix, out_fh)
-        out_fh.write("    clk,\n")
+        out_fh.write("    clk\n")
         out_fh.write(");\n")
         out_fh.write(f"    parameter DATA_WIDTH = {mem.get_width()};\n")
         out_fh.write(f"    parameter ADDR_WIDTH = {mem.get_addr_width()};\n")

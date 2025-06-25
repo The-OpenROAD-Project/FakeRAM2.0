@@ -6,15 +6,15 @@ PROPERTYDEFINITIONS
   MACRO depth INTEGER ;
   MACRO banks INTEGER ;
 END PROPERTYDEFINITIONS
-MACRO sprf_256x32
+MACRO spsram_256x32_h
   PROPERTY width 32 ;
   PROPERTY depth 256 ;
   PROPERTY banks 2 ;
-  FOREIGN sprf_256x32 0 0 ;
+  FOREIGN spsram_256x32_h 0 0 ;
   SYMMETRY X Y R90 ;
-  SIZE 8.360 BY 42.000 ;
+  SIZE 8.360 BY 44.800 ;
   CLASS BLOCK ;
-  PIN dout_a[0]
+  PIN rd_out[0]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
@@ -22,107 +22,98 @@ MACRO sprf_256x32
       LAYER M4 ;
       RECT 0.000 0.048 0.024 0.072 ;
     END
-  END dout_a[0]
-  PIN dout_a[1]
+  END rd_out[0]
+  PIN rd_out[1]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 0.576 0.024 0.600 ;
+      RECT 0.000 0.624 0.024 0.648 ;
     END
-  END dout_a[1]
-  PIN dout_a[2]
+  END rd_out[1]
+  PIN rd_out[2]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 1.104 0.024 1.128 ;
+      RECT 0.000 1.200 0.024 1.224 ;
     END
-  END dout_a[2]
-  PIN dout_a[3]
+  END rd_out[2]
+  PIN rd_out[3]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 1.632 0.024 1.656 ;
+      RECT 0.000 1.776 0.024 1.800 ;
     END
-  END dout_a[3]
-  PIN dout_a[4]
+  END rd_out[3]
+  PIN rd_out[4]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 2.160 0.024 2.184 ;
+      RECT 0.000 2.352 0.024 2.376 ;
     END
-  END dout_a[4]
-  PIN dout_a[5]
+  END rd_out[4]
+  PIN rd_out[5]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 2.688 0.024 2.712 ;
+      RECT 0.000 2.928 0.024 2.952 ;
     END
-  END dout_a[5]
-  PIN dout_a[6]
+  END rd_out[5]
+  PIN rd_out[6]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 3.216 0.024 3.240 ;
+      RECT 0.000 3.504 0.024 3.528 ;
     END
-  END dout_a[6]
-  PIN dout_a[7]
+  END rd_out[6]
+  PIN rd_out[7]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 3.744 0.024 3.768 ;
+      RECT 0.000 4.080 0.024 4.104 ;
     END
-  END dout_a[7]
-  PIN dout_a[8]
+  END rd_out[7]
+  PIN rd_out[8]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 4.272 0.024 4.296 ;
+      RECT 0.000 4.656 0.024 4.680 ;
     END
-  END dout_a[8]
-  PIN dout_a[9]
+  END rd_out[8]
+  PIN rd_out[9]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 4.800 0.024 4.824 ;
+      RECT 0.000 5.232 0.024 5.256 ;
     END
-  END dout_a[9]
-  PIN dout_a[10]
+  END rd_out[9]
+  PIN rd_out[10]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 5.328 0.024 5.352 ;
+      RECT 0.000 5.808 0.024 5.832 ;
     END
-  END dout_a[10]
-  PIN dout_a[11]
-    DIRECTION OUTPUT ;
-    USE SIGNAL ;
-    SHAPE ABUTMENT ;
-    PORT
-      LAYER M4 ;
-      RECT 0.000 5.856 0.024 5.880 ;
-    END
-  END dout_a[11]
-  PIN dout_a[12]
+  END rd_out[10]
+  PIN rd_out[11]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
@@ -130,107 +121,98 @@ MACRO sprf_256x32
       LAYER M4 ;
       RECT 0.000 6.384 0.024 6.408 ;
     END
-  END dout_a[12]
-  PIN dout_a[13]
+  END rd_out[11]
+  PIN rd_out[12]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 6.912 0.024 6.936 ;
+      RECT 0.000 6.960 0.024 6.984 ;
     END
-  END dout_a[13]
-  PIN dout_a[14]
+  END rd_out[12]
+  PIN rd_out[13]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 7.440 0.024 7.464 ;
+      RECT 0.000 7.536 0.024 7.560 ;
     END
-  END dout_a[14]
-  PIN dout_a[15]
+  END rd_out[13]
+  PIN rd_out[14]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 7.968 0.024 7.992 ;
+      RECT 0.000 8.112 0.024 8.136 ;
     END
-  END dout_a[15]
-  PIN dout_a[16]
+  END rd_out[14]
+  PIN rd_out[15]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 8.496 0.024 8.520 ;
+      RECT 0.000 8.688 0.024 8.712 ;
     END
-  END dout_a[16]
-  PIN dout_a[17]
+  END rd_out[15]
+  PIN rd_out[16]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 9.024 0.024 9.048 ;
+      RECT 0.000 9.264 0.024 9.288 ;
     END
-  END dout_a[17]
-  PIN dout_a[18]
+  END rd_out[16]
+  PIN rd_out[17]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 9.552 0.024 9.576 ;
+      RECT 0.000 9.840 0.024 9.864 ;
     END
-  END dout_a[18]
-  PIN dout_a[19]
+  END rd_out[17]
+  PIN rd_out[18]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 10.080 0.024 10.104 ;
+      RECT 0.000 10.416 0.024 10.440 ;
     END
-  END dout_a[19]
-  PIN dout_a[20]
+  END rd_out[18]
+  PIN rd_out[19]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 10.608 0.024 10.632 ;
+      RECT 0.000 10.992 0.024 11.016 ;
     END
-  END dout_a[20]
-  PIN dout_a[21]
+  END rd_out[19]
+  PIN rd_out[20]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 11.136 0.024 11.160 ;
+      RECT 0.000 11.568 0.024 11.592 ;
     END
-  END dout_a[21]
-  PIN dout_a[22]
+  END rd_out[20]
+  PIN rd_out[21]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 11.664 0.024 11.688 ;
+      RECT 0.000 12.144 0.024 12.168 ;
     END
-  END dout_a[22]
-  PIN dout_a[23]
-    DIRECTION OUTPUT ;
-    USE SIGNAL ;
-    SHAPE ABUTMENT ;
-    PORT
-      LAYER M4 ;
-      RECT 0.000 12.192 0.024 12.216 ;
-    END
-  END dout_a[23]
-  PIN dout_a[24]
+  END rd_out[21]
+  PIN rd_out[22]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
@@ -238,359 +220,350 @@ MACRO sprf_256x32
       LAYER M4 ;
       RECT 0.000 12.720 0.024 12.744 ;
     END
-  END dout_a[24]
-  PIN dout_a[25]
+  END rd_out[22]
+  PIN rd_out[23]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 13.248 0.024 13.272 ;
+      RECT 0.000 13.296 0.024 13.320 ;
     END
-  END dout_a[25]
-  PIN dout_a[26]
+  END rd_out[23]
+  PIN rd_out[24]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 13.776 0.024 13.800 ;
+      RECT 0.000 13.872 0.024 13.896 ;
     END
-  END dout_a[26]
-  PIN dout_a[27]
+  END rd_out[24]
+  PIN rd_out[25]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 14.304 0.024 14.328 ;
+      RECT 0.000 14.448 0.024 14.472 ;
     END
-  END dout_a[27]
-  PIN dout_a[28]
+  END rd_out[25]
+  PIN rd_out[26]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 14.832 0.024 14.856 ;
+      RECT 0.000 15.024 0.024 15.048 ;
     END
-  END dout_a[28]
-  PIN dout_a[29]
+  END rd_out[26]
+  PIN rd_out[27]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 15.360 0.024 15.384 ;
+      RECT 0.000 15.600 0.024 15.624 ;
     END
-  END dout_a[29]
-  PIN dout_a[30]
+  END rd_out[27]
+  PIN rd_out[28]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 15.888 0.024 15.912 ;
+      RECT 0.000 16.176 0.024 16.200 ;
     END
-  END dout_a[30]
-  PIN dout_a[31]
+  END rd_out[28]
+  PIN rd_out[29]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 16.416 0.024 16.440 ;
+      RECT 0.000 16.752 0.024 16.776 ;
     END
-  END dout_a[31]
-  PIN din_a[0]
+  END rd_out[29]
+  PIN rd_out[30]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 17.856 0.024 17.880 ;
+      RECT 0.000 17.328 0.024 17.352 ;
     END
-  END din_a[0]
-  PIN din_a[1]
+  END rd_out[30]
+  PIN rd_out[31]
     DIRECTION OUTPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 18.384 0.024 18.408 ;
+      RECT 0.000 17.904 0.024 17.928 ;
     END
-  END din_a[1]
-  PIN din_a[2]
-    DIRECTION OUTPUT ;
+  END rd_out[31]
+  PIN wd_in[0]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 18.912 0.024 18.936 ;
+      RECT 0.000 18.960 0.024 18.984 ;
     END
-  END din_a[2]
-  PIN din_a[3]
-    DIRECTION OUTPUT ;
+  END wd_in[0]
+  PIN wd_in[1]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 19.440 0.024 19.464 ;
+      RECT 0.000 19.536 0.024 19.560 ;
     END
-  END din_a[3]
-  PIN din_a[4]
-    DIRECTION OUTPUT ;
+  END wd_in[1]
+  PIN wd_in[2]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 19.968 0.024 19.992 ;
+      RECT 0.000 20.112 0.024 20.136 ;
     END
-  END din_a[4]
-  PIN din_a[5]
-    DIRECTION OUTPUT ;
+  END wd_in[2]
+  PIN wd_in[3]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 20.496 0.024 20.520 ;
+      RECT 0.000 20.688 0.024 20.712 ;
     END
-  END din_a[5]
-  PIN din_a[6]
-    DIRECTION OUTPUT ;
+  END wd_in[3]
+  PIN wd_in[4]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 21.024 0.024 21.048 ;
+      RECT 0.000 21.264 0.024 21.288 ;
     END
-  END din_a[6]
-  PIN din_a[7]
-    DIRECTION OUTPUT ;
+  END wd_in[4]
+  PIN wd_in[5]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 21.552 0.024 21.576 ;
+      RECT 0.000 21.840 0.024 21.864 ;
     END
-  END din_a[7]
-  PIN din_a[8]
-    DIRECTION OUTPUT ;
+  END wd_in[5]
+  PIN wd_in[6]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 22.080 0.024 22.104 ;
+      RECT 0.000 22.416 0.024 22.440 ;
     END
-  END din_a[8]
-  PIN din_a[9]
-    DIRECTION OUTPUT ;
+  END wd_in[6]
+  PIN wd_in[7]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 22.608 0.024 22.632 ;
+      RECT 0.000 22.992 0.024 23.016 ;
     END
-  END din_a[9]
-  PIN din_a[10]
-    DIRECTION OUTPUT ;
+  END wd_in[7]
+  PIN wd_in[8]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 23.136 0.024 23.160 ;
+      RECT 0.000 23.568 0.024 23.592 ;
     END
-  END din_a[10]
-  PIN din_a[11]
-    DIRECTION OUTPUT ;
+  END wd_in[8]
+  PIN wd_in[9]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 23.664 0.024 23.688 ;
+      RECT 0.000 24.144 0.024 24.168 ;
     END
-  END din_a[11]
-  PIN din_a[12]
-    DIRECTION OUTPUT ;
-    USE SIGNAL ;
-    SHAPE ABUTMENT ;
-    PORT
-      LAYER M4 ;
-      RECT 0.000 24.192 0.024 24.216 ;
-    END
-  END din_a[12]
-  PIN din_a[13]
-    DIRECTION OUTPUT ;
+  END wd_in[9]
+  PIN wd_in[10]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
       RECT 0.000 24.720 0.024 24.744 ;
     END
-  END din_a[13]
-  PIN din_a[14]
-    DIRECTION OUTPUT ;
+  END wd_in[10]
+  PIN wd_in[11]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 25.248 0.024 25.272 ;
+      RECT 0.000 25.296 0.024 25.320 ;
     END
-  END din_a[14]
-  PIN din_a[15]
-    DIRECTION OUTPUT ;
+  END wd_in[11]
+  PIN wd_in[12]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 25.776 0.024 25.800 ;
+      RECT 0.000 25.872 0.024 25.896 ;
     END
-  END din_a[15]
-  PIN din_a[16]
-    DIRECTION OUTPUT ;
+  END wd_in[12]
+  PIN wd_in[13]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 26.304 0.024 26.328 ;
+      RECT 0.000 26.448 0.024 26.472 ;
     END
-  END din_a[16]
-  PIN din_a[17]
-    DIRECTION OUTPUT ;
+  END wd_in[13]
+  PIN wd_in[14]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 26.832 0.024 26.856 ;
+      RECT 0.000 27.024 0.024 27.048 ;
     END
-  END din_a[17]
-  PIN din_a[18]
-    DIRECTION OUTPUT ;
+  END wd_in[14]
+  PIN wd_in[15]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 27.360 0.024 27.384 ;
+      RECT 0.000 27.600 0.024 27.624 ;
     END
-  END din_a[18]
-  PIN din_a[19]
-    DIRECTION OUTPUT ;
+  END wd_in[15]
+  PIN wd_in[16]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 27.888 0.024 27.912 ;
+      RECT 0.000 28.176 0.024 28.200 ;
     END
-  END din_a[19]
-  PIN din_a[20]
-    DIRECTION OUTPUT ;
+  END wd_in[16]
+  PIN wd_in[17]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 28.416 0.024 28.440 ;
+      RECT 0.000 28.752 0.024 28.776 ;
     END
-  END din_a[20]
-  PIN din_a[21]
-    DIRECTION OUTPUT ;
+  END wd_in[17]
+  PIN wd_in[18]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 28.944 0.024 28.968 ;
+      RECT 0.000 29.328 0.024 29.352 ;
     END
-  END din_a[21]
-  PIN din_a[22]
-    DIRECTION OUTPUT ;
+  END wd_in[18]
+  PIN wd_in[19]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 29.472 0.024 29.496 ;
+      RECT 0.000 29.904 0.024 29.928 ;
     END
-  END din_a[22]
-  PIN din_a[23]
-    DIRECTION OUTPUT ;
+  END wd_in[19]
+  PIN wd_in[20]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 30.000 0.024 30.024 ;
+      RECT 0.000 30.480 0.024 30.504 ;
     END
-  END din_a[23]
-  PIN din_a[24]
-    DIRECTION OUTPUT ;
-    USE SIGNAL ;
-    SHAPE ABUTMENT ;
-    PORT
-      LAYER M4 ;
-      RECT 0.000 30.528 0.024 30.552 ;
-    END
-  END din_a[24]
-  PIN din_a[25]
-    DIRECTION OUTPUT ;
+  END wd_in[20]
+  PIN wd_in[21]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
       RECT 0.000 31.056 0.024 31.080 ;
     END
-  END din_a[25]
-  PIN din_a[26]
-    DIRECTION OUTPUT ;
+  END wd_in[21]
+  PIN wd_in[22]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 31.584 0.024 31.608 ;
+      RECT 0.000 31.632 0.024 31.656 ;
     END
-  END din_a[26]
-  PIN din_a[27]
-    DIRECTION OUTPUT ;
+  END wd_in[22]
+  PIN wd_in[23]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 32.112 0.024 32.136 ;
+      RECT 0.000 32.208 0.024 32.232 ;
     END
-  END din_a[27]
-  PIN din_a[28]
-    DIRECTION OUTPUT ;
+  END wd_in[23]
+  PIN wd_in[24]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 32.640 0.024 32.664 ;
+      RECT 0.000 32.784 0.024 32.808 ;
     END
-  END din_a[28]
-  PIN din_a[29]
-    DIRECTION OUTPUT ;
+  END wd_in[24]
+  PIN wd_in[25]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 33.168 0.024 33.192 ;
+      RECT 0.000 33.360 0.024 33.384 ;
     END
-  END din_a[29]
-  PIN din_a[30]
-    DIRECTION OUTPUT ;
+  END wd_in[25]
+  PIN wd_in[26]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 33.696 0.024 33.720 ;
+      RECT 0.000 33.936 0.024 33.960 ;
     END
-  END din_a[30]
-  PIN din_a[31]
-    DIRECTION OUTPUT ;
+  END wd_in[26]
+  PIN wd_in[27]
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 34.224 0.024 34.248 ;
+      RECT 0.000 34.512 0.024 34.536 ;
     END
-  END din_a[31]
-  PIN addr_a[0]
+  END wd_in[27]
+  PIN wd_in[28]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER M4 ;
+      RECT 0.000 35.088 0.024 35.112 ;
+    END
+  END wd_in[28]
+  PIN wd_in[29]
     DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
@@ -598,86 +571,122 @@ MACRO sprf_256x32
       LAYER M4 ;
       RECT 0.000 35.664 0.024 35.688 ;
     END
-  END addr_a[0]
-  PIN addr_a[1]
+  END wd_in[29]
+  PIN wd_in[30]
     DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 36.192 0.024 36.216 ;
+      RECT 0.000 36.240 0.024 36.264 ;
     END
-  END addr_a[1]
-  PIN addr_a[2]
+  END wd_in[30]
+  PIN wd_in[31]
     DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 36.720 0.024 36.744 ;
+      RECT 0.000 36.816 0.024 36.840 ;
     END
-  END addr_a[2]
-  PIN addr_a[3]
+  END wd_in[31]
+  PIN addr_in[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 37.248 0.024 37.272 ;
+      RECT 0.000 37.872 0.024 37.896 ;
     END
-  END addr_a[3]
-  PIN addr_a[4]
+  END addr_in[0]
+  PIN addr_in[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 37.776 0.024 37.800 ;
+      RECT 0.000 38.448 0.024 38.472 ;
     END
-  END addr_a[4]
-  PIN addr_a[5]
+  END addr_in[1]
+  PIN addr_in[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 38.304 0.024 38.328 ;
+      RECT 0.000 39.024 0.024 39.048 ;
     END
-  END addr_a[5]
-  PIN addr_a[6]
+  END addr_in[2]
+  PIN addr_in[3]
     DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 38.832 0.024 38.856 ;
+      RECT 0.000 39.600 0.024 39.624 ;
     END
-  END addr_a[6]
-  PIN addr_a[7]
+  END addr_in[3]
+  PIN addr_in[4]
     DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 39.360 0.024 39.384 ;
+      RECT 0.000 40.176 0.024 40.200 ;
     END
-  END addr_a[7]
-  PIN we_a
+  END addr_in[4]
+  PIN addr_in[5]
     DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 40.800 0.024 40.824 ;
+      RECT 0.000 40.752 0.024 40.776 ;
     END
-  END we_a
-  PIN clk
+  END addr_in[5]
+  PIN addr_in[6]
     DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
       RECT 0.000 41.328 0.024 41.352 ;
+    END
+  END addr_in[6]
+  PIN addr_in[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER M4 ;
+      RECT 0.000 41.904 0.024 41.928 ;
+    END
+  END addr_in[7]
+  PIN we_in
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER M4 ;
+      RECT 0.000 42.960 0.024 42.984 ;
+    END
+  END we_in
+  PIN ce_in
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER M4 ;
+      RECT 0.000 43.536 0.024 43.560 ;
+    END
+  END ce_in
+  PIN clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER M4 ;
+      RECT 0.000 44.112 0.024 44.136 ;
     END
   END clk
   PIN VSS
@@ -740,6 +749,10 @@ MACRO sprf_256x32
       RECT 0.048 39.936 8.312 40.032 ;
       RECT 0.048 40.704 8.312 40.800 ;
       RECT 0.048 41.472 8.312 41.568 ;
+      RECT 0.048 42.240 8.312 42.336 ;
+      RECT 0.048 43.008 8.312 43.104 ;
+      RECT 0.048 43.776 8.312 43.872 ;
+      RECT 0.048 44.544 8.312 44.640 ;
     END
   END VSS
   PIN VDD
@@ -802,62 +815,105 @@ MACRO sprf_256x32
       RECT 0.048 40.320 8.312 40.416 ;
       RECT 0.048 41.088 8.312 41.184 ;
       RECT 0.048 41.856 8.312 41.952 ;
+      RECT 0.048 42.624 8.312 42.720 ;
+      RECT 0.048 43.392 8.312 43.488 ;
+      RECT 0.048 44.160 8.312 44.256 ;
     END
   END VDD
   OBS
     LAYER M1 ;
-    RECT 0 0 8.360 42.000 ;
+    RECT 0 0 8.360 44.800 ;
     LAYER M2 ;
-    RECT 0 0 8.360 42.000 ;
+    RECT 0 0 8.360 44.800 ;
     LAYER M3 ;
-    RECT 0 0 8.360 42.000 ;
+    RECT 0 0 8.360 44.800 ;
     LAYER M4 ;
-    RECT 0 0 8.360 42.000 ;
+    RECT 0 0 8.360 44.800 ;
   END
-END sprf_256x32
+END spsram_256x32_h
 
 END LIBRARY
-module sprf_256x32
+module spsram_256x32_h
 (
-    we_a,
-    addr_a,
-    din_a,
-    dout_a,
-    clk
+   rd_out,
+   addr_in,
+   we_in,
+   wd_in,
+   clk,
+   ce_in
 );
-    parameter DATA_WIDTH = 32;
-    parameter ADDR_WIDTH = 8;
+   parameter BITS = 32;
+   parameter WORD_DEPTH = 256;
+   parameter ADDR_WIDTH = 8;
+   parameter corrupt_mem_on_X_p = 1;
 
-    // Port A
-    input  wire                     we_a,
-    input  wire [ADDR_WIDTH-1:0]    addr_a,
-    input  wire [DATA_WIDTH-1:0]    din_a,
-    output reg  [DATA_WIDTH-1:0]    dout_a,
+   output reg [BITS-1:0]    rd_out;
+   input  [ADDR_WIDTH-1:0]  addr_in;
+   input                    we_in;
+   input  [BITS-1:0]        wd_in;
+   input                    clk;
+   input                    ce_in;
 
-    input  wire                     clk,
+   reg    [BITS-1:0]        mem [0:WORD_DEPTH-1];
 
-    // Memory array: 256 words of 32 bits
-    reg [DATA_WIDTH-1:0] mem [0:(1 << ADDR_WIDTH)-1];
+   integer j;
 
-    // Synchronous Port A
-     always @(posedge clk) begin
-        if (we_a) begin
-            mem[addr_a] <= din_a;
-        end
-        dout_a <= mem[addr_a];  // Read occurs after write (read-after-write OK)
-    end
+   always @(posedge clk)
+   begin
+      if (ce_in)
+      begin
+         //if ((we_in !== 1'b1 && we_in !== 1'b0) && corrupt_mem_on_X_p)
+         if (corrupt_mem_on_X_p &&
+             ((^we_in === 1'bx) || (^addr_in === 1'bx))
+            )
+         begin
+            // WEN or ADDR is unknown, so corrupt entire array (using unsynthesizeable for loop)
+            for (j = 0; j < WORD_DEPTH; j = j + 1)
+               mem[j] <= 'x;
+            $display("warning: ce_in=1, we_in is %b, addr_in = %x in spsram_256x32_h", we_in, addr_in);
+         end
+         else if (we_in)
+         begin
+            mem[addr_in] <= (wd_in) | (mem[addr_in]);
+         end
+         // read
+         rd_out <= mem[addr_in];
+      end
+      else
+      begin
+         // Make sure read fails if ce_in is low
+         rd_out <= 'x;
+      end
+   end
+
+   // Timing check placeholders (will be replaced during SDF back-annotation)
+   reg notifier;
+   specify
+      // Delay from clk to rd_out
+      (posedge clk *> rd_out) = (0, 0);
+
+      // Timing checks
+      $width     (posedge clk,            0, 0, notifier);
+      $width     (negedge clk,            0, 0, notifier);
+      $period    (posedge clk,            0,    notifier);
+      $setuphold (posedge clk, we_in,     0, 0, notifier);
+      $setuphold (posedge clk, ce_in,     0, 0, notifier);
+      $setuphold (posedge clk, addr_in,   0, 0, notifier);
+      $setuphold (posedge clk, wd_in,     0, 0, notifier);
+   endspecify
 
 endmodule
 (* blackbox *)
-module sprf_256x32 (
-    input we_a,
-    input [7:0] addr_a,
-    input [31:0] din_a,
-    output reg [31:0] dout_a,
-    clk
+module spsram_256x32_h (
+   output reg [31:0] rd_out,
+   input [7:0] addr_in,
+   input we_in,
+   input [31:0] wd_in,
+   input clk,
+   input ce_in
 );
 endmodule
-library(sprf_256x32) {
+library(spsram_256x32_h) {
     technology (cmos);
     delay_model : table_lookup;
     revision : 1.0;
@@ -904,32 +960,32 @@ library(sprf_256x32) {
     output_threshold_pct_rise : 50.000;
 
 
-    lu_table_template(sprf_256x32_mem_out_delay_template) {
+    lu_table_template(spsram_256x32_h_mem_out_delay_template) {
         variable_1 : input_net_transition;
         variable_2 : total_output_net_capacitance;
             index_1 ("1000, 1001");
             index_2 ("1000, 1001");
     }
-    lu_table_template(sprf_256x32_mem_out_slew_template) {
+    lu_table_template(spsram_256x32_h_mem_out_slew_template) {
         variable_1 : total_output_net_capacitance;
             index_1 ("1000, 1001");
     }
-    lu_table_template(sprf_256x32_constraint_template) {
+    lu_table_template(spsram_256x32_h_constraint_template) {
         variable_1 : related_pin_transition;
         variable_2 : constrained_pin_transition;
             index_1 ("1000, 1001");
             index_2 ("1000, 1001");
     }
-    power_lut_template(sprf_256x32_energy_template_clkslew) {
+    power_lut_template(spsram_256x32_h_energy_template_clkslew) {
         variable_1 : input_transition_time;
             index_1 ("1000, 1001");
     }
-    power_lut_template(sprf_256x32_energy_template_sigslew) {
+    power_lut_template(spsram_256x32_h_energy_template_sigslew) {
         variable_1 : input_transition_time;
             index_1 ("1000, 1001");
     }
     library_features(report_delay_calculation);
-    type (sprf_256x32_DATA) {
+    type (spsram_256x32_h_DATA) {
         base_type : array ;
         data_type : bit ;
         bit_width : 32;
@@ -937,7 +993,7 @@ library(sprf_256x32) {
         bit_to : 0 ;
         downto : true ;
     }
-    type (sprf_256x32_ADDRESS) {
+    type (spsram_256x32_h_ADDRESS) {
         base_type : array ;
         data_type : bit ;
         bit_width : 8;
@@ -945,218 +1001,13 @@ library(sprf_256x32) {
         bit_to : 0 ;
         downto : true ;
     }
-cell(sprf_256x32) {
-    area : 343.985;
+cell(spsram_256x32_h) {
+    area : 368.869;
     interface_timing : true;
-    pin(we_a){
-        direction : input;
-        capacitance : 0.005;
-        timing() {
-            related_pin : clk;
-            timing_type : setup_rising ;
-            rise_constraint(sprf_256x32_constraint_template) {
-                index_1 ("0.009, 0.227");
-                index_2 ("0.009, 0.227");
-                values ( \
-                  "0.050, 0.050", \
-                  "0.050, 0.050" \
-                )
-            }
-            fall_constraint(sprf_256x32_constraint_template) {
-                index_1 ("0.009, 0.227");
-                index_2 ("0.009, 0.227");
-                values ( \
-                  "0.050, 0.050", \
-                  "0.050, 0.050" \
-                )
-            }
-        } 
-        timing() {
-            related_pin : clk;
-            timing_type : hold_rising ;
-            rise_constraint(sprf_256x32_constraint_template) {
-                index_1 ("0.009, 0.227");
-                index_2 ("0.009, 0.227");
-                values ( \
-                  "0.050, 0.050", \
-                  "0.050, 0.050" \
-                )
-            }
-            fall_constraint(sprf_256x32_constraint_template) {
-                index_1 ("0.009, 0.227");
-                index_2 ("0.009, 0.227");
-                values ( \
-                  "0.050, 0.050", \
-                  "0.050, 0.050" \
-                )
-            }
-        }
-        internal_power(){
-            rise_power(sprf_256x32_energy_template_sigslew) {
-                index_1 ("0.009, 0.227");
-                values ("0.013, 0.013")
-            }
-            fall_power(sprf_256x32_energy_template_sigslew) {
-                index_1 ("0.009, 0.227");
-                values ("0.013, 0.013")
-            }
-        }
-    }
-    bus(addr_a)   {
-        bus_type : sprf_256x32_ADDRESS;
-        direction : input;
-        capacitance : 0.005;
-        timing() {
-            related_pin : clk;
-            timing_type : setup_rising ;
-            rise_constraint(sprf_256x32_constraint_template) {
-                index_1 ("0.009, 0.227");
-                index_2 ("0.009, 0.227");
-                values ( \
-                  "0.050, 0.050", \
-                  "0.050, 0.050" \
-                )
-            }
-            fall_constraint(sprf_256x32_constraint_template) {
-                index_1 ("0.009, 0.227");
-                index_2 ("0.009, 0.227");
-                values ( \
-                  "0.050, 0.050", \
-                  "0.050, 0.050" \
-                )
-            }
-        } 
-        timing() {
-            related_pin : clk;
-            timing_type : hold_rising ;
-            rise_constraint(sprf_256x32_constraint_template) {
-                index_1 ("0.009, 0.227");
-                index_2 ("0.009, 0.227");
-                values ( \
-                  "0.050, 0.050", \
-                  "0.050, 0.050" \
-                )
-            }
-            fall_constraint(sprf_256x32_constraint_template) {
-                index_1 ("0.009, 0.227");
-                index_2 ("0.009, 0.227");
-                values ( \
-                  "0.050, 0.050", \
-                  "0.050, 0.050" \
-                )
-            }
-        }
-        internal_power(){
-            rise_power(sprf_256x32_energy_template_sigslew) {
-                index_1 ("0.009, 0.227");
-                values ("0.013, 0.013")
-            }
-            fall_power(sprf_256x32_energy_template_sigslew) {
-                index_1 ("0.009, 0.227");
-                values ("0.013, 0.013")
-            }
-        }
-    }
-    bus(din_a)   {
-        bus_type : sprf_256x32_DATA;
-        direction : input;
-        capacitance : 0.005;
-        timing() {
-            related_pin : clk;
-            timing_type : setup_rising ;
-            rise_constraint(sprf_256x32_constraint_template) {
-                index_1 ("0.009, 0.227");
-                index_2 ("0.009, 0.227");
-                values ( \
-                  "0.050, 0.050", \
-                  "0.050, 0.050" \
-                )
-            }
-            fall_constraint(sprf_256x32_constraint_template) {
-                index_1 ("0.009, 0.227");
-                index_2 ("0.009, 0.227");
-                values ( \
-                  "0.050, 0.050", \
-                  "0.050, 0.050" \
-                )
-            }
-        } 
-        timing() {
-            related_pin : clk;
-            timing_type : hold_rising ;
-            rise_constraint(sprf_256x32_constraint_template) {
-                index_1 ("0.009, 0.227");
-                index_2 ("0.009, 0.227");
-                values ( \
-                  "0.050, 0.050", \
-                  "0.050, 0.050" \
-                )
-            }
-            fall_constraint(sprf_256x32_constraint_template) {
-                index_1 ("0.009, 0.227");
-                index_2 ("0.009, 0.227");
-                values ( \
-                  "0.050, 0.050", \
-                  "0.050, 0.050" \
-                )
-            }
-        }
-        internal_power(){
-            when : "(! (we_a) )";
-            rise_power(sprf_256x32_energy_template_sigslew) {
-                index_1 ("0.009, 0.227");
-                values ("0.013, 0.013")
-            }
-            fall_power(sprf_256x32_energy_template_sigslew) {
-                index_1 ("0.009, 0.227");
-                values ("0.013, 0.013")
-            }
-        }
-        internal_power(){
-            when : "(we_a)";
-            rise_power(sprf_256x32_energy_template_sigslew) {
-                index_1 ("0.009, 0.227");
-                values ("0.013, 0.013")
-            }
-            fall_power(sprf_256x32_energy_template_sigslew) {
-                index_1 ("0.009, 0.227");
-                values ("0.013, 0.013")
-            }
-        }
-    }
-    bus(dout_a)   {
-        bus_type : sprf_256x32_DATA;
-        direction : output;
-        max_capacitance : 0.500;
-        timing() {
-            related_pin : "clk" ;
-            timing_type : rising_edge;
-            timing_sense : non_unate;
-            cell_rise(sprf_256x32_mem_out_delay_template) {
-                index_1 ("0.009, 0.227");
-                index_2 ("0.005, 0.500");
-                values ( \
-                  "0.218, 0.218", \
-                  "0.218, 0.218" \
-                )
-            }
-            cell_fall(sprf_256x32_mem_out_delay_template) {
-                index_1 ("0.009, 0.227");
-                index_2 ("0.005, 0.500");
-                values ( \
-                  "0.218, 0.218", \
-                  "0.218, 0.218" \
-                )
-            }
-            rise_transition(sprf_256x32_mem_out_slew_template) {
-                index_1 ("0.005, 0.500");
-                values ("0.009, 0.227")
-            }
-            fall_transition(sprf_256x32_mem_out_slew_template) {
-                index_1 ("0.005, 0.500");
-                values ("0.009, 0.227")
-            }
-        }
+    memory() {
+        type : ram;
+        address_width : 8;
+        word_width : 32;
     }
     pin(clk)   {
         direction : input;
@@ -1164,17 +1015,288 @@ cell(sprf_256x32) {
         clock : true;
         min_period           : 0.157 ;
         internal_power(){
-            rise_power(sprf_256x32_energy_template_clkslew) {
+            rise_power(spsram_256x32_h_energy_template_clkslew) {
                 index_1 ("0.009, 0.227");
                 values ("1.345, 1.345")
             }
-            fall_power(sprf_256x32_energy_template_clkslew) {
+            fall_power(spsram_256x32_h_energy_template_clkslew) {
                 index_1 ("0.009, 0.227");
                 values ("1.345, 1.345")
             }
         }
     }
 
+    bus(rd_out)   {
+        bus_type : spsram_256x32_h_DATA;
+        direction : output;
+        max_capacitance : 0.500;
+        memory_read() {
+            address : addr_in;
+        }
+        timing() {
+            related_pin : "clk" ;
+            timing_type : rising_edge;
+            timing_sense : non_unate;
+            cell_rise(spsram_256x32_h_mem_out_delay_template) {
+                index_1 ("0.009, 0.227");
+                index_2 ("0.005, 0.500");
+                values ( \
+                  "0.218, 0.218", \
+                  "0.218, 0.218" \
+                )
+            }
+            cell_fall(spsram_256x32_h_mem_out_delay_template) {
+                index_1 ("0.009, 0.227");
+                index_2 ("0.005, 0.500");
+                values ( \
+                  "0.218, 0.218", \
+                  "0.218, 0.218" \
+                )
+            }
+            rise_transition(spsram_256x32_h_mem_out_slew_template) {
+                index_1 ("0.005, 0.500");
+                values ("0.009, 0.227")
+            }
+            fall_transition(spsram_256x32_h_mem_out_slew_template) {
+                index_1 ("0.005, 0.500");
+                values ("0.009, 0.227")
+            }
+        }
+    }
+    pin(we_in){
+        direction : input;
+        capacitance : 0.005;
+        timing() {
+            related_pin : clk;
+            timing_type : setup_rising ;
+            rise_constraint(spsram_256x32_h_constraint_template) {
+                index_1 ("0.009, 0.227");
+                index_2 ("0.009, 0.227");
+                values ( \
+                  "0.050, 0.050", \
+                  "0.050, 0.050" \
+                )
+            }
+            fall_constraint(spsram_256x32_h_constraint_template) {
+                index_1 ("0.009, 0.227");
+                index_2 ("0.009, 0.227");
+                values ( \
+                  "0.050, 0.050", \
+                  "0.050, 0.050" \
+                )
+            }
+        } 
+        timing() {
+            related_pin : clk;
+            timing_type : hold_rising ;
+            rise_constraint(spsram_256x32_h_constraint_template) {
+                index_1 ("0.009, 0.227");
+                index_2 ("0.009, 0.227");
+                values ( \
+                  "0.050, 0.050", \
+                  "0.050, 0.050" \
+                )
+            }
+            fall_constraint(spsram_256x32_h_constraint_template) {
+                index_1 ("0.009, 0.227");
+                index_2 ("0.009, 0.227");
+                values ( \
+                  "0.050, 0.050", \
+                  "0.050, 0.050" \
+                )
+            }
+        }
+        internal_power(){
+            rise_power(spsram_256x32_h_energy_template_sigslew) {
+                index_1 ("0.009, 0.227");
+                values ("0.013, 0.013")
+            }
+            fall_power(spsram_256x32_h_energy_template_sigslew) {
+                index_1 ("0.009, 0.227");
+                values ("0.013, 0.013")
+            }
+        }
+    }
+    pin(ce_in){
+        direction : input;
+        capacitance : 0.005;
+        timing() {
+            related_pin : clk;
+            timing_type : setup_rising ;
+            rise_constraint(spsram_256x32_h_constraint_template) {
+                index_1 ("0.009, 0.227");
+                index_2 ("0.009, 0.227");
+                values ( \
+                  "0.050, 0.050", \
+                  "0.050, 0.050" \
+                )
+            }
+            fall_constraint(spsram_256x32_h_constraint_template) {
+                index_1 ("0.009, 0.227");
+                index_2 ("0.009, 0.227");
+                values ( \
+                  "0.050, 0.050", \
+                  "0.050, 0.050" \
+                )
+            }
+        } 
+        timing() {
+            related_pin : clk;
+            timing_type : hold_rising ;
+            rise_constraint(spsram_256x32_h_constraint_template) {
+                index_1 ("0.009, 0.227");
+                index_2 ("0.009, 0.227");
+                values ( \
+                  "0.050, 0.050", \
+                  "0.050, 0.050" \
+                )
+            }
+            fall_constraint(spsram_256x32_h_constraint_template) {
+                index_1 ("0.009, 0.227");
+                index_2 ("0.009, 0.227");
+                values ( \
+                  "0.050, 0.050", \
+                  "0.050, 0.050" \
+                )
+            }
+        }
+        internal_power(){
+            rise_power(spsram_256x32_h_energy_template_sigslew) {
+                index_1 ("0.009, 0.227");
+                values ("0.013, 0.013")
+            }
+            fall_power(spsram_256x32_h_energy_template_sigslew) {
+                index_1 ("0.009, 0.227");
+                values ("0.013, 0.013")
+            }
+        }
+    }
+    bus(addr_in)   {
+        bus_type : spsram_256x32_h_ADDRESS;
+        direction : input;
+        capacitance : 0.005;
+        timing() {
+            related_pin : clk;
+            timing_type : setup_rising ;
+            rise_constraint(spsram_256x32_h_constraint_template) {
+                index_1 ("0.009, 0.227");
+                index_2 ("0.009, 0.227");
+                values ( \
+                  "0.050, 0.050", \
+                  "0.050, 0.050" \
+                )
+            }
+            fall_constraint(spsram_256x32_h_constraint_template) {
+                index_1 ("0.009, 0.227");
+                index_2 ("0.009, 0.227");
+                values ( \
+                  "0.050, 0.050", \
+                  "0.050, 0.050" \
+                )
+            }
+        } 
+        timing() {
+            related_pin : clk;
+            timing_type : hold_rising ;
+            rise_constraint(spsram_256x32_h_constraint_template) {
+                index_1 ("0.009, 0.227");
+                index_2 ("0.009, 0.227");
+                values ( \
+                  "0.050, 0.050", \
+                  "0.050, 0.050" \
+                )
+            }
+            fall_constraint(spsram_256x32_h_constraint_template) {
+                index_1 ("0.009, 0.227");
+                index_2 ("0.009, 0.227");
+                values ( \
+                  "0.050, 0.050", \
+                  "0.050, 0.050" \
+                )
+            }
+        }
+        internal_power(){
+            rise_power(spsram_256x32_h_energy_template_sigslew) {
+                index_1 ("0.009, 0.227");
+                values ("0.013, 0.013")
+            }
+            fall_power(spsram_256x32_h_energy_template_sigslew) {
+                index_1 ("0.009, 0.227");
+                values ("0.013, 0.013")
+            }
+        }
+    }
+    bus(wd_in)   {
+        bus_type : spsram_256x32_h_DATA;
+        memory_write() {
+            address : addr_in;
+            clocked_on : "clk";
+        }
+        direction : input;
+        capacitance : 0.005;
+        timing() {
+            related_pin : clk;
+            timing_type : setup_rising ;
+            rise_constraint(spsram_256x32_h_constraint_template) {
+                index_1 ("0.009, 0.227");
+                index_2 ("0.009, 0.227");
+                values ( \
+                  "0.050, 0.050", \
+                  "0.050, 0.050" \
+                )
+            }
+            fall_constraint(spsram_256x32_h_constraint_template) {
+                index_1 ("0.009, 0.227");
+                index_2 ("0.009, 0.227");
+                values ( \
+                  "0.050, 0.050", \
+                  "0.050, 0.050" \
+                )
+            }
+        } 
+        timing() {
+            related_pin : clk;
+            timing_type : hold_rising ;
+            rise_constraint(spsram_256x32_h_constraint_template) {
+                index_1 ("0.009, 0.227");
+                index_2 ("0.009, 0.227");
+                values ( \
+                  "0.050, 0.050", \
+                  "0.050, 0.050" \
+                )
+            }
+            fall_constraint(spsram_256x32_h_constraint_template) {
+                index_1 ("0.009, 0.227");
+                index_2 ("0.009, 0.227");
+                values ( \
+                  "0.050, 0.050", \
+                  "0.050, 0.050" \
+                )
+            }
+        }
+        internal_power(){
+            when : "(! (we_in) )";
+            rise_power(spsram_256x32_h_energy_template_sigslew) {
+                index_1 ("0.009, 0.227");
+                values ("0.013, 0.013")
+            }
+            fall_power(spsram_256x32_h_energy_template_sigslew) {
+                index_1 ("0.009, 0.227");
+                values ("0.013, 0.013")
+            }
+        }
+        internal_power(){
+            when : "(we_in)";
+            rise_power(spsram_256x32_h_energy_template_sigslew) {
+                index_1 ("0.009, 0.227");
+                values ("0.013, 0.013")
+            }
+            fall_power(spsram_256x32_h_energy_template_sigslew) {
+                index_1 ("0.009, 0.227");
+                values ("0.013, 0.013")
+            }
+        }
+    }
     cell_leakage_power : 128.900;
 }
 

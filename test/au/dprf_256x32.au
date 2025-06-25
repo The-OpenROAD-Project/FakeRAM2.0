@@ -1484,7 +1484,7 @@ module dprf_256x32
     addr_b,
     din_b,
     dout_b,
-    clk,
+    clk
 );
     parameter DATA_WIDTH = 32;
     parameter ADDR_WIDTH = 8;
@@ -1533,7 +1533,7 @@ module dprf_256x32 (
     input [7:0] addr_b,
     input [31:0] din_b,
     output reg [31:0] dout_b,
-    clk,
+    clk
 );
 endmodule
 library(dprf_256x32) {
@@ -1781,7 +1781,7 @@ cell(dprf_256x32) {
             }
         }
         internal_power(){
-            when : "(! (we_in) )";
+            when : "(! (we_a) )";
             rise_power(dprf_256x32_energy_template_sigslew) {
                 index_1 ("0.009, 0.227");
                 values ("0.013, 0.013")
@@ -1792,7 +1792,7 @@ cell(dprf_256x32) {
             }
         }
         internal_power(){
-            when : "(we_in)";
+            when : "(we_a)";
             rise_power(dprf_256x32_energy_template_sigslew) {
                 index_1 ("0.009, 0.227");
                 values ("0.013, 0.013")
@@ -1991,7 +1991,7 @@ cell(dprf_256x32) {
             }
         }
         internal_power(){
-            when : "(! (we_in) )";
+            when : "(! (we_b) )";
             rise_power(dprf_256x32_energy_template_sigslew) {
                 index_1 ("0.009, 0.227");
                 values ("0.013, 0.013")
@@ -2002,7 +2002,7 @@ cell(dprf_256x32) {
             }
         }
         internal_power(){
-            when : "(we_in)";
+            when : "(we_b)";
             rise_power(dprf_256x32_energy_template_sigslew) {
                 index_1 ("0.009, 0.227");
                 values ("0.013, 0.013")

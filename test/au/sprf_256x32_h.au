@@ -6,13 +6,13 @@ PROPERTYDEFINITIONS
   MACRO depth INTEGER ;
   MACRO banks INTEGER ;
 END PROPERTYDEFINITIONS
-MACRO sprf_256x32
+MACRO sprf_256x32_h
   PROPERTY width 32 ;
   PROPERTY depth 256 ;
   PROPERTY banks 2 ;
-  FOREIGN sprf_256x32 0 0 ;
+  FOREIGN sprf_256x32_h 0 0 ;
   SYMMETRY X Y R90 ;
-  SIZE 8.360 BY 42.000 ;
+  SIZE 8.360 BY 61.600 ;
   CLASS BLOCK ;
   PIN dout_a[0]
     DIRECTION OUTPUT ;
@@ -29,7 +29,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 0.576 0.024 0.600 ;
+      RECT 0.000 0.864 0.024 0.888 ;
     END
   END dout_a[1]
   PIN dout_a[2]
@@ -38,7 +38,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 1.104 0.024 1.128 ;
+      RECT 0.000 1.680 0.024 1.704 ;
     END
   END dout_a[2]
   PIN dout_a[3]
@@ -47,7 +47,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 1.632 0.024 1.656 ;
+      RECT 0.000 2.496 0.024 2.520 ;
     END
   END dout_a[3]
   PIN dout_a[4]
@@ -56,7 +56,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 2.160 0.024 2.184 ;
+      RECT 0.000 3.312 0.024 3.336 ;
     END
   END dout_a[4]
   PIN dout_a[5]
@@ -65,7 +65,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 2.688 0.024 2.712 ;
+      RECT 0.000 4.128 0.024 4.152 ;
     END
   END dout_a[5]
   PIN dout_a[6]
@@ -74,7 +74,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 3.216 0.024 3.240 ;
+      RECT 0.000 4.944 0.024 4.968 ;
     END
   END dout_a[6]
   PIN dout_a[7]
@@ -83,7 +83,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 3.744 0.024 3.768 ;
+      RECT 0.000 5.760 0.024 5.784 ;
     END
   END dout_a[7]
   PIN dout_a[8]
@@ -92,7 +92,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 4.272 0.024 4.296 ;
+      RECT 0.000 6.576 0.024 6.600 ;
     END
   END dout_a[8]
   PIN dout_a[9]
@@ -101,7 +101,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 4.800 0.024 4.824 ;
+      RECT 0.000 7.392 0.024 7.416 ;
     END
   END dout_a[9]
   PIN dout_a[10]
@@ -110,7 +110,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 5.328 0.024 5.352 ;
+      RECT 0.000 8.208 0.024 8.232 ;
     END
   END dout_a[10]
   PIN dout_a[11]
@@ -119,7 +119,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 5.856 0.024 5.880 ;
+      RECT 0.000 9.024 0.024 9.048 ;
     END
   END dout_a[11]
   PIN dout_a[12]
@@ -128,7 +128,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 6.384 0.024 6.408 ;
+      RECT 0.000 9.840 0.024 9.864 ;
     END
   END dout_a[12]
   PIN dout_a[13]
@@ -137,7 +137,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 6.912 0.024 6.936 ;
+      RECT 0.000 10.656 0.024 10.680 ;
     END
   END dout_a[13]
   PIN dout_a[14]
@@ -146,7 +146,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 7.440 0.024 7.464 ;
+      RECT 0.000 11.472 0.024 11.496 ;
     END
   END dout_a[14]
   PIN dout_a[15]
@@ -155,7 +155,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 7.968 0.024 7.992 ;
+      RECT 0.000 12.288 0.024 12.312 ;
     END
   END dout_a[15]
   PIN dout_a[16]
@@ -164,7 +164,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 8.496 0.024 8.520 ;
+      RECT 0.000 13.104 0.024 13.128 ;
     END
   END dout_a[16]
   PIN dout_a[17]
@@ -173,7 +173,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 9.024 0.024 9.048 ;
+      RECT 0.000 13.920 0.024 13.944 ;
     END
   END dout_a[17]
   PIN dout_a[18]
@@ -182,7 +182,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 9.552 0.024 9.576 ;
+      RECT 0.000 14.736 0.024 14.760 ;
     END
   END dout_a[18]
   PIN dout_a[19]
@@ -191,7 +191,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 10.080 0.024 10.104 ;
+      RECT 0.000 15.552 0.024 15.576 ;
     END
   END dout_a[19]
   PIN dout_a[20]
@@ -200,7 +200,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 10.608 0.024 10.632 ;
+      RECT 0.000 16.368 0.024 16.392 ;
     END
   END dout_a[20]
   PIN dout_a[21]
@@ -209,7 +209,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 11.136 0.024 11.160 ;
+      RECT 0.000 17.184 0.024 17.208 ;
     END
   END dout_a[21]
   PIN dout_a[22]
@@ -218,7 +218,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 11.664 0.024 11.688 ;
+      RECT 0.000 18.000 0.024 18.024 ;
     END
   END dout_a[22]
   PIN dout_a[23]
@@ -227,7 +227,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 12.192 0.024 12.216 ;
+      RECT 0.000 18.816 0.024 18.840 ;
     END
   END dout_a[23]
   PIN dout_a[24]
@@ -236,7 +236,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 12.720 0.024 12.744 ;
+      RECT 0.000 19.632 0.024 19.656 ;
     END
   END dout_a[24]
   PIN dout_a[25]
@@ -245,7 +245,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 13.248 0.024 13.272 ;
+      RECT 0.000 20.448 0.024 20.472 ;
     END
   END dout_a[25]
   PIN dout_a[26]
@@ -254,7 +254,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 13.776 0.024 13.800 ;
+      RECT 0.000 21.264 0.024 21.288 ;
     END
   END dout_a[26]
   PIN dout_a[27]
@@ -263,7 +263,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 14.304 0.024 14.328 ;
+      RECT 0.000 22.080 0.024 22.104 ;
     END
   END dout_a[27]
   PIN dout_a[28]
@@ -272,7 +272,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 14.832 0.024 14.856 ;
+      RECT 0.000 22.896 0.024 22.920 ;
     END
   END dout_a[28]
   PIN dout_a[29]
@@ -281,7 +281,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 15.360 0.024 15.384 ;
+      RECT 0.000 23.712 0.024 23.736 ;
     END
   END dout_a[29]
   PIN dout_a[30]
@@ -290,7 +290,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 15.888 0.024 15.912 ;
+      RECT 0.000 24.528 0.024 24.552 ;
     END
   END dout_a[30]
   PIN dout_a[31]
@@ -299,7 +299,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 16.416 0.024 16.440 ;
+      RECT 0.000 25.344 0.024 25.368 ;
     END
   END dout_a[31]
   PIN din_a[0]
@@ -308,7 +308,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 17.856 0.024 17.880 ;
+      RECT 0.000 26.496 0.024 26.520 ;
     END
   END din_a[0]
   PIN din_a[1]
@@ -317,7 +317,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 18.384 0.024 18.408 ;
+      RECT 0.000 27.312 0.024 27.336 ;
     END
   END din_a[1]
   PIN din_a[2]
@@ -326,7 +326,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 18.912 0.024 18.936 ;
+      RECT 0.000 28.128 0.024 28.152 ;
     END
   END din_a[2]
   PIN din_a[3]
@@ -335,7 +335,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 19.440 0.024 19.464 ;
+      RECT 0.000 28.944 0.024 28.968 ;
     END
   END din_a[3]
   PIN din_a[4]
@@ -344,7 +344,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 19.968 0.024 19.992 ;
+      RECT 0.000 29.760 0.024 29.784 ;
     END
   END din_a[4]
   PIN din_a[5]
@@ -353,7 +353,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 20.496 0.024 20.520 ;
+      RECT 0.000 30.576 0.024 30.600 ;
     END
   END din_a[5]
   PIN din_a[6]
@@ -362,7 +362,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 21.024 0.024 21.048 ;
+      RECT 0.000 31.392 0.024 31.416 ;
     END
   END din_a[6]
   PIN din_a[7]
@@ -371,7 +371,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 21.552 0.024 21.576 ;
+      RECT 0.000 32.208 0.024 32.232 ;
     END
   END din_a[7]
   PIN din_a[8]
@@ -380,7 +380,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 22.080 0.024 22.104 ;
+      RECT 0.000 33.024 0.024 33.048 ;
     END
   END din_a[8]
   PIN din_a[9]
@@ -389,7 +389,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 22.608 0.024 22.632 ;
+      RECT 0.000 33.840 0.024 33.864 ;
     END
   END din_a[9]
   PIN din_a[10]
@@ -398,7 +398,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 23.136 0.024 23.160 ;
+      RECT 0.000 34.656 0.024 34.680 ;
     END
   END din_a[10]
   PIN din_a[11]
@@ -407,7 +407,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 23.664 0.024 23.688 ;
+      RECT 0.000 35.472 0.024 35.496 ;
     END
   END din_a[11]
   PIN din_a[12]
@@ -416,7 +416,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 24.192 0.024 24.216 ;
+      RECT 0.000 36.288 0.024 36.312 ;
     END
   END din_a[12]
   PIN din_a[13]
@@ -425,7 +425,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 24.720 0.024 24.744 ;
+      RECT 0.000 37.104 0.024 37.128 ;
     END
   END din_a[13]
   PIN din_a[14]
@@ -434,7 +434,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 25.248 0.024 25.272 ;
+      RECT 0.000 37.920 0.024 37.944 ;
     END
   END din_a[14]
   PIN din_a[15]
@@ -443,7 +443,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 25.776 0.024 25.800 ;
+      RECT 0.000 38.736 0.024 38.760 ;
     END
   END din_a[15]
   PIN din_a[16]
@@ -452,7 +452,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 26.304 0.024 26.328 ;
+      RECT 0.000 39.552 0.024 39.576 ;
     END
   END din_a[16]
   PIN din_a[17]
@@ -461,7 +461,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 26.832 0.024 26.856 ;
+      RECT 0.000 40.368 0.024 40.392 ;
     END
   END din_a[17]
   PIN din_a[18]
@@ -470,7 +470,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 27.360 0.024 27.384 ;
+      RECT 0.000 41.184 0.024 41.208 ;
     END
   END din_a[18]
   PIN din_a[19]
@@ -479,7 +479,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 27.888 0.024 27.912 ;
+      RECT 0.000 42.000 0.024 42.024 ;
     END
   END din_a[19]
   PIN din_a[20]
@@ -488,7 +488,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 28.416 0.024 28.440 ;
+      RECT 0.000 42.816 0.024 42.840 ;
     END
   END din_a[20]
   PIN din_a[21]
@@ -497,7 +497,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 28.944 0.024 28.968 ;
+      RECT 0.000 43.632 0.024 43.656 ;
     END
   END din_a[21]
   PIN din_a[22]
@@ -506,7 +506,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 29.472 0.024 29.496 ;
+      RECT 0.000 44.448 0.024 44.472 ;
     END
   END din_a[22]
   PIN din_a[23]
@@ -515,7 +515,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 30.000 0.024 30.024 ;
+      RECT 0.000 45.264 0.024 45.288 ;
     END
   END din_a[23]
   PIN din_a[24]
@@ -524,7 +524,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 30.528 0.024 30.552 ;
+      RECT 0.000 46.080 0.024 46.104 ;
     END
   END din_a[24]
   PIN din_a[25]
@@ -533,7 +533,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 31.056 0.024 31.080 ;
+      RECT 0.000 46.896 0.024 46.920 ;
     END
   END din_a[25]
   PIN din_a[26]
@@ -542,7 +542,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 31.584 0.024 31.608 ;
+      RECT 0.000 47.712 0.024 47.736 ;
     END
   END din_a[26]
   PIN din_a[27]
@@ -551,7 +551,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 32.112 0.024 32.136 ;
+      RECT 0.000 48.528 0.024 48.552 ;
     END
   END din_a[27]
   PIN din_a[28]
@@ -560,7 +560,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 32.640 0.024 32.664 ;
+      RECT 0.000 49.344 0.024 49.368 ;
     END
   END din_a[28]
   PIN din_a[29]
@@ -569,7 +569,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 33.168 0.024 33.192 ;
+      RECT 0.000 50.160 0.024 50.184 ;
     END
   END din_a[29]
   PIN din_a[30]
@@ -578,7 +578,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 33.696 0.024 33.720 ;
+      RECT 0.000 50.976 0.024 51.000 ;
     END
   END din_a[30]
   PIN din_a[31]
@@ -587,7 +587,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 34.224 0.024 34.248 ;
+      RECT 0.000 51.792 0.024 51.816 ;
     END
   END din_a[31]
   PIN addr_a[0]
@@ -596,7 +596,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 35.664 0.024 35.688 ;
+      RECT 0.000 52.944 0.024 52.968 ;
     END
   END addr_a[0]
   PIN addr_a[1]
@@ -605,7 +605,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 36.192 0.024 36.216 ;
+      RECT 0.000 53.760 0.024 53.784 ;
     END
   END addr_a[1]
   PIN addr_a[2]
@@ -614,7 +614,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 36.720 0.024 36.744 ;
+      RECT 0.000 54.576 0.024 54.600 ;
     END
   END addr_a[2]
   PIN addr_a[3]
@@ -623,7 +623,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 37.248 0.024 37.272 ;
+      RECT 0.000 55.392 0.024 55.416 ;
     END
   END addr_a[3]
   PIN addr_a[4]
@@ -632,7 +632,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 37.776 0.024 37.800 ;
+      RECT 0.000 56.208 0.024 56.232 ;
     END
   END addr_a[4]
   PIN addr_a[5]
@@ -641,7 +641,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 38.304 0.024 38.328 ;
+      RECT 0.000 57.024 0.024 57.048 ;
     END
   END addr_a[5]
   PIN addr_a[6]
@@ -650,7 +650,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 38.832 0.024 38.856 ;
+      RECT 0.000 57.840 0.024 57.864 ;
     END
   END addr_a[6]
   PIN addr_a[7]
@@ -659,7 +659,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 39.360 0.024 39.384 ;
+      RECT 0.000 58.656 0.024 58.680 ;
     END
   END addr_a[7]
   PIN we_a
@@ -668,7 +668,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 40.800 0.024 40.824 ;
+      RECT 0.000 59.808 0.024 59.832 ;
     END
   END we_a
   PIN clk
@@ -677,7 +677,7 @@ MACRO sprf_256x32
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 41.328 0.024 41.352 ;
+      RECT 0.000 60.624 0.024 60.648 ;
     END
   END clk
   PIN VSS
@@ -740,6 +740,32 @@ MACRO sprf_256x32
       RECT 0.048 39.936 8.312 40.032 ;
       RECT 0.048 40.704 8.312 40.800 ;
       RECT 0.048 41.472 8.312 41.568 ;
+      RECT 0.048 42.240 8.312 42.336 ;
+      RECT 0.048 43.008 8.312 43.104 ;
+      RECT 0.048 43.776 8.312 43.872 ;
+      RECT 0.048 44.544 8.312 44.640 ;
+      RECT 0.048 45.312 8.312 45.408 ;
+      RECT 0.048 46.080 8.312 46.176 ;
+      RECT 0.048 46.848 8.312 46.944 ;
+      RECT 0.048 47.616 8.312 47.712 ;
+      RECT 0.048 48.384 8.312 48.480 ;
+      RECT 0.048 49.152 8.312 49.248 ;
+      RECT 0.048 49.920 8.312 50.016 ;
+      RECT 0.048 50.688 8.312 50.784 ;
+      RECT 0.048 51.456 8.312 51.552 ;
+      RECT 0.048 52.224 8.312 52.320 ;
+      RECT 0.048 52.992 8.312 53.088 ;
+      RECT 0.048 53.760 8.312 53.856 ;
+      RECT 0.048 54.528 8.312 54.624 ;
+      RECT 0.048 55.296 8.312 55.392 ;
+      RECT 0.048 56.064 8.312 56.160 ;
+      RECT 0.048 56.832 8.312 56.928 ;
+      RECT 0.048 57.600 8.312 57.696 ;
+      RECT 0.048 58.368 8.312 58.464 ;
+      RECT 0.048 59.136 8.312 59.232 ;
+      RECT 0.048 59.904 8.312 60.000 ;
+      RECT 0.048 60.672 8.312 60.768 ;
+      RECT 0.048 61.440 8.312 61.536 ;
     END
   END VSS
   PIN VDD
@@ -802,22 +828,47 @@ MACRO sprf_256x32
       RECT 0.048 40.320 8.312 40.416 ;
       RECT 0.048 41.088 8.312 41.184 ;
       RECT 0.048 41.856 8.312 41.952 ;
+      RECT 0.048 42.624 8.312 42.720 ;
+      RECT 0.048 43.392 8.312 43.488 ;
+      RECT 0.048 44.160 8.312 44.256 ;
+      RECT 0.048 44.928 8.312 45.024 ;
+      RECT 0.048 45.696 8.312 45.792 ;
+      RECT 0.048 46.464 8.312 46.560 ;
+      RECT 0.048 47.232 8.312 47.328 ;
+      RECT 0.048 48.000 8.312 48.096 ;
+      RECT 0.048 48.768 8.312 48.864 ;
+      RECT 0.048 49.536 8.312 49.632 ;
+      RECT 0.048 50.304 8.312 50.400 ;
+      RECT 0.048 51.072 8.312 51.168 ;
+      RECT 0.048 51.840 8.312 51.936 ;
+      RECT 0.048 52.608 8.312 52.704 ;
+      RECT 0.048 53.376 8.312 53.472 ;
+      RECT 0.048 54.144 8.312 54.240 ;
+      RECT 0.048 54.912 8.312 55.008 ;
+      RECT 0.048 55.680 8.312 55.776 ;
+      RECT 0.048 56.448 8.312 56.544 ;
+      RECT 0.048 57.216 8.312 57.312 ;
+      RECT 0.048 57.984 8.312 58.080 ;
+      RECT 0.048 58.752 8.312 58.848 ;
+      RECT 0.048 59.520 8.312 59.616 ;
+      RECT 0.048 60.288 8.312 60.384 ;
+      RECT 0.048 61.056 8.312 61.152 ;
     END
   END VDD
   OBS
     LAYER M1 ;
-    RECT 0 0 8.360 42.000 ;
+    RECT 0 0 8.360 61.600 ;
     LAYER M2 ;
-    RECT 0 0 8.360 42.000 ;
+    RECT 0 0 8.360 61.600 ;
     LAYER M3 ;
-    RECT 0 0 8.360 42.000 ;
+    RECT 0 0 8.360 61.600 ;
     LAYER M4 ;
-    RECT 0 0 8.360 42.000 ;
+    RECT 0 0 8.360 61.600 ;
   END
-END sprf_256x32
+END sprf_256x32_h
 
 END LIBRARY
-module sprf_256x32
+module sprf_256x32_h
 (
     we_a,
     addr_a,
@@ -849,7 +900,7 @@ module sprf_256x32
 
 endmodule
 (* blackbox *)
-module sprf_256x32 (
+module sprf_256x32_h (
     input we_a,
     input [7:0] addr_a,
     input [31:0] din_a,
@@ -857,7 +908,7 @@ module sprf_256x32 (
     clk
 );
 endmodule
-library(sprf_256x32) {
+library(sprf_256x32_h) {
     technology (cmos);
     delay_model : table_lookup;
     revision : 1.0;
@@ -904,32 +955,32 @@ library(sprf_256x32) {
     output_threshold_pct_rise : 50.000;
 
 
-    lu_table_template(sprf_256x32_mem_out_delay_template) {
+    lu_table_template(sprf_256x32_h_mem_out_delay_template) {
         variable_1 : input_net_transition;
         variable_2 : total_output_net_capacitance;
             index_1 ("1000, 1001");
             index_2 ("1000, 1001");
     }
-    lu_table_template(sprf_256x32_mem_out_slew_template) {
+    lu_table_template(sprf_256x32_h_mem_out_slew_template) {
         variable_1 : total_output_net_capacitance;
             index_1 ("1000, 1001");
     }
-    lu_table_template(sprf_256x32_constraint_template) {
+    lu_table_template(sprf_256x32_h_constraint_template) {
         variable_1 : related_pin_transition;
         variable_2 : constrained_pin_transition;
             index_1 ("1000, 1001");
             index_2 ("1000, 1001");
     }
-    power_lut_template(sprf_256x32_energy_template_clkslew) {
+    power_lut_template(sprf_256x32_h_energy_template_clkslew) {
         variable_1 : input_transition_time;
             index_1 ("1000, 1001");
     }
-    power_lut_template(sprf_256x32_energy_template_sigslew) {
+    power_lut_template(sprf_256x32_h_energy_template_sigslew) {
         variable_1 : input_transition_time;
             index_1 ("1000, 1001");
     }
     library_features(report_delay_calculation);
-    type (sprf_256x32_DATA) {
+    type (sprf_256x32_h_DATA) {
         base_type : array ;
         data_type : bit ;
         bit_width : 32;
@@ -937,7 +988,7 @@ library(sprf_256x32) {
         bit_to : 0 ;
         downto : true ;
     }
-    type (sprf_256x32_ADDRESS) {
+    type (sprf_256x32_h_ADDRESS) {
         base_type : array ;
         data_type : bit ;
         bit_width : 8;
@@ -945,8 +996,8 @@ library(sprf_256x32) {
         bit_to : 0 ;
         downto : true ;
     }
-cell(sprf_256x32) {
-    area : 343.985;
+cell(sprf_256x32_h) {
+    area : 509.873;
     interface_timing : true;
     pin(we_a){
         direction : input;
@@ -954,7 +1005,7 @@ cell(sprf_256x32) {
         timing() {
             related_pin : clk;
             timing_type : setup_rising ;
-            rise_constraint(sprf_256x32_constraint_template) {
+            rise_constraint(sprf_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
                 index_2 ("0.009, 0.227");
                 values ( \
@@ -962,7 +1013,7 @@ cell(sprf_256x32) {
                   "0.050, 0.050" \
                 )
             }
-            fall_constraint(sprf_256x32_constraint_template) {
+            fall_constraint(sprf_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
                 index_2 ("0.009, 0.227");
                 values ( \
@@ -974,7 +1025,7 @@ cell(sprf_256x32) {
         timing() {
             related_pin : clk;
             timing_type : hold_rising ;
-            rise_constraint(sprf_256x32_constraint_template) {
+            rise_constraint(sprf_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
                 index_2 ("0.009, 0.227");
                 values ( \
@@ -982,7 +1033,7 @@ cell(sprf_256x32) {
                   "0.050, 0.050" \
                 )
             }
-            fall_constraint(sprf_256x32_constraint_template) {
+            fall_constraint(sprf_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
                 index_2 ("0.009, 0.227");
                 values ( \
@@ -992,24 +1043,24 @@ cell(sprf_256x32) {
             }
         }
         internal_power(){
-            rise_power(sprf_256x32_energy_template_sigslew) {
+            rise_power(sprf_256x32_h_energy_template_sigslew) {
                 index_1 ("0.009, 0.227");
                 values ("0.013, 0.013")
             }
-            fall_power(sprf_256x32_energy_template_sigslew) {
+            fall_power(sprf_256x32_h_energy_template_sigslew) {
                 index_1 ("0.009, 0.227");
                 values ("0.013, 0.013")
             }
         }
     }
     bus(addr_a)   {
-        bus_type : sprf_256x32_ADDRESS;
+        bus_type : sprf_256x32_h_ADDRESS;
         direction : input;
         capacitance : 0.005;
         timing() {
             related_pin : clk;
             timing_type : setup_rising ;
-            rise_constraint(sprf_256x32_constraint_template) {
+            rise_constraint(sprf_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
                 index_2 ("0.009, 0.227");
                 values ( \
@@ -1017,7 +1068,7 @@ cell(sprf_256x32) {
                   "0.050, 0.050" \
                 )
             }
-            fall_constraint(sprf_256x32_constraint_template) {
+            fall_constraint(sprf_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
                 index_2 ("0.009, 0.227");
                 values ( \
@@ -1029,7 +1080,7 @@ cell(sprf_256x32) {
         timing() {
             related_pin : clk;
             timing_type : hold_rising ;
-            rise_constraint(sprf_256x32_constraint_template) {
+            rise_constraint(sprf_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
                 index_2 ("0.009, 0.227");
                 values ( \
@@ -1037,7 +1088,7 @@ cell(sprf_256x32) {
                   "0.050, 0.050" \
                 )
             }
-            fall_constraint(sprf_256x32_constraint_template) {
+            fall_constraint(sprf_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
                 index_2 ("0.009, 0.227");
                 values ( \
@@ -1047,24 +1098,24 @@ cell(sprf_256x32) {
             }
         }
         internal_power(){
-            rise_power(sprf_256x32_energy_template_sigslew) {
+            rise_power(sprf_256x32_h_energy_template_sigslew) {
                 index_1 ("0.009, 0.227");
                 values ("0.013, 0.013")
             }
-            fall_power(sprf_256x32_energy_template_sigslew) {
+            fall_power(sprf_256x32_h_energy_template_sigslew) {
                 index_1 ("0.009, 0.227");
                 values ("0.013, 0.013")
             }
         }
     }
     bus(din_a)   {
-        bus_type : sprf_256x32_DATA;
+        bus_type : sprf_256x32_h_DATA;
         direction : input;
         capacitance : 0.005;
         timing() {
             related_pin : clk;
             timing_type : setup_rising ;
-            rise_constraint(sprf_256x32_constraint_template) {
+            rise_constraint(sprf_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
                 index_2 ("0.009, 0.227");
                 values ( \
@@ -1072,7 +1123,7 @@ cell(sprf_256x32) {
                   "0.050, 0.050" \
                 )
             }
-            fall_constraint(sprf_256x32_constraint_template) {
+            fall_constraint(sprf_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
                 index_2 ("0.009, 0.227");
                 values ( \
@@ -1084,7 +1135,7 @@ cell(sprf_256x32) {
         timing() {
             related_pin : clk;
             timing_type : hold_rising ;
-            rise_constraint(sprf_256x32_constraint_template) {
+            rise_constraint(sprf_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
                 index_2 ("0.009, 0.227");
                 values ( \
@@ -1092,7 +1143,7 @@ cell(sprf_256x32) {
                   "0.050, 0.050" \
                 )
             }
-            fall_constraint(sprf_256x32_constraint_template) {
+            fall_constraint(sprf_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
                 index_2 ("0.009, 0.227");
                 values ( \
@@ -1103,36 +1154,36 @@ cell(sprf_256x32) {
         }
         internal_power(){
             when : "(! (we_a) )";
-            rise_power(sprf_256x32_energy_template_sigslew) {
+            rise_power(sprf_256x32_h_energy_template_sigslew) {
                 index_1 ("0.009, 0.227");
                 values ("0.013, 0.013")
             }
-            fall_power(sprf_256x32_energy_template_sigslew) {
+            fall_power(sprf_256x32_h_energy_template_sigslew) {
                 index_1 ("0.009, 0.227");
                 values ("0.013, 0.013")
             }
         }
         internal_power(){
             when : "(we_a)";
-            rise_power(sprf_256x32_energy_template_sigslew) {
+            rise_power(sprf_256x32_h_energy_template_sigslew) {
                 index_1 ("0.009, 0.227");
                 values ("0.013, 0.013")
             }
-            fall_power(sprf_256x32_energy_template_sigslew) {
+            fall_power(sprf_256x32_h_energy_template_sigslew) {
                 index_1 ("0.009, 0.227");
                 values ("0.013, 0.013")
             }
         }
     }
     bus(dout_a)   {
-        bus_type : sprf_256x32_DATA;
+        bus_type : sprf_256x32_h_DATA;
         direction : output;
         max_capacitance : 0.500;
         timing() {
             related_pin : "clk" ;
             timing_type : rising_edge;
             timing_sense : non_unate;
-            cell_rise(sprf_256x32_mem_out_delay_template) {
+            cell_rise(sprf_256x32_h_mem_out_delay_template) {
                 index_1 ("0.009, 0.227");
                 index_2 ("0.005, 0.500");
                 values ( \
@@ -1140,7 +1191,7 @@ cell(sprf_256x32) {
                   "0.218, 0.218" \
                 )
             }
-            cell_fall(sprf_256x32_mem_out_delay_template) {
+            cell_fall(sprf_256x32_h_mem_out_delay_template) {
                 index_1 ("0.009, 0.227");
                 index_2 ("0.005, 0.500");
                 values ( \
@@ -1148,11 +1199,11 @@ cell(sprf_256x32) {
                   "0.218, 0.218" \
                 )
             }
-            rise_transition(sprf_256x32_mem_out_slew_template) {
+            rise_transition(sprf_256x32_h_mem_out_slew_template) {
                 index_1 ("0.005, 0.500");
                 values ("0.009, 0.227")
             }
-            fall_transition(sprf_256x32_mem_out_slew_template) {
+            fall_transition(sprf_256x32_h_mem_out_slew_template) {
                 index_1 ("0.005, 0.500");
                 values ("0.009, 0.227")
             }
@@ -1164,11 +1215,11 @@ cell(sprf_256x32) {
         clock : true;
         min_period           : 0.157 ;
         internal_power(){
-            rise_power(sprf_256x32_energy_template_clkslew) {
+            rise_power(sprf_256x32_h_energy_template_clkslew) {
                 index_1 ("0.009, 0.227");
                 values ("1.345, 1.345")
             }
-            fall_power(sprf_256x32_energy_template_clkslew) {
+            fall_power(sprf_256x32_h_energy_template_clkslew) {
                 index_1 ("0.009, 0.227");
                 values ("1.345, 1.345")
             }
