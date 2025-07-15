@@ -104,13 +104,15 @@ class PhysicalData:
         ## The next few lines of code till "pin_pitch = min.." spreads the pins
         ## in higher multiples of pin pitch if there are available tracks
         track_count = 1
-        while number_of_spare_tracks > 0:
-            track_count += 1
-            number_of_spare_tracks = number_of_tracks_available - num_pins * track_count
-        track_count -= 1
+        if number_of_spare_tracks > 0:
+            while number_of_spare_tracks > 0:
+                track_count += 1
+                number_of_spare_tracks = number_of_tracks_available - num_pins * track_count
+            track_count -= 1
 
         self._pin_pitch = min_pin_pitch * track_count
         # Divide by the remaining 'spare' tracks into the inter-group spaces
         #  [4 groups -> 3 spaces]
         extra = math.floor((number_of_tracks_available - num_pins * track_count) / 3)
         self._group_pitch = extra * min_pin_pitch
+        

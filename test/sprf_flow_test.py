@@ -22,6 +22,7 @@ class SPRFFlowTest(FlowTestBase):
         expected_ram_list = [
             "sprf_256x256",
             "sprf_256x32",
+            "sprf_256x32_h",
         ]
         self._execute_run(self._tag, expected_ram_list)
 

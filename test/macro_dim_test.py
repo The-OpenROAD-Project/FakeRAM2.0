@@ -35,9 +35,37 @@ class MacroDimTest(unittest.TestCase):
                 "banks": num_banks,
             }
             (width, height) = self._process.get_macro_dimensions(
-                sram_data["width"], sram_data["depth"], sram_data["banks"]
+                sram_data["width"], sram_data["depth"], sram_data["banks"], 0
             )
             exp_height = base_height / num_banks
+            exp_width = base_width * num_banks
+            self.assertFalse(self._process.has_defined_bitcell_size())
+            self.assertAlmostEqual(height, exp_height, delta=self._delta)
+            self.assertAlmostEqual(width, exp_width, delta=self._delta)
+
+    def test_macro_dim_add_height(self):
+        """
+        Tests basic macro dimension calculation based on three bank
+        configurations
+        """
+
+        banks = [1, 2, 4]
+        base_height = 663.552
+        base_width = 5.054
+        for num_banks in banks:
+            sram_data = {
+                "width": 39,
+                "depth": 2048,
+                "banks": num_banks,
+                "additional_height": 10,
+            }
+            (width, height) = self._process.get_macro_dimensions(
+                sram_data["width"],
+                sram_data["depth"],
+                sram_data["banks"],
+                sram_data["additional_height"],
+            )
+            exp_height = (base_height / num_banks) + sram_data["additional_height"]
             exp_width = base_width * num_banks
             self.assertFalse(self._process.has_defined_bitcell_size())
             self.assertAlmostEqual(height, exp_height, delta=self._delta)
@@ -53,7 +81,7 @@ class MacroDimTest(unittest.TestCase):
         }
         with self.assertRaises(Exception):
             (width, height) = self._process.get_macro_dimensions(
-                sram_data["width"], sram_data["depth"], sram_data["banks"]
+                sram_data["width"], sram_data["depth"], sram_data["banks"], 0
             )
 
     def test_macro_dim_bitcell_override(self):
@@ -72,7 +100,7 @@ class MacroDimTest(unittest.TestCase):
         exp_width = 4723.2
         exp_height = 140083.2
         (width, height) = process.get_macro_dimensions(
-            sram_data["width"], sram_data["depth"], sram_data["banks"]
+            sram_data["width"], sram_data["depth"], sram_data["banks"], 0
         )
         self.assertTrue(process.has_defined_bitcell_size())
         (bitcell_width, bitcell_height) = process.get_bitcell_dimensions()

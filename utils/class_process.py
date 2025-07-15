@@ -88,7 +88,7 @@ class Process:
             bitcell_width = 2 * contacted_poly_pitch_um
         return (bitcell_width, bitcell_height)
 
-    def get_macro_dimensions(self, width_in_bits, depth, num_banks):
+    def get_macro_dimensions(self, width_in_bits, depth, num_banks, additional_height):
         """
         Returns the computed macro height & width based on the width/depth/banks
         and process parameters
@@ -111,6 +111,8 @@ class Process:
 
         total_height = all_bitcell_height * 1.2
         total_width = all_bitcell_width * 1.2
+
+        total_height += additional_height
 
         return (total_width, total_height)
 

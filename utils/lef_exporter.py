@@ -15,6 +15,16 @@ class LefExporter(Exporter):
     def __init__(self, memory):
         """Initializer"""
         Exporter.__init__(self, memory)
+        # In rect_pin_mode, we try and avoid EOL spacing issues by:
+        #   1) making the pins rectangular in the X direction:
+        #          width: min_pin_width * 1.5
+        #          height: 1.5 * min_pin_width
+        #   2) reducing the width of the power/ground straps by one x_offset
+        #      on the left side where the pins are
+        self._rect_pin_mode = (
+            memory.get_physical_data().get_pin_pitch()
+            == memory.get_process_data().get_pin_pitch_um()
+        )
 
     def export(self, out_fh):
         """Exports LEF file to output stream"""
@@ -91,7 +101,13 @@ class LefExporter(Exporter):
         fid.write("    SHAPE ABUTMENT ;\n")
         fid.write("    PORT\n")
         fid.write("      LAYER %s ;\n" % layer)
-        fid.write("      RECT %.3f %.3f %.3f %.3f ;\n" % (0, y - hpw, pw, y + hpw))
+        if self._rect_pin_mode:
+            # make pins a little longer in the X direction
+            fid.write(
+                "      RECT %.3f %.3f %.3f %.3f ;\n" % (0, y - hpw, pw + hpw, y + hpw)
+            )
+        else:
+            fid.write("      RECT %.3f %.3f %.3f %.3f ;\n" % (0, y - hpw, pw, y + hpw))
         fid.write("    END\n")
         fid.write("  END %s\n" % pin_name)
 
@@ -156,13 +172,16 @@ class LefExporter(Exporter):
     ):
         """Creates power/ground shapes"""
 
+        # if in rect_pin_mode we start the pin two offsets in to avoid
+        # spacing issues with the signal pin
+        mod_x_offset = x_offset * (self._rect_pin_mode + 1)
         while y_step <= h - y_offset:
             fid.write(
                 "      RECT %.3f %.3f %.3f %.3f ;\n"
                 % (
-                    x_offset,
+                    mod_x_offset,
                     y_step - supply_pin_half_width,
-                    w - x_offset,
+                    w - mod_x_offset,
                     y_step + supply_pin_half_width,
                 )
             )

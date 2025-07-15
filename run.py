@@ -5,6 +5,7 @@ import argparse
 
 from utils.run_utils import RunUtils
 from utils.class_process import Process
+from utils.memory_config import MemoryConfig
 from utils.memory_factory import MemoryFactory
 from utils.timing_data import TimingData
 
@@ -41,19 +42,9 @@ def main(args: argparse.Namespace):
 
     # Go through each sram and generate the lib, lef and v files
     for sram_data in json_data["srams"]:
-        name = str(sram_data["name"])
-        width_in_bits = int(sram_data["width"])
-        depth = int(sram_data["depth"])
-        num_banks = int(sram_data["banks"])
+        mem_config = MemoryConfig.from_json(sram_data)
         memory = MemoryFactory.create(
-            name,
-            width_in_bits,
-            depth,
-            num_banks,
-            memory_type,
-            port_config,
-            process,
-            timing_data,
+            mem_config, memory_type, port_config, process, timing_data
         )
         RunUtils.write_memory(memory, args.output_dir)
 

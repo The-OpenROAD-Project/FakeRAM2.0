@@ -16,7 +16,7 @@ from lef_exporter import LefExporter
 
 
 class Memory:
-    def __init__(self, name, width_in_bits, depth, num_banks, process, timing_data):
+    def __init__(self, mem_config, process, timing_data):
         """
         Initializer
 
@@ -26,17 +26,18 @@ class Memory:
         """
 
         self.process = process
-        self.name = name
-        self.width_in_bits = width_in_bits
-        self.depth = depth
+        self.name = mem_config.get_name()
+        self.width_in_bits = mem_config.get_width_in_bits()
+        self.depth = mem_config.get_depth()
         self.addr_width = math.ceil(math.log2(self.depth))
-        self.num_banks = num_banks
+        self.num_banks = mem_config.get_num_banks()
         self.width_in_bytes = math.ceil(self.width_in_bits / 8.0)
         self.total_size = self.width_in_bytes * self.depth
+        self.additional_height = mem_config.get_additional_height()
         self.timing_data = timing_data
         self.physical = PhysicalData()
         (width_um, height_um) = self.process.get_macro_dimensions(
-            self.width_in_bits, self.depth, self.num_banks
+            self.width_in_bits, self.depth, self.num_banks, self.additional_height
         )
         self.physical.set_extents(width_um, height_um)
         self.physical.snap_to_grid(
@@ -73,6 +74,15 @@ class Memory:
     def get_total_size(self):
         """Returns the total size in bytes"""
         return self.total_size
+
+    def get_additional_height(self):
+        """
+        Returns the additional height to add in um
+
+        Can be used when the number of pins exceeds the number of available
+        tracks
+        """
+        return self.additional_height
 
     def get_data_bus_msb(self):
         """

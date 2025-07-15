@@ -4964,7 +4964,7 @@ module sprf_256x256
     addr_a,
     din_a,
     dout_a,
-    clk,
+    clk
 );
     parameter DATA_WIDTH = 256;
     parameter ADDR_WIDTH = 8;
@@ -4995,7 +4995,7 @@ module sprf_256x256 (
     input [7:0] addr_a,
     input [255:0] din_a,
     output reg [255:0] dout_a,
-    clk,
+    clk
 );
 endmodule
 library(sprf_256x256) {
@@ -5243,7 +5243,7 @@ cell(sprf_256x256) {
             }
         }
         internal_power(){
-            when : "(! (we_in) )";
+            when : "(! (we_a) )";
             rise_power(sprf_256x256_energy_template_sigslew) {
                 index_1 ("0.009, 0.227");
                 values ("0.013, 0.013")
@@ -5254,7 +5254,7 @@ cell(sprf_256x256) {
             }
         }
         internal_power(){
-            when : "(we_in)";
+            when : "(we_a)";
             rise_power(sprf_256x256_energy_template_sigslew) {
                 index_1 ("0.009, 0.227");
                 values ("0.013, 0.013")

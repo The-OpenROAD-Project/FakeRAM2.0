@@ -22,4 +22,4 @@ class RegFileLibertyExporter(LibertyExporter):
         for i in range(0, self._memory.get_num_rw_ports()):
             suffix = chr(ord("a") + i)
             self.write_rw_pin_set(out_fh, name, suffix, False)
-        self.write_clk_pin(out_fh)
+        self.write_clk_pin("clk", out_fh)

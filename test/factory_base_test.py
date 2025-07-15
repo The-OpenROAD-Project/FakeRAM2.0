@@ -6,12 +6,13 @@ import unittest
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "utils")))
 from factory_base import FactoryBase
+from memory_config import MemoryConfig
 
 
 class DPRAM:
     """Test class for DPRAM"""
 
-    def __init__(self, name, width_in_bits, depth, num_banks, process, timing_data):
+    def __init__(self, mem_config, process, timing_data):
         pass
 
     def get_type(self):
@@ -21,7 +22,7 @@ class DPRAM:
 class SPRAM:
     """Test class for SPRAM"""
 
-    def __init__(self, name, width_in_bits, depth, num_banks, process, timing_data):
+    def __init__(self, mem_config, process, timing_data):
         pass
 
     def get_type(self):
@@ -41,21 +42,18 @@ class FactoryBaseTest(unittest.TestCase):
         width = 32
         depth = 256
         banks = 2
-        dpram = FactoryBase.create(
-            "dpram", width, depth, banks, "RAM", "DP", None, None
-        )
+        mem_config = MemoryConfig("dpram", width, depth, banks, 0)
+        dpram = FactoryBase.create(mem_config, "RAM", "DP", None, None)
         self.assertIsNotNone(dpram)
         self.assertEqual(dpram.get_type(), "DPRAM")
-        spram = FactoryBase.create(
-            "spram", width, depth, banks, "RAM", "SP", None, None
-        )
+        mem_config.set_name("spram")
+        spram = FactoryBase.create(mem_config, "RAM", "SP", None, None)
         self.assertIsNotNone(spram)
         self.assertEqual(spram.get_type(), "SPRAM")
         # SP RF is not registered, so raise exception
         with self.assertRaises(Exception):
-            sprf = FactoryBase.create(
-                "sprf", width, depth, banks, "RF", "SP", None, None
-            )
+            mem_config.set_name("sprf")
+            sprf = FactoryBase.create(mem_config, "RF", "SP", None, None)
 
 
 if __name__ == "__main__":
