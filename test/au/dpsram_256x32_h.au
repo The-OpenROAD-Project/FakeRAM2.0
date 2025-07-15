@@ -303,291 +303,291 @@ MACRO dpsram_256x32_h
     END
   END dout_a[31]
   PIN din_a[0]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 11.424 0.024 11.448 ;
+      RECT 0.000 11.328 0.024 11.352 ;
     END
   END din_a[0]
   PIN din_a[1]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 11.712 0.024 11.736 ;
+      RECT 0.000 11.616 0.024 11.640 ;
     END
   END din_a[1]
   PIN din_a[2]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 12.000 0.024 12.024 ;
+      RECT 0.000 11.904 0.024 11.928 ;
     END
   END din_a[2]
   PIN din_a[3]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 12.288 0.024 12.312 ;
+      RECT 0.000 12.192 0.024 12.216 ;
     END
   END din_a[3]
   PIN din_a[4]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 12.576 0.024 12.600 ;
+      RECT 0.000 12.480 0.024 12.504 ;
     END
   END din_a[4]
   PIN din_a[5]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 12.864 0.024 12.888 ;
+      RECT 0.000 12.768 0.024 12.792 ;
     END
   END din_a[5]
   PIN din_a[6]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 13.152 0.024 13.176 ;
+      RECT 0.000 13.056 0.024 13.080 ;
     END
   END din_a[6]
   PIN din_a[7]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 13.440 0.024 13.464 ;
+      RECT 0.000 13.344 0.024 13.368 ;
     END
   END din_a[7]
   PIN din_a[8]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 13.728 0.024 13.752 ;
+      RECT 0.000 13.632 0.024 13.656 ;
     END
   END din_a[8]
   PIN din_a[9]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 14.016 0.024 14.040 ;
+      RECT 0.000 13.920 0.024 13.944 ;
     END
   END din_a[9]
   PIN din_a[10]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 14.304 0.024 14.328 ;
+      RECT 0.000 14.208 0.024 14.232 ;
     END
   END din_a[10]
   PIN din_a[11]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 14.592 0.024 14.616 ;
+      RECT 0.000 14.496 0.024 14.520 ;
     END
   END din_a[11]
   PIN din_a[12]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 14.880 0.024 14.904 ;
+      RECT 0.000 14.784 0.024 14.808 ;
     END
   END din_a[12]
   PIN din_a[13]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 15.168 0.024 15.192 ;
+      RECT 0.000 15.072 0.024 15.096 ;
     END
   END din_a[13]
   PIN din_a[14]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 15.456 0.024 15.480 ;
+      RECT 0.000 15.360 0.024 15.384 ;
     END
   END din_a[14]
   PIN din_a[15]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 15.744 0.024 15.768 ;
+      RECT 0.000 15.648 0.024 15.672 ;
     END
   END din_a[15]
   PIN din_a[16]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 16.032 0.024 16.056 ;
+      RECT 0.000 15.936 0.024 15.960 ;
     END
   END din_a[16]
   PIN din_a[17]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 16.320 0.024 16.344 ;
+      RECT 0.000 16.224 0.024 16.248 ;
     END
   END din_a[17]
   PIN din_a[18]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 16.608 0.024 16.632 ;
+      RECT 0.000 16.512 0.024 16.536 ;
     END
   END din_a[18]
   PIN din_a[19]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 16.896 0.024 16.920 ;
+      RECT 0.000 16.800 0.024 16.824 ;
     END
   END din_a[19]
   PIN din_a[20]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 17.184 0.024 17.208 ;
+      RECT 0.000 17.088 0.024 17.112 ;
     END
   END din_a[20]
   PIN din_a[21]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 17.472 0.024 17.496 ;
+      RECT 0.000 17.376 0.024 17.400 ;
     END
   END din_a[21]
   PIN din_a[22]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 17.760 0.024 17.784 ;
+      RECT 0.000 17.664 0.024 17.688 ;
     END
   END din_a[22]
   PIN din_a[23]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 18.048 0.024 18.072 ;
+      RECT 0.000 17.952 0.024 17.976 ;
     END
   END din_a[23]
   PIN din_a[24]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 18.336 0.024 18.360 ;
+      RECT 0.000 18.240 0.024 18.264 ;
     END
   END din_a[24]
   PIN din_a[25]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 18.624 0.024 18.648 ;
+      RECT 0.000 18.528 0.024 18.552 ;
     END
   END din_a[25]
   PIN din_a[26]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 18.912 0.024 18.936 ;
+      RECT 0.000 18.816 0.024 18.840 ;
     END
   END din_a[26]
   PIN din_a[27]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 19.200 0.024 19.224 ;
+      RECT 0.000 19.104 0.024 19.128 ;
     END
   END din_a[27]
   PIN din_a[28]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 19.488 0.024 19.512 ;
+      RECT 0.000 19.392 0.024 19.416 ;
     END
   END din_a[28]
   PIN din_a[29]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 19.776 0.024 19.800 ;
+      RECT 0.000 19.680 0.024 19.704 ;
     END
   END din_a[29]
   PIN din_a[30]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 20.064 0.024 20.088 ;
+      RECT 0.000 19.968 0.024 19.992 ;
     END
   END din_a[30]
   PIN din_a[31]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 20.352 0.024 20.376 ;
+      RECT 0.000 20.256 0.024 20.280 ;
     END
   END din_a[31]
   PIN addr_a[0]
@@ -596,7 +596,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 22.800 0.024 22.824 ;
+      RECT 0.000 22.608 0.024 22.632 ;
     END
   END addr_a[0]
   PIN addr_a[1]
@@ -605,7 +605,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 23.088 0.024 23.112 ;
+      RECT 0.000 22.896 0.024 22.920 ;
     END
   END addr_a[1]
   PIN addr_a[2]
@@ -614,7 +614,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 23.376 0.024 23.400 ;
+      RECT 0.000 23.184 0.024 23.208 ;
     END
   END addr_a[2]
   PIN addr_a[3]
@@ -623,7 +623,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 23.664 0.024 23.688 ;
+      RECT 0.000 23.472 0.024 23.496 ;
     END
   END addr_a[3]
   PIN addr_a[4]
@@ -632,7 +632,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 23.952 0.024 23.976 ;
+      RECT 0.000 23.760 0.024 23.784 ;
     END
   END addr_a[4]
   PIN addr_a[5]
@@ -641,7 +641,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 24.240 0.024 24.264 ;
+      RECT 0.000 24.048 0.024 24.072 ;
     END
   END addr_a[5]
   PIN addr_a[6]
@@ -650,7 +650,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 24.528 0.024 24.552 ;
+      RECT 0.000 24.336 0.024 24.360 ;
     END
   END addr_a[6]
   PIN addr_a[7]
@@ -659,7 +659,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 24.816 0.024 24.840 ;
+      RECT 0.000 24.624 0.024 24.648 ;
     END
   END addr_a[7]
   PIN dout_b[0]
@@ -668,7 +668,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 27.264 0.024 27.288 ;
+      RECT 0.000 26.976 0.024 27.000 ;
     END
   END dout_b[0]
   PIN dout_b[1]
@@ -677,7 +677,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 27.552 0.024 27.576 ;
+      RECT 0.000 27.264 0.024 27.288 ;
     END
   END dout_b[1]
   PIN dout_b[2]
@@ -686,7 +686,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 27.840 0.024 27.864 ;
+      RECT 0.000 27.552 0.024 27.576 ;
     END
   END dout_b[2]
   PIN dout_b[3]
@@ -695,7 +695,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 28.128 0.024 28.152 ;
+      RECT 0.000 27.840 0.024 27.864 ;
     END
   END dout_b[3]
   PIN dout_b[4]
@@ -704,7 +704,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 28.416 0.024 28.440 ;
+      RECT 0.000 28.128 0.024 28.152 ;
     END
   END dout_b[4]
   PIN dout_b[5]
@@ -713,7 +713,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 28.704 0.024 28.728 ;
+      RECT 0.000 28.416 0.024 28.440 ;
     END
   END dout_b[5]
   PIN dout_b[6]
@@ -722,7 +722,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 28.992 0.024 29.016 ;
+      RECT 0.000 28.704 0.024 28.728 ;
     END
   END dout_b[6]
   PIN dout_b[7]
@@ -731,7 +731,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 29.280 0.024 29.304 ;
+      RECT 0.000 28.992 0.024 29.016 ;
     END
   END dout_b[7]
   PIN dout_b[8]
@@ -740,7 +740,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 29.568 0.024 29.592 ;
+      RECT 0.000 29.280 0.024 29.304 ;
     END
   END dout_b[8]
   PIN dout_b[9]
@@ -749,7 +749,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 29.856 0.024 29.880 ;
+      RECT 0.000 29.568 0.024 29.592 ;
     END
   END dout_b[9]
   PIN dout_b[10]
@@ -758,7 +758,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 30.144 0.024 30.168 ;
+      RECT 0.000 29.856 0.024 29.880 ;
     END
   END dout_b[10]
   PIN dout_b[11]
@@ -767,7 +767,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 30.432 0.024 30.456 ;
+      RECT 0.000 30.144 0.024 30.168 ;
     END
   END dout_b[11]
   PIN dout_b[12]
@@ -776,7 +776,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 30.720 0.024 30.744 ;
+      RECT 0.000 30.432 0.024 30.456 ;
     END
   END dout_b[12]
   PIN dout_b[13]
@@ -785,7 +785,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 31.008 0.024 31.032 ;
+      RECT 0.000 30.720 0.024 30.744 ;
     END
   END dout_b[13]
   PIN dout_b[14]
@@ -794,7 +794,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 31.296 0.024 31.320 ;
+      RECT 0.000 31.008 0.024 31.032 ;
     END
   END dout_b[14]
   PIN dout_b[15]
@@ -803,7 +803,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 31.584 0.024 31.608 ;
+      RECT 0.000 31.296 0.024 31.320 ;
     END
   END dout_b[15]
   PIN dout_b[16]
@@ -812,7 +812,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 31.872 0.024 31.896 ;
+      RECT 0.000 31.584 0.024 31.608 ;
     END
   END dout_b[16]
   PIN dout_b[17]
@@ -821,7 +821,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 32.160 0.024 32.184 ;
+      RECT 0.000 31.872 0.024 31.896 ;
     END
   END dout_b[17]
   PIN dout_b[18]
@@ -830,7 +830,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 32.448 0.024 32.472 ;
+      RECT 0.000 32.160 0.024 32.184 ;
     END
   END dout_b[18]
   PIN dout_b[19]
@@ -839,7 +839,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 32.736 0.024 32.760 ;
+      RECT 0.000 32.448 0.024 32.472 ;
     END
   END dout_b[19]
   PIN dout_b[20]
@@ -848,7 +848,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 33.024 0.024 33.048 ;
+      RECT 0.000 32.736 0.024 32.760 ;
     END
   END dout_b[20]
   PIN dout_b[21]
@@ -857,7 +857,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 33.312 0.024 33.336 ;
+      RECT 0.000 33.024 0.024 33.048 ;
     END
   END dout_b[21]
   PIN dout_b[22]
@@ -866,7 +866,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 33.600 0.024 33.624 ;
+      RECT 0.000 33.312 0.024 33.336 ;
     END
   END dout_b[22]
   PIN dout_b[23]
@@ -875,7 +875,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 33.888 0.024 33.912 ;
+      RECT 0.000 33.600 0.024 33.624 ;
     END
   END dout_b[23]
   PIN dout_b[24]
@@ -884,7 +884,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 34.176 0.024 34.200 ;
+      RECT 0.000 33.888 0.024 33.912 ;
     END
   END dout_b[24]
   PIN dout_b[25]
@@ -893,7 +893,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 34.464 0.024 34.488 ;
+      RECT 0.000 34.176 0.024 34.200 ;
     END
   END dout_b[25]
   PIN dout_b[26]
@@ -902,7 +902,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 34.752 0.024 34.776 ;
+      RECT 0.000 34.464 0.024 34.488 ;
     END
   END dout_b[26]
   PIN dout_b[27]
@@ -911,7 +911,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 35.040 0.024 35.064 ;
+      RECT 0.000 34.752 0.024 34.776 ;
     END
   END dout_b[27]
   PIN dout_b[28]
@@ -920,7 +920,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 35.328 0.024 35.352 ;
+      RECT 0.000 35.040 0.024 35.064 ;
     END
   END dout_b[28]
   PIN dout_b[29]
@@ -929,7 +929,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 35.616 0.024 35.640 ;
+      RECT 0.000 35.328 0.024 35.352 ;
     END
   END dout_b[29]
   PIN dout_b[30]
@@ -938,7 +938,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 35.904 0.024 35.928 ;
+      RECT 0.000 35.616 0.024 35.640 ;
     END
   END dout_b[30]
   PIN dout_b[31]
@@ -947,295 +947,295 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 36.192 0.024 36.216 ;
+      RECT 0.000 35.904 0.024 35.928 ;
     END
   END dout_b[31]
   PIN din_b[0]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 38.640 0.024 38.664 ;
+      RECT 0.000 38.256 0.024 38.280 ;
     END
   END din_b[0]
   PIN din_b[1]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 38.928 0.024 38.952 ;
+      RECT 0.000 38.544 0.024 38.568 ;
     END
   END din_b[1]
   PIN din_b[2]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 39.216 0.024 39.240 ;
+      RECT 0.000 38.832 0.024 38.856 ;
     END
   END din_b[2]
   PIN din_b[3]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 39.504 0.024 39.528 ;
+      RECT 0.000 39.120 0.024 39.144 ;
     END
   END din_b[3]
   PIN din_b[4]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 39.792 0.024 39.816 ;
+      RECT 0.000 39.408 0.024 39.432 ;
     END
   END din_b[4]
   PIN din_b[5]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 40.080 0.024 40.104 ;
+      RECT 0.000 39.696 0.024 39.720 ;
     END
   END din_b[5]
   PIN din_b[6]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 40.368 0.024 40.392 ;
+      RECT 0.000 39.984 0.024 40.008 ;
     END
   END din_b[6]
   PIN din_b[7]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 40.656 0.024 40.680 ;
+      RECT 0.000 40.272 0.024 40.296 ;
     END
   END din_b[7]
   PIN din_b[8]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 40.944 0.024 40.968 ;
+      RECT 0.000 40.560 0.024 40.584 ;
     END
   END din_b[8]
   PIN din_b[9]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 41.232 0.024 41.256 ;
+      RECT 0.000 40.848 0.024 40.872 ;
     END
   END din_b[9]
   PIN din_b[10]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 41.520 0.024 41.544 ;
+      RECT 0.000 41.136 0.024 41.160 ;
     END
   END din_b[10]
   PIN din_b[11]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 41.808 0.024 41.832 ;
+      RECT 0.000 41.424 0.024 41.448 ;
     END
   END din_b[11]
   PIN din_b[12]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 42.096 0.024 42.120 ;
+      RECT 0.000 41.712 0.024 41.736 ;
     END
   END din_b[12]
   PIN din_b[13]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 42.384 0.024 42.408 ;
+      RECT 0.000 42.000 0.024 42.024 ;
     END
   END din_b[13]
   PIN din_b[14]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 42.672 0.024 42.696 ;
+      RECT 0.000 42.288 0.024 42.312 ;
     END
   END din_b[14]
   PIN din_b[15]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 42.960 0.024 42.984 ;
+      RECT 0.000 42.576 0.024 42.600 ;
     END
   END din_b[15]
   PIN din_b[16]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 43.248 0.024 43.272 ;
+      RECT 0.000 42.864 0.024 42.888 ;
     END
   END din_b[16]
   PIN din_b[17]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 43.536 0.024 43.560 ;
+      RECT 0.000 43.152 0.024 43.176 ;
     END
   END din_b[17]
   PIN din_b[18]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 43.824 0.024 43.848 ;
+      RECT 0.000 43.440 0.024 43.464 ;
     END
   END din_b[18]
   PIN din_b[19]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 44.112 0.024 44.136 ;
+      RECT 0.000 43.728 0.024 43.752 ;
     END
   END din_b[19]
   PIN din_b[20]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 44.400 0.024 44.424 ;
+      RECT 0.000 44.016 0.024 44.040 ;
     END
   END din_b[20]
   PIN din_b[21]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 44.688 0.024 44.712 ;
+      RECT 0.000 44.304 0.024 44.328 ;
     END
   END din_b[21]
   PIN din_b[22]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 44.976 0.024 45.000 ;
+      RECT 0.000 44.592 0.024 44.616 ;
     END
   END din_b[22]
   PIN din_b[23]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 45.264 0.024 45.288 ;
+      RECT 0.000 44.880 0.024 44.904 ;
     END
   END din_b[23]
   PIN din_b[24]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 45.552 0.024 45.576 ;
+      RECT 0.000 45.168 0.024 45.192 ;
     END
   END din_b[24]
   PIN din_b[25]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 45.840 0.024 45.864 ;
+      RECT 0.000 45.456 0.024 45.480 ;
     END
   END din_b[25]
   PIN din_b[26]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 46.128 0.024 46.152 ;
+      RECT 0.000 45.744 0.024 45.768 ;
     END
   END din_b[26]
   PIN din_b[27]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 46.416 0.024 46.440 ;
+      RECT 0.000 46.032 0.024 46.056 ;
     END
   END din_b[27]
   PIN din_b[28]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 46.704 0.024 46.728 ;
+      RECT 0.000 46.320 0.024 46.344 ;
     END
   END din_b[28]
   PIN din_b[29]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 46.992 0.024 47.016 ;
+      RECT 0.000 46.608 0.024 46.632 ;
     END
   END din_b[29]
   PIN din_b[30]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 47.280 0.024 47.304 ;
+      RECT 0.000 46.896 0.024 46.920 ;
     END
   END din_b[30]
   PIN din_b[31]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 47.568 0.024 47.592 ;
+      RECT 0.000 47.184 0.024 47.208 ;
     END
   END din_b[31]
   PIN addr_b[0]
@@ -1244,7 +1244,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 50.016 0.024 50.040 ;
+      RECT 0.000 49.536 0.024 49.560 ;
     END
   END addr_b[0]
   PIN addr_b[1]
@@ -1253,7 +1253,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 50.304 0.024 50.328 ;
+      RECT 0.000 49.824 0.024 49.848 ;
     END
   END addr_b[1]
   PIN addr_b[2]
@@ -1262,7 +1262,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 50.592 0.024 50.616 ;
+      RECT 0.000 50.112 0.024 50.136 ;
     END
   END addr_b[2]
   PIN addr_b[3]
@@ -1271,7 +1271,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 50.880 0.024 50.904 ;
+      RECT 0.000 50.400 0.024 50.424 ;
     END
   END addr_b[3]
   PIN addr_b[4]
@@ -1280,7 +1280,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 51.168 0.024 51.192 ;
+      RECT 0.000 50.688 0.024 50.712 ;
     END
   END addr_b[4]
   PIN addr_b[5]
@@ -1289,7 +1289,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 51.456 0.024 51.480 ;
+      RECT 0.000 50.976 0.024 51.000 ;
     END
   END addr_b[5]
   PIN addr_b[6]
@@ -1298,7 +1298,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 51.744 0.024 51.768 ;
+      RECT 0.000 51.264 0.024 51.288 ;
     END
   END addr_b[6]
   PIN addr_b[7]
@@ -1307,7 +1307,7 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 52.032 0.024 52.056 ;
+      RECT 0.000 51.552 0.024 51.576 ;
     END
   END addr_b[7]
   PIN we_a
@@ -1316,10 +1316,28 @@ MACRO dpsram_256x32_h
     SHAPE ABUTMENT ;
     PORT
       LAYER M4 ;
-      RECT 0.000 54.480 0.024 54.504 ;
+      RECT 0.000 53.904 0.024 53.928 ;
     END
   END we_a
+  PIN clk_a
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER M4 ;
+      RECT 0.000 54.192 0.024 54.216 ;
+    END
+  END clk_a
   PIN we_b
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER M4 ;
+      RECT 0.000 54.480 0.024 54.504 ;
+    END
+  END we_b
+  PIN clk_b
     DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
@@ -1327,87 +1345,7 @@ MACRO dpsram_256x32_h
       LAYER M4 ;
       RECT 0.000 54.768 0.024 54.792 ;
     END
-  END we_b
-  PIN clk
-    DIRECTION INPUT ;
-    USE SIGNAL ;
-    SHAPE ABUTMENT ;
-    PORT
-      LAYER M4 ;
-      RECT 0.000 55.056 0.024 55.080 ;
-    END
-  END clk
-  PIN VSS
-    DIRECTION INOUT ;
-    USE GROUND ;
-    PORT
-      LAYER M4 ;
-      RECT 0.048 0.000 8.312 0.096 ;
-      RECT 0.048 0.768 8.312 0.864 ;
-      RECT 0.048 1.536 8.312 1.632 ;
-      RECT 0.048 2.304 8.312 2.400 ;
-      RECT 0.048 3.072 8.312 3.168 ;
-      RECT 0.048 3.840 8.312 3.936 ;
-      RECT 0.048 4.608 8.312 4.704 ;
-      RECT 0.048 5.376 8.312 5.472 ;
-      RECT 0.048 6.144 8.312 6.240 ;
-      RECT 0.048 6.912 8.312 7.008 ;
-      RECT 0.048 7.680 8.312 7.776 ;
-      RECT 0.048 8.448 8.312 8.544 ;
-      RECT 0.048 9.216 8.312 9.312 ;
-      RECT 0.048 9.984 8.312 10.080 ;
-      RECT 0.048 10.752 8.312 10.848 ;
-      RECT 0.048 11.520 8.312 11.616 ;
-      RECT 0.048 12.288 8.312 12.384 ;
-      RECT 0.048 13.056 8.312 13.152 ;
-      RECT 0.048 13.824 8.312 13.920 ;
-      RECT 0.048 14.592 8.312 14.688 ;
-      RECT 0.048 15.360 8.312 15.456 ;
-      RECT 0.048 16.128 8.312 16.224 ;
-      RECT 0.048 16.896 8.312 16.992 ;
-      RECT 0.048 17.664 8.312 17.760 ;
-      RECT 0.048 18.432 8.312 18.528 ;
-      RECT 0.048 19.200 8.312 19.296 ;
-      RECT 0.048 19.968 8.312 20.064 ;
-      RECT 0.048 20.736 8.312 20.832 ;
-      RECT 0.048 21.504 8.312 21.600 ;
-      RECT 0.048 22.272 8.312 22.368 ;
-      RECT 0.048 23.040 8.312 23.136 ;
-      RECT 0.048 23.808 8.312 23.904 ;
-      RECT 0.048 24.576 8.312 24.672 ;
-      RECT 0.048 25.344 8.312 25.440 ;
-      RECT 0.048 26.112 8.312 26.208 ;
-      RECT 0.048 26.880 8.312 26.976 ;
-      RECT 0.048 27.648 8.312 27.744 ;
-      RECT 0.048 28.416 8.312 28.512 ;
-      RECT 0.048 29.184 8.312 29.280 ;
-      RECT 0.048 29.952 8.312 30.048 ;
-      RECT 0.048 30.720 8.312 30.816 ;
-      RECT 0.048 31.488 8.312 31.584 ;
-      RECT 0.048 32.256 8.312 32.352 ;
-      RECT 0.048 33.024 8.312 33.120 ;
-      RECT 0.048 33.792 8.312 33.888 ;
-      RECT 0.048 34.560 8.312 34.656 ;
-      RECT 0.048 35.328 8.312 35.424 ;
-      RECT 0.048 36.096 8.312 36.192 ;
-      RECT 0.048 36.864 8.312 36.960 ;
-      RECT 0.048 37.632 8.312 37.728 ;
-      RECT 0.048 38.400 8.312 38.496 ;
-      RECT 0.048 39.168 8.312 39.264 ;
-      RECT 0.048 39.936 8.312 40.032 ;
-      RECT 0.048 40.704 8.312 40.800 ;
-      RECT 0.048 41.472 8.312 41.568 ;
-      RECT 0.048 42.240 8.312 42.336 ;
-      RECT 0.048 43.008 8.312 43.104 ;
-      RECT 0.048 43.776 8.312 43.872 ;
-      RECT 0.048 44.544 8.312 44.640 ;
-      RECT 0.048 45.312 8.312 45.408 ;
-      RECT 0.048 46.080 8.312 46.176 ;
-      RECT 0.048 46.848 8.312 46.944 ;
-      RECT 0.048 47.616 8.312 47.712 ;
-      RECT 0.048 48.384 8.312 48.480 ;
-    END
-  END VSS
+  END clk_b
   PIN VDD
     DIRECTION INOUT ;
     USE POWER ;
@@ -1479,6 +1417,77 @@ MACRO dpsram_256x32_h
       RECT 0.048 48.768 8.312 48.864 ;
     END
   END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER M4 ;
+      RECT 0.048 0.000 8.312 0.096 ;
+      RECT 0.048 0.768 8.312 0.864 ;
+      RECT 0.048 1.536 8.312 1.632 ;
+      RECT 0.048 2.304 8.312 2.400 ;
+      RECT 0.048 3.072 8.312 3.168 ;
+      RECT 0.048 3.840 8.312 3.936 ;
+      RECT 0.048 4.608 8.312 4.704 ;
+      RECT 0.048 5.376 8.312 5.472 ;
+      RECT 0.048 6.144 8.312 6.240 ;
+      RECT 0.048 6.912 8.312 7.008 ;
+      RECT 0.048 7.680 8.312 7.776 ;
+      RECT 0.048 8.448 8.312 8.544 ;
+      RECT 0.048 9.216 8.312 9.312 ;
+      RECT 0.048 9.984 8.312 10.080 ;
+      RECT 0.048 10.752 8.312 10.848 ;
+      RECT 0.048 11.520 8.312 11.616 ;
+      RECT 0.048 12.288 8.312 12.384 ;
+      RECT 0.048 13.056 8.312 13.152 ;
+      RECT 0.048 13.824 8.312 13.920 ;
+      RECT 0.048 14.592 8.312 14.688 ;
+      RECT 0.048 15.360 8.312 15.456 ;
+      RECT 0.048 16.128 8.312 16.224 ;
+      RECT 0.048 16.896 8.312 16.992 ;
+      RECT 0.048 17.664 8.312 17.760 ;
+      RECT 0.048 18.432 8.312 18.528 ;
+      RECT 0.048 19.200 8.312 19.296 ;
+      RECT 0.048 19.968 8.312 20.064 ;
+      RECT 0.048 20.736 8.312 20.832 ;
+      RECT 0.048 21.504 8.312 21.600 ;
+      RECT 0.048 22.272 8.312 22.368 ;
+      RECT 0.048 23.040 8.312 23.136 ;
+      RECT 0.048 23.808 8.312 23.904 ;
+      RECT 0.048 24.576 8.312 24.672 ;
+      RECT 0.048 25.344 8.312 25.440 ;
+      RECT 0.048 26.112 8.312 26.208 ;
+      RECT 0.048 26.880 8.312 26.976 ;
+      RECT 0.048 27.648 8.312 27.744 ;
+      RECT 0.048 28.416 8.312 28.512 ;
+      RECT 0.048 29.184 8.312 29.280 ;
+      RECT 0.048 29.952 8.312 30.048 ;
+      RECT 0.048 30.720 8.312 30.816 ;
+      RECT 0.048 31.488 8.312 31.584 ;
+      RECT 0.048 32.256 8.312 32.352 ;
+      RECT 0.048 33.024 8.312 33.120 ;
+      RECT 0.048 33.792 8.312 33.888 ;
+      RECT 0.048 34.560 8.312 34.656 ;
+      RECT 0.048 35.328 8.312 35.424 ;
+      RECT 0.048 36.096 8.312 36.192 ;
+      RECT 0.048 36.864 8.312 36.960 ;
+      RECT 0.048 37.632 8.312 37.728 ;
+      RECT 0.048 38.400 8.312 38.496 ;
+      RECT 0.048 39.168 8.312 39.264 ;
+      RECT 0.048 39.936 8.312 40.032 ;
+      RECT 0.048 40.704 8.312 40.800 ;
+      RECT 0.048 41.472 8.312 41.568 ;
+      RECT 0.048 42.240 8.312 42.336 ;
+      RECT 0.048 43.008 8.312 43.104 ;
+      RECT 0.048 43.776 8.312 43.872 ;
+      RECT 0.048 44.544 8.312 44.640 ;
+      RECT 0.048 45.312 8.312 45.408 ;
+      RECT 0.048 46.080 8.312 46.176 ;
+      RECT 0.048 46.848 8.312 46.944 ;
+      RECT 0.048 47.616 8.312 47.712 ;
+      RECT 0.048 48.384 8.312 48.480 ;
+    END
+  END VSS
   OBS
     LAYER M1 ;
     RECT 0 0 8.360 49.000 ;
@@ -1498,28 +1507,30 @@ module dpsram_256x32_h
     addr_a,
     din_a,
     dout_a,
+    clk_a,
     we_b,
     addr_b,
     din_b,
     dout_b,
-    clk
+    clk_b
 );
     parameter DATA_WIDTH = 32;
     parameter ADDR_WIDTH = 8;
 
     // Port A
-    input  wire                     we_a,
-    input  wire [ADDR_WIDTH-1:0]    addr_a,
-    input  wire [DATA_WIDTH-1:0]    din_a,
-    output reg  [DATA_WIDTH-1:0]    dout_a,
+    input  wire                     we_a;
+    input  wire [ADDR_WIDTH-1:0]    addr_a;
+    input  wire [DATA_WIDTH-1:0]    din_a;
+    output reg  [DATA_WIDTH-1:0]    dout_a;
+    input  wire                     clk_a;
 
     // Port B
-    input  wire                     we_b,
-    input  wire [ADDR_WIDTH-1:0]    addr_b,
-    input  wire [DATA_WIDTH-1:0]    din_b,
-    output reg  [DATA_WIDTH-1:0]    dout_b,
+    input  wire                     we_b;
+    input  wire [ADDR_WIDTH-1:0]    addr_b;
+    input  wire [DATA_WIDTH-1:0]    din_b;
+    output reg  [DATA_WIDTH-1:0]    dout_b;
+    input  wire                     clk_b;
 
-    input  wire                     clk,
 
     // Memory array: 256 words of 32 bits
     reg [DATA_WIDTH-1:0] mem [0:(1 << ADDR_WIDTH)-1];
@@ -1530,7 +1541,7 @@ module dpsram_256x32_h
 
     integer i;
 
-    always @(posedge clk) begin
+    always @(posedge clk_a) begin
         // ==== Port A write ====
         if (^we_a === 1'bx || ^addr_a === 1'bx) begin
             // Unknown write enable or address ? corrupt entire memory
@@ -1560,11 +1571,12 @@ module dpsram_256x32_h (
     input [7:0] addr_a,
     input [31:0] din_a,
     output reg [31:0] dout_a,
+    input clk_a,
     input we_b,
     input [7:0] addr_b,
     input [31:0] din_b,
     output reg [31:0] dout_b,
-    clk
+    input clk_b
 );
 endmodule
 library(dpsram_256x32_h) {
@@ -1667,7 +1679,7 @@ cell(dpsram_256x32_h) {
         direction : input;
         capacitance : 0.005;
         timing() {
-            related_pin : clk;
+            related_pin : clk_a;
             timing_type : setup_rising ;
             rise_constraint(dpsram_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -1687,7 +1699,7 @@ cell(dpsram_256x32_h) {
             }
         } 
         timing() {
-            related_pin : clk;
+            related_pin : clk_a;
             timing_type : hold_rising ;
             rise_constraint(dpsram_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -1722,7 +1734,7 @@ cell(dpsram_256x32_h) {
         direction : input;
         capacitance : 0.005;
         timing() {
-            related_pin : clk;
+            related_pin : clk_a;
             timing_type : setup_rising ;
             rise_constraint(dpsram_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -1742,7 +1754,7 @@ cell(dpsram_256x32_h) {
             }
         } 
         timing() {
-            related_pin : clk;
+            related_pin : clk_a;
             timing_type : hold_rising ;
             rise_constraint(dpsram_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -1776,12 +1788,12 @@ cell(dpsram_256x32_h) {
         bus_type : dpsram_256x32_h_DATA;
         memory_write() {
             address : addr_in;
-            clocked_on : "clk";
+            clocked_on : "clk_a";
         }
         direction : input;
         capacitance : 0.005;
         timing() {
-            related_pin : clk;
+            related_pin : clk_a;
             timing_type : setup_rising ;
             rise_constraint(dpsram_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -1801,7 +1813,7 @@ cell(dpsram_256x32_h) {
             }
         } 
         timing() {
-            related_pin : clk;
+            related_pin : clk_a;
             timing_type : hold_rising ;
             rise_constraint(dpsram_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -1851,7 +1863,7 @@ cell(dpsram_256x32_h) {
             address : addr_in;
         }
         timing() {
-            related_pin : "clk" ;
+            related_pin : "clk_a" ;
             timing_type : rising_edge;
             timing_sense : non_unate;
             cell_rise(dpsram_256x32_h_mem_out_delay_template) {
@@ -1880,11 +1892,28 @@ cell(dpsram_256x32_h) {
             }
         }
     }
+    pin(clk_a)   {
+        direction : input;
+        capacitance : 0.025;
+        clock : true;
+        min_period           : 0.157 ;
+        internal_power(){
+            rise_power(dpsram_256x32_h_energy_template_clkslew) {
+                index_1 ("0.009, 0.227");
+                values ("1.345, 1.345")
+            }
+            fall_power(dpsram_256x32_h_energy_template_clkslew) {
+                index_1 ("0.009, 0.227");
+                values ("1.345, 1.345")
+            }
+        }
+    }
+
     pin(we_b){
         direction : input;
         capacitance : 0.005;
         timing() {
-            related_pin : clk;
+            related_pin : clk_b;
             timing_type : setup_rising ;
             rise_constraint(dpsram_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -1904,7 +1933,7 @@ cell(dpsram_256x32_h) {
             }
         } 
         timing() {
-            related_pin : clk;
+            related_pin : clk_b;
             timing_type : hold_rising ;
             rise_constraint(dpsram_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -1939,7 +1968,7 @@ cell(dpsram_256x32_h) {
         direction : input;
         capacitance : 0.005;
         timing() {
-            related_pin : clk;
+            related_pin : clk_b;
             timing_type : setup_rising ;
             rise_constraint(dpsram_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -1959,7 +1988,7 @@ cell(dpsram_256x32_h) {
             }
         } 
         timing() {
-            related_pin : clk;
+            related_pin : clk_b;
             timing_type : hold_rising ;
             rise_constraint(dpsram_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -1993,12 +2022,12 @@ cell(dpsram_256x32_h) {
         bus_type : dpsram_256x32_h_DATA;
         memory_write() {
             address : addr_in;
-            clocked_on : "clk";
+            clocked_on : "clk_b";
         }
         direction : input;
         capacitance : 0.005;
         timing() {
-            related_pin : clk;
+            related_pin : clk_b;
             timing_type : setup_rising ;
             rise_constraint(dpsram_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -2018,7 +2047,7 @@ cell(dpsram_256x32_h) {
             }
         } 
         timing() {
-            related_pin : clk;
+            related_pin : clk_b;
             timing_type : hold_rising ;
             rise_constraint(dpsram_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -2068,7 +2097,7 @@ cell(dpsram_256x32_h) {
             address : addr_in;
         }
         timing() {
-            related_pin : "clk" ;
+            related_pin : "clk_b" ;
             timing_type : rising_edge;
             timing_sense : non_unate;
             cell_rise(dpsram_256x32_h_mem_out_delay_template) {
@@ -2097,7 +2126,7 @@ cell(dpsram_256x32_h) {
             }
         }
     }
-    pin(clk)   {
+    pin(clk_b)   {
         direction : input;
         capacitance : 0.025;
         clock : true;

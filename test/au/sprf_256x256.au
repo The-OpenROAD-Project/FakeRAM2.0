@@ -2319,7 +2319,7 @@ MACRO sprf_256x256
     END
   END dout_a[255]
   PIN din_a[0]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2328,7 +2328,7 @@ MACRO sprf_256x256
     END
   END din_a[0]
   PIN din_a[1]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2337,7 +2337,7 @@ MACRO sprf_256x256
     END
   END din_a[1]
   PIN din_a[2]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2346,7 +2346,7 @@ MACRO sprf_256x256
     END
   END din_a[2]
   PIN din_a[3]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2355,7 +2355,7 @@ MACRO sprf_256x256
     END
   END din_a[3]
   PIN din_a[4]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2364,7 +2364,7 @@ MACRO sprf_256x256
     END
   END din_a[4]
   PIN din_a[5]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2373,7 +2373,7 @@ MACRO sprf_256x256
     END
   END din_a[5]
   PIN din_a[6]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2382,7 +2382,7 @@ MACRO sprf_256x256
     END
   END din_a[6]
   PIN din_a[7]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2391,7 +2391,7 @@ MACRO sprf_256x256
     END
   END din_a[7]
   PIN din_a[8]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2400,7 +2400,7 @@ MACRO sprf_256x256
     END
   END din_a[8]
   PIN din_a[9]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2409,7 +2409,7 @@ MACRO sprf_256x256
     END
   END din_a[9]
   PIN din_a[10]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2418,7 +2418,7 @@ MACRO sprf_256x256
     END
   END din_a[10]
   PIN din_a[11]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2427,7 +2427,7 @@ MACRO sprf_256x256
     END
   END din_a[11]
   PIN din_a[12]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2436,7 +2436,7 @@ MACRO sprf_256x256
     END
   END din_a[12]
   PIN din_a[13]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2445,7 +2445,7 @@ MACRO sprf_256x256
     END
   END din_a[13]
   PIN din_a[14]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2454,7 +2454,7 @@ MACRO sprf_256x256
     END
   END din_a[14]
   PIN din_a[15]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2463,7 +2463,7 @@ MACRO sprf_256x256
     END
   END din_a[15]
   PIN din_a[16]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2472,7 +2472,7 @@ MACRO sprf_256x256
     END
   END din_a[16]
   PIN din_a[17]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2481,7 +2481,7 @@ MACRO sprf_256x256
     END
   END din_a[17]
   PIN din_a[18]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2490,7 +2490,7 @@ MACRO sprf_256x256
     END
   END din_a[18]
   PIN din_a[19]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2499,7 +2499,7 @@ MACRO sprf_256x256
     END
   END din_a[19]
   PIN din_a[20]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2508,7 +2508,7 @@ MACRO sprf_256x256
     END
   END din_a[20]
   PIN din_a[21]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2517,7 +2517,7 @@ MACRO sprf_256x256
     END
   END din_a[21]
   PIN din_a[22]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2526,7 +2526,7 @@ MACRO sprf_256x256
     END
   END din_a[22]
   PIN din_a[23]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2535,7 +2535,7 @@ MACRO sprf_256x256
     END
   END din_a[23]
   PIN din_a[24]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2544,7 +2544,7 @@ MACRO sprf_256x256
     END
   END din_a[24]
   PIN din_a[25]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2553,7 +2553,7 @@ MACRO sprf_256x256
     END
   END din_a[25]
   PIN din_a[26]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2562,7 +2562,7 @@ MACRO sprf_256x256
     END
   END din_a[26]
   PIN din_a[27]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2571,7 +2571,7 @@ MACRO sprf_256x256
     END
   END din_a[27]
   PIN din_a[28]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2580,7 +2580,7 @@ MACRO sprf_256x256
     END
   END din_a[28]
   PIN din_a[29]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2589,7 +2589,7 @@ MACRO sprf_256x256
     END
   END din_a[29]
   PIN din_a[30]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2598,7 +2598,7 @@ MACRO sprf_256x256
     END
   END din_a[30]
   PIN din_a[31]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2607,7 +2607,7 @@ MACRO sprf_256x256
     END
   END din_a[31]
   PIN din_a[32]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2616,7 +2616,7 @@ MACRO sprf_256x256
     END
   END din_a[32]
   PIN din_a[33]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2625,7 +2625,7 @@ MACRO sprf_256x256
     END
   END din_a[33]
   PIN din_a[34]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2634,7 +2634,7 @@ MACRO sprf_256x256
     END
   END din_a[34]
   PIN din_a[35]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2643,7 +2643,7 @@ MACRO sprf_256x256
     END
   END din_a[35]
   PIN din_a[36]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2652,7 +2652,7 @@ MACRO sprf_256x256
     END
   END din_a[36]
   PIN din_a[37]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2661,7 +2661,7 @@ MACRO sprf_256x256
     END
   END din_a[37]
   PIN din_a[38]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2670,7 +2670,7 @@ MACRO sprf_256x256
     END
   END din_a[38]
   PIN din_a[39]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2679,7 +2679,7 @@ MACRO sprf_256x256
     END
   END din_a[39]
   PIN din_a[40]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2688,7 +2688,7 @@ MACRO sprf_256x256
     END
   END din_a[40]
   PIN din_a[41]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2697,7 +2697,7 @@ MACRO sprf_256x256
     END
   END din_a[41]
   PIN din_a[42]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2706,7 +2706,7 @@ MACRO sprf_256x256
     END
   END din_a[42]
   PIN din_a[43]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2715,7 +2715,7 @@ MACRO sprf_256x256
     END
   END din_a[43]
   PIN din_a[44]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2724,7 +2724,7 @@ MACRO sprf_256x256
     END
   END din_a[44]
   PIN din_a[45]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2733,7 +2733,7 @@ MACRO sprf_256x256
     END
   END din_a[45]
   PIN din_a[46]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2742,7 +2742,7 @@ MACRO sprf_256x256
     END
   END din_a[46]
   PIN din_a[47]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2751,7 +2751,7 @@ MACRO sprf_256x256
     END
   END din_a[47]
   PIN din_a[48]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2760,7 +2760,7 @@ MACRO sprf_256x256
     END
   END din_a[48]
   PIN din_a[49]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2769,7 +2769,7 @@ MACRO sprf_256x256
     END
   END din_a[49]
   PIN din_a[50]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2778,7 +2778,7 @@ MACRO sprf_256x256
     END
   END din_a[50]
   PIN din_a[51]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2787,7 +2787,7 @@ MACRO sprf_256x256
     END
   END din_a[51]
   PIN din_a[52]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2796,7 +2796,7 @@ MACRO sprf_256x256
     END
   END din_a[52]
   PIN din_a[53]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2805,7 +2805,7 @@ MACRO sprf_256x256
     END
   END din_a[53]
   PIN din_a[54]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2814,7 +2814,7 @@ MACRO sprf_256x256
     END
   END din_a[54]
   PIN din_a[55]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2823,7 +2823,7 @@ MACRO sprf_256x256
     END
   END din_a[55]
   PIN din_a[56]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2832,7 +2832,7 @@ MACRO sprf_256x256
     END
   END din_a[56]
   PIN din_a[57]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2841,7 +2841,7 @@ MACRO sprf_256x256
     END
   END din_a[57]
   PIN din_a[58]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2850,7 +2850,7 @@ MACRO sprf_256x256
     END
   END din_a[58]
   PIN din_a[59]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2859,7 +2859,7 @@ MACRO sprf_256x256
     END
   END din_a[59]
   PIN din_a[60]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2868,7 +2868,7 @@ MACRO sprf_256x256
     END
   END din_a[60]
   PIN din_a[61]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2877,7 +2877,7 @@ MACRO sprf_256x256
     END
   END din_a[61]
   PIN din_a[62]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2886,7 +2886,7 @@ MACRO sprf_256x256
     END
   END din_a[62]
   PIN din_a[63]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2895,7 +2895,7 @@ MACRO sprf_256x256
     END
   END din_a[63]
   PIN din_a[64]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2904,7 +2904,7 @@ MACRO sprf_256x256
     END
   END din_a[64]
   PIN din_a[65]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2913,7 +2913,7 @@ MACRO sprf_256x256
     END
   END din_a[65]
   PIN din_a[66]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2922,7 +2922,7 @@ MACRO sprf_256x256
     END
   END din_a[66]
   PIN din_a[67]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2931,7 +2931,7 @@ MACRO sprf_256x256
     END
   END din_a[67]
   PIN din_a[68]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2940,7 +2940,7 @@ MACRO sprf_256x256
     END
   END din_a[68]
   PIN din_a[69]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2949,7 +2949,7 @@ MACRO sprf_256x256
     END
   END din_a[69]
   PIN din_a[70]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2958,7 +2958,7 @@ MACRO sprf_256x256
     END
   END din_a[70]
   PIN din_a[71]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2967,7 +2967,7 @@ MACRO sprf_256x256
     END
   END din_a[71]
   PIN din_a[72]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2976,7 +2976,7 @@ MACRO sprf_256x256
     END
   END din_a[72]
   PIN din_a[73]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2985,7 +2985,7 @@ MACRO sprf_256x256
     END
   END din_a[73]
   PIN din_a[74]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -2994,7 +2994,7 @@ MACRO sprf_256x256
     END
   END din_a[74]
   PIN din_a[75]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3003,7 +3003,7 @@ MACRO sprf_256x256
     END
   END din_a[75]
   PIN din_a[76]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3012,7 +3012,7 @@ MACRO sprf_256x256
     END
   END din_a[76]
   PIN din_a[77]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3021,7 +3021,7 @@ MACRO sprf_256x256
     END
   END din_a[77]
   PIN din_a[78]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3030,7 +3030,7 @@ MACRO sprf_256x256
     END
   END din_a[78]
   PIN din_a[79]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3039,7 +3039,7 @@ MACRO sprf_256x256
     END
   END din_a[79]
   PIN din_a[80]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3048,7 +3048,7 @@ MACRO sprf_256x256
     END
   END din_a[80]
   PIN din_a[81]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3057,7 +3057,7 @@ MACRO sprf_256x256
     END
   END din_a[81]
   PIN din_a[82]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3066,7 +3066,7 @@ MACRO sprf_256x256
     END
   END din_a[82]
   PIN din_a[83]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3075,7 +3075,7 @@ MACRO sprf_256x256
     END
   END din_a[83]
   PIN din_a[84]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3084,7 +3084,7 @@ MACRO sprf_256x256
     END
   END din_a[84]
   PIN din_a[85]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3093,7 +3093,7 @@ MACRO sprf_256x256
     END
   END din_a[85]
   PIN din_a[86]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3102,7 +3102,7 @@ MACRO sprf_256x256
     END
   END din_a[86]
   PIN din_a[87]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3111,7 +3111,7 @@ MACRO sprf_256x256
     END
   END din_a[87]
   PIN din_a[88]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3120,7 +3120,7 @@ MACRO sprf_256x256
     END
   END din_a[88]
   PIN din_a[89]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3129,7 +3129,7 @@ MACRO sprf_256x256
     END
   END din_a[89]
   PIN din_a[90]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3138,7 +3138,7 @@ MACRO sprf_256x256
     END
   END din_a[90]
   PIN din_a[91]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3147,7 +3147,7 @@ MACRO sprf_256x256
     END
   END din_a[91]
   PIN din_a[92]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3156,7 +3156,7 @@ MACRO sprf_256x256
     END
   END din_a[92]
   PIN din_a[93]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3165,7 +3165,7 @@ MACRO sprf_256x256
     END
   END din_a[93]
   PIN din_a[94]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3174,7 +3174,7 @@ MACRO sprf_256x256
     END
   END din_a[94]
   PIN din_a[95]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3183,7 +3183,7 @@ MACRO sprf_256x256
     END
   END din_a[95]
   PIN din_a[96]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3192,7 +3192,7 @@ MACRO sprf_256x256
     END
   END din_a[96]
   PIN din_a[97]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3201,7 +3201,7 @@ MACRO sprf_256x256
     END
   END din_a[97]
   PIN din_a[98]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3210,7 +3210,7 @@ MACRO sprf_256x256
     END
   END din_a[98]
   PIN din_a[99]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3219,7 +3219,7 @@ MACRO sprf_256x256
     END
   END din_a[99]
   PIN din_a[100]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3228,7 +3228,7 @@ MACRO sprf_256x256
     END
   END din_a[100]
   PIN din_a[101]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3237,7 +3237,7 @@ MACRO sprf_256x256
     END
   END din_a[101]
   PIN din_a[102]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3246,7 +3246,7 @@ MACRO sprf_256x256
     END
   END din_a[102]
   PIN din_a[103]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3255,7 +3255,7 @@ MACRO sprf_256x256
     END
   END din_a[103]
   PIN din_a[104]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3264,7 +3264,7 @@ MACRO sprf_256x256
     END
   END din_a[104]
   PIN din_a[105]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3273,7 +3273,7 @@ MACRO sprf_256x256
     END
   END din_a[105]
   PIN din_a[106]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3282,7 +3282,7 @@ MACRO sprf_256x256
     END
   END din_a[106]
   PIN din_a[107]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3291,7 +3291,7 @@ MACRO sprf_256x256
     END
   END din_a[107]
   PIN din_a[108]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3300,7 +3300,7 @@ MACRO sprf_256x256
     END
   END din_a[108]
   PIN din_a[109]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3309,7 +3309,7 @@ MACRO sprf_256x256
     END
   END din_a[109]
   PIN din_a[110]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3318,7 +3318,7 @@ MACRO sprf_256x256
     END
   END din_a[110]
   PIN din_a[111]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3327,7 +3327,7 @@ MACRO sprf_256x256
     END
   END din_a[111]
   PIN din_a[112]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3336,7 +3336,7 @@ MACRO sprf_256x256
     END
   END din_a[112]
   PIN din_a[113]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3345,7 +3345,7 @@ MACRO sprf_256x256
     END
   END din_a[113]
   PIN din_a[114]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3354,7 +3354,7 @@ MACRO sprf_256x256
     END
   END din_a[114]
   PIN din_a[115]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3363,7 +3363,7 @@ MACRO sprf_256x256
     END
   END din_a[115]
   PIN din_a[116]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3372,7 +3372,7 @@ MACRO sprf_256x256
     END
   END din_a[116]
   PIN din_a[117]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3381,7 +3381,7 @@ MACRO sprf_256x256
     END
   END din_a[117]
   PIN din_a[118]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3390,7 +3390,7 @@ MACRO sprf_256x256
     END
   END din_a[118]
   PIN din_a[119]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3399,7 +3399,7 @@ MACRO sprf_256x256
     END
   END din_a[119]
   PIN din_a[120]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3408,7 +3408,7 @@ MACRO sprf_256x256
     END
   END din_a[120]
   PIN din_a[121]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3417,7 +3417,7 @@ MACRO sprf_256x256
     END
   END din_a[121]
   PIN din_a[122]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3426,7 +3426,7 @@ MACRO sprf_256x256
     END
   END din_a[122]
   PIN din_a[123]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3435,7 +3435,7 @@ MACRO sprf_256x256
     END
   END din_a[123]
   PIN din_a[124]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3444,7 +3444,7 @@ MACRO sprf_256x256
     END
   END din_a[124]
   PIN din_a[125]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3453,7 +3453,7 @@ MACRO sprf_256x256
     END
   END din_a[125]
   PIN din_a[126]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3462,7 +3462,7 @@ MACRO sprf_256x256
     END
   END din_a[126]
   PIN din_a[127]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3471,7 +3471,7 @@ MACRO sprf_256x256
     END
   END din_a[127]
   PIN din_a[128]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3480,7 +3480,7 @@ MACRO sprf_256x256
     END
   END din_a[128]
   PIN din_a[129]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3489,7 +3489,7 @@ MACRO sprf_256x256
     END
   END din_a[129]
   PIN din_a[130]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3498,7 +3498,7 @@ MACRO sprf_256x256
     END
   END din_a[130]
   PIN din_a[131]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3507,7 +3507,7 @@ MACRO sprf_256x256
     END
   END din_a[131]
   PIN din_a[132]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3516,7 +3516,7 @@ MACRO sprf_256x256
     END
   END din_a[132]
   PIN din_a[133]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3525,7 +3525,7 @@ MACRO sprf_256x256
     END
   END din_a[133]
   PIN din_a[134]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3534,7 +3534,7 @@ MACRO sprf_256x256
     END
   END din_a[134]
   PIN din_a[135]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3543,7 +3543,7 @@ MACRO sprf_256x256
     END
   END din_a[135]
   PIN din_a[136]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3552,7 +3552,7 @@ MACRO sprf_256x256
     END
   END din_a[136]
   PIN din_a[137]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3561,7 +3561,7 @@ MACRO sprf_256x256
     END
   END din_a[137]
   PIN din_a[138]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3570,7 +3570,7 @@ MACRO sprf_256x256
     END
   END din_a[138]
   PIN din_a[139]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3579,7 +3579,7 @@ MACRO sprf_256x256
     END
   END din_a[139]
   PIN din_a[140]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3588,7 +3588,7 @@ MACRO sprf_256x256
     END
   END din_a[140]
   PIN din_a[141]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3597,7 +3597,7 @@ MACRO sprf_256x256
     END
   END din_a[141]
   PIN din_a[142]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3606,7 +3606,7 @@ MACRO sprf_256x256
     END
   END din_a[142]
   PIN din_a[143]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3615,7 +3615,7 @@ MACRO sprf_256x256
     END
   END din_a[143]
   PIN din_a[144]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3624,7 +3624,7 @@ MACRO sprf_256x256
     END
   END din_a[144]
   PIN din_a[145]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3633,7 +3633,7 @@ MACRO sprf_256x256
     END
   END din_a[145]
   PIN din_a[146]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3642,7 +3642,7 @@ MACRO sprf_256x256
     END
   END din_a[146]
   PIN din_a[147]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3651,7 +3651,7 @@ MACRO sprf_256x256
     END
   END din_a[147]
   PIN din_a[148]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3660,7 +3660,7 @@ MACRO sprf_256x256
     END
   END din_a[148]
   PIN din_a[149]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3669,7 +3669,7 @@ MACRO sprf_256x256
     END
   END din_a[149]
   PIN din_a[150]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3678,7 +3678,7 @@ MACRO sprf_256x256
     END
   END din_a[150]
   PIN din_a[151]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3687,7 +3687,7 @@ MACRO sprf_256x256
     END
   END din_a[151]
   PIN din_a[152]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3696,7 +3696,7 @@ MACRO sprf_256x256
     END
   END din_a[152]
   PIN din_a[153]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3705,7 +3705,7 @@ MACRO sprf_256x256
     END
   END din_a[153]
   PIN din_a[154]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3714,7 +3714,7 @@ MACRO sprf_256x256
     END
   END din_a[154]
   PIN din_a[155]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3723,7 +3723,7 @@ MACRO sprf_256x256
     END
   END din_a[155]
   PIN din_a[156]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3732,7 +3732,7 @@ MACRO sprf_256x256
     END
   END din_a[156]
   PIN din_a[157]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3741,7 +3741,7 @@ MACRO sprf_256x256
     END
   END din_a[157]
   PIN din_a[158]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3750,7 +3750,7 @@ MACRO sprf_256x256
     END
   END din_a[158]
   PIN din_a[159]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3759,7 +3759,7 @@ MACRO sprf_256x256
     END
   END din_a[159]
   PIN din_a[160]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3768,7 +3768,7 @@ MACRO sprf_256x256
     END
   END din_a[160]
   PIN din_a[161]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3777,7 +3777,7 @@ MACRO sprf_256x256
     END
   END din_a[161]
   PIN din_a[162]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3786,7 +3786,7 @@ MACRO sprf_256x256
     END
   END din_a[162]
   PIN din_a[163]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3795,7 +3795,7 @@ MACRO sprf_256x256
     END
   END din_a[163]
   PIN din_a[164]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3804,7 +3804,7 @@ MACRO sprf_256x256
     END
   END din_a[164]
   PIN din_a[165]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3813,7 +3813,7 @@ MACRO sprf_256x256
     END
   END din_a[165]
   PIN din_a[166]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3822,7 +3822,7 @@ MACRO sprf_256x256
     END
   END din_a[166]
   PIN din_a[167]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3831,7 +3831,7 @@ MACRO sprf_256x256
     END
   END din_a[167]
   PIN din_a[168]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3840,7 +3840,7 @@ MACRO sprf_256x256
     END
   END din_a[168]
   PIN din_a[169]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3849,7 +3849,7 @@ MACRO sprf_256x256
     END
   END din_a[169]
   PIN din_a[170]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3858,7 +3858,7 @@ MACRO sprf_256x256
     END
   END din_a[170]
   PIN din_a[171]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3867,7 +3867,7 @@ MACRO sprf_256x256
     END
   END din_a[171]
   PIN din_a[172]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3876,7 +3876,7 @@ MACRO sprf_256x256
     END
   END din_a[172]
   PIN din_a[173]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3885,7 +3885,7 @@ MACRO sprf_256x256
     END
   END din_a[173]
   PIN din_a[174]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3894,7 +3894,7 @@ MACRO sprf_256x256
     END
   END din_a[174]
   PIN din_a[175]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3903,7 +3903,7 @@ MACRO sprf_256x256
     END
   END din_a[175]
   PIN din_a[176]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3912,7 +3912,7 @@ MACRO sprf_256x256
     END
   END din_a[176]
   PIN din_a[177]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3921,7 +3921,7 @@ MACRO sprf_256x256
     END
   END din_a[177]
   PIN din_a[178]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3930,7 +3930,7 @@ MACRO sprf_256x256
     END
   END din_a[178]
   PIN din_a[179]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3939,7 +3939,7 @@ MACRO sprf_256x256
     END
   END din_a[179]
   PIN din_a[180]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3948,7 +3948,7 @@ MACRO sprf_256x256
     END
   END din_a[180]
   PIN din_a[181]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3957,7 +3957,7 @@ MACRO sprf_256x256
     END
   END din_a[181]
   PIN din_a[182]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3966,7 +3966,7 @@ MACRO sprf_256x256
     END
   END din_a[182]
   PIN din_a[183]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3975,7 +3975,7 @@ MACRO sprf_256x256
     END
   END din_a[183]
   PIN din_a[184]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3984,7 +3984,7 @@ MACRO sprf_256x256
     END
   END din_a[184]
   PIN din_a[185]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -3993,7 +3993,7 @@ MACRO sprf_256x256
     END
   END din_a[185]
   PIN din_a[186]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4002,7 +4002,7 @@ MACRO sprf_256x256
     END
   END din_a[186]
   PIN din_a[187]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4011,7 +4011,7 @@ MACRO sprf_256x256
     END
   END din_a[187]
   PIN din_a[188]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4020,7 +4020,7 @@ MACRO sprf_256x256
     END
   END din_a[188]
   PIN din_a[189]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4029,7 +4029,7 @@ MACRO sprf_256x256
     END
   END din_a[189]
   PIN din_a[190]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4038,7 +4038,7 @@ MACRO sprf_256x256
     END
   END din_a[190]
   PIN din_a[191]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4047,7 +4047,7 @@ MACRO sprf_256x256
     END
   END din_a[191]
   PIN din_a[192]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4056,7 +4056,7 @@ MACRO sprf_256x256
     END
   END din_a[192]
   PIN din_a[193]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4065,7 +4065,7 @@ MACRO sprf_256x256
     END
   END din_a[193]
   PIN din_a[194]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4074,7 +4074,7 @@ MACRO sprf_256x256
     END
   END din_a[194]
   PIN din_a[195]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4083,7 +4083,7 @@ MACRO sprf_256x256
     END
   END din_a[195]
   PIN din_a[196]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4092,7 +4092,7 @@ MACRO sprf_256x256
     END
   END din_a[196]
   PIN din_a[197]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4101,7 +4101,7 @@ MACRO sprf_256x256
     END
   END din_a[197]
   PIN din_a[198]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4110,7 +4110,7 @@ MACRO sprf_256x256
     END
   END din_a[198]
   PIN din_a[199]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4119,7 +4119,7 @@ MACRO sprf_256x256
     END
   END din_a[199]
   PIN din_a[200]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4128,7 +4128,7 @@ MACRO sprf_256x256
     END
   END din_a[200]
   PIN din_a[201]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4137,7 +4137,7 @@ MACRO sprf_256x256
     END
   END din_a[201]
   PIN din_a[202]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4146,7 +4146,7 @@ MACRO sprf_256x256
     END
   END din_a[202]
   PIN din_a[203]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4155,7 +4155,7 @@ MACRO sprf_256x256
     END
   END din_a[203]
   PIN din_a[204]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4164,7 +4164,7 @@ MACRO sprf_256x256
     END
   END din_a[204]
   PIN din_a[205]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4173,7 +4173,7 @@ MACRO sprf_256x256
     END
   END din_a[205]
   PIN din_a[206]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4182,7 +4182,7 @@ MACRO sprf_256x256
     END
   END din_a[206]
   PIN din_a[207]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4191,7 +4191,7 @@ MACRO sprf_256x256
     END
   END din_a[207]
   PIN din_a[208]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4200,7 +4200,7 @@ MACRO sprf_256x256
     END
   END din_a[208]
   PIN din_a[209]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4209,7 +4209,7 @@ MACRO sprf_256x256
     END
   END din_a[209]
   PIN din_a[210]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4218,7 +4218,7 @@ MACRO sprf_256x256
     END
   END din_a[210]
   PIN din_a[211]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4227,7 +4227,7 @@ MACRO sprf_256x256
     END
   END din_a[211]
   PIN din_a[212]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4236,7 +4236,7 @@ MACRO sprf_256x256
     END
   END din_a[212]
   PIN din_a[213]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4245,7 +4245,7 @@ MACRO sprf_256x256
     END
   END din_a[213]
   PIN din_a[214]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4254,7 +4254,7 @@ MACRO sprf_256x256
     END
   END din_a[214]
   PIN din_a[215]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4263,7 +4263,7 @@ MACRO sprf_256x256
     END
   END din_a[215]
   PIN din_a[216]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4272,7 +4272,7 @@ MACRO sprf_256x256
     END
   END din_a[216]
   PIN din_a[217]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4281,7 +4281,7 @@ MACRO sprf_256x256
     END
   END din_a[217]
   PIN din_a[218]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4290,7 +4290,7 @@ MACRO sprf_256x256
     END
   END din_a[218]
   PIN din_a[219]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4299,7 +4299,7 @@ MACRO sprf_256x256
     END
   END din_a[219]
   PIN din_a[220]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4308,7 +4308,7 @@ MACRO sprf_256x256
     END
   END din_a[220]
   PIN din_a[221]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4317,7 +4317,7 @@ MACRO sprf_256x256
     END
   END din_a[221]
   PIN din_a[222]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4326,7 +4326,7 @@ MACRO sprf_256x256
     END
   END din_a[222]
   PIN din_a[223]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4335,7 +4335,7 @@ MACRO sprf_256x256
     END
   END din_a[223]
   PIN din_a[224]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4344,7 +4344,7 @@ MACRO sprf_256x256
     END
   END din_a[224]
   PIN din_a[225]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4353,7 +4353,7 @@ MACRO sprf_256x256
     END
   END din_a[225]
   PIN din_a[226]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4362,7 +4362,7 @@ MACRO sprf_256x256
     END
   END din_a[226]
   PIN din_a[227]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4371,7 +4371,7 @@ MACRO sprf_256x256
     END
   END din_a[227]
   PIN din_a[228]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4380,7 +4380,7 @@ MACRO sprf_256x256
     END
   END din_a[228]
   PIN din_a[229]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4389,7 +4389,7 @@ MACRO sprf_256x256
     END
   END din_a[229]
   PIN din_a[230]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4398,7 +4398,7 @@ MACRO sprf_256x256
     END
   END din_a[230]
   PIN din_a[231]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4407,7 +4407,7 @@ MACRO sprf_256x256
     END
   END din_a[231]
   PIN din_a[232]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4416,7 +4416,7 @@ MACRO sprf_256x256
     END
   END din_a[232]
   PIN din_a[233]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4425,7 +4425,7 @@ MACRO sprf_256x256
     END
   END din_a[233]
   PIN din_a[234]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4434,7 +4434,7 @@ MACRO sprf_256x256
     END
   END din_a[234]
   PIN din_a[235]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4443,7 +4443,7 @@ MACRO sprf_256x256
     END
   END din_a[235]
   PIN din_a[236]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4452,7 +4452,7 @@ MACRO sprf_256x256
     END
   END din_a[236]
   PIN din_a[237]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4461,7 +4461,7 @@ MACRO sprf_256x256
     END
   END din_a[237]
   PIN din_a[238]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4470,7 +4470,7 @@ MACRO sprf_256x256
     END
   END din_a[238]
   PIN din_a[239]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4479,7 +4479,7 @@ MACRO sprf_256x256
     END
   END din_a[239]
   PIN din_a[240]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4488,7 +4488,7 @@ MACRO sprf_256x256
     END
   END din_a[240]
   PIN din_a[241]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4497,7 +4497,7 @@ MACRO sprf_256x256
     END
   END din_a[241]
   PIN din_a[242]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4506,7 +4506,7 @@ MACRO sprf_256x256
     END
   END din_a[242]
   PIN din_a[243]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4515,7 +4515,7 @@ MACRO sprf_256x256
     END
   END din_a[243]
   PIN din_a[244]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4524,7 +4524,7 @@ MACRO sprf_256x256
     END
   END din_a[244]
   PIN din_a[245]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4533,7 +4533,7 @@ MACRO sprf_256x256
     END
   END din_a[245]
   PIN din_a[246]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4542,7 +4542,7 @@ MACRO sprf_256x256
     END
   END din_a[246]
   PIN din_a[247]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4551,7 +4551,7 @@ MACRO sprf_256x256
     END
   END din_a[247]
   PIN din_a[248]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4560,7 +4560,7 @@ MACRO sprf_256x256
     END
   END din_a[248]
   PIN din_a[249]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4569,7 +4569,7 @@ MACRO sprf_256x256
     END
   END din_a[249]
   PIN din_a[250]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4578,7 +4578,7 @@ MACRO sprf_256x256
     END
   END din_a[250]
   PIN din_a[251]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4587,7 +4587,7 @@ MACRO sprf_256x256
     END
   END din_a[251]
   PIN din_a[252]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4596,7 +4596,7 @@ MACRO sprf_256x256
     END
   END din_a[252]
   PIN din_a[253]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4605,7 +4605,7 @@ MACRO sprf_256x256
     END
   END din_a[253]
   PIN din_a[254]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4614,7 +4614,7 @@ MACRO sprf_256x256
     END
   END din_a[254]
   PIN din_a[255]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -4703,7 +4703,7 @@ MACRO sprf_256x256
       RECT 0.000 83.568 0.024 83.592 ;
     END
   END we_a
-  PIN clk
+  PIN clk_a
     DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
@@ -4711,7 +4711,123 @@ MACRO sprf_256x256
       LAYER M4 ;
       RECT 0.000 83.712 0.024 83.736 ;
     END
-  END clk
+  END clk_a
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER M4 ;
+      RECT 0.048 0.384 33.202 0.480 ;
+      RECT 0.048 1.152 33.202 1.248 ;
+      RECT 0.048 1.920 33.202 2.016 ;
+      RECT 0.048 2.688 33.202 2.784 ;
+      RECT 0.048 3.456 33.202 3.552 ;
+      RECT 0.048 4.224 33.202 4.320 ;
+      RECT 0.048 4.992 33.202 5.088 ;
+      RECT 0.048 5.760 33.202 5.856 ;
+      RECT 0.048 6.528 33.202 6.624 ;
+      RECT 0.048 7.296 33.202 7.392 ;
+      RECT 0.048 8.064 33.202 8.160 ;
+      RECT 0.048 8.832 33.202 8.928 ;
+      RECT 0.048 9.600 33.202 9.696 ;
+      RECT 0.048 10.368 33.202 10.464 ;
+      RECT 0.048 11.136 33.202 11.232 ;
+      RECT 0.048 11.904 33.202 12.000 ;
+      RECT 0.048 12.672 33.202 12.768 ;
+      RECT 0.048 13.440 33.202 13.536 ;
+      RECT 0.048 14.208 33.202 14.304 ;
+      RECT 0.048 14.976 33.202 15.072 ;
+      RECT 0.048 15.744 33.202 15.840 ;
+      RECT 0.048 16.512 33.202 16.608 ;
+      RECT 0.048 17.280 33.202 17.376 ;
+      RECT 0.048 18.048 33.202 18.144 ;
+      RECT 0.048 18.816 33.202 18.912 ;
+      RECT 0.048 19.584 33.202 19.680 ;
+      RECT 0.048 20.352 33.202 20.448 ;
+      RECT 0.048 21.120 33.202 21.216 ;
+      RECT 0.048 21.888 33.202 21.984 ;
+      RECT 0.048 22.656 33.202 22.752 ;
+      RECT 0.048 23.424 33.202 23.520 ;
+      RECT 0.048 24.192 33.202 24.288 ;
+      RECT 0.048 24.960 33.202 25.056 ;
+      RECT 0.048 25.728 33.202 25.824 ;
+      RECT 0.048 26.496 33.202 26.592 ;
+      RECT 0.048 27.264 33.202 27.360 ;
+      RECT 0.048 28.032 33.202 28.128 ;
+      RECT 0.048 28.800 33.202 28.896 ;
+      RECT 0.048 29.568 33.202 29.664 ;
+      RECT 0.048 30.336 33.202 30.432 ;
+      RECT 0.048 31.104 33.202 31.200 ;
+      RECT 0.048 31.872 33.202 31.968 ;
+      RECT 0.048 32.640 33.202 32.736 ;
+      RECT 0.048 33.408 33.202 33.504 ;
+      RECT 0.048 34.176 33.202 34.272 ;
+      RECT 0.048 34.944 33.202 35.040 ;
+      RECT 0.048 35.712 33.202 35.808 ;
+      RECT 0.048 36.480 33.202 36.576 ;
+      RECT 0.048 37.248 33.202 37.344 ;
+      RECT 0.048 38.016 33.202 38.112 ;
+      RECT 0.048 38.784 33.202 38.880 ;
+      RECT 0.048 39.552 33.202 39.648 ;
+      RECT 0.048 40.320 33.202 40.416 ;
+      RECT 0.048 41.088 33.202 41.184 ;
+      RECT 0.048 41.856 33.202 41.952 ;
+      RECT 0.048 42.624 33.202 42.720 ;
+      RECT 0.048 43.392 33.202 43.488 ;
+      RECT 0.048 44.160 33.202 44.256 ;
+      RECT 0.048 44.928 33.202 45.024 ;
+      RECT 0.048 45.696 33.202 45.792 ;
+      RECT 0.048 46.464 33.202 46.560 ;
+      RECT 0.048 47.232 33.202 47.328 ;
+      RECT 0.048 48.000 33.202 48.096 ;
+      RECT 0.048 48.768 33.202 48.864 ;
+      RECT 0.048 49.536 33.202 49.632 ;
+      RECT 0.048 50.304 33.202 50.400 ;
+      RECT 0.048 51.072 33.202 51.168 ;
+      RECT 0.048 51.840 33.202 51.936 ;
+      RECT 0.048 52.608 33.202 52.704 ;
+      RECT 0.048 53.376 33.202 53.472 ;
+      RECT 0.048 54.144 33.202 54.240 ;
+      RECT 0.048 54.912 33.202 55.008 ;
+      RECT 0.048 55.680 33.202 55.776 ;
+      RECT 0.048 56.448 33.202 56.544 ;
+      RECT 0.048 57.216 33.202 57.312 ;
+      RECT 0.048 57.984 33.202 58.080 ;
+      RECT 0.048 58.752 33.202 58.848 ;
+      RECT 0.048 59.520 33.202 59.616 ;
+      RECT 0.048 60.288 33.202 60.384 ;
+      RECT 0.048 61.056 33.202 61.152 ;
+      RECT 0.048 61.824 33.202 61.920 ;
+      RECT 0.048 62.592 33.202 62.688 ;
+      RECT 0.048 63.360 33.202 63.456 ;
+      RECT 0.048 64.128 33.202 64.224 ;
+      RECT 0.048 64.896 33.202 64.992 ;
+      RECT 0.048 65.664 33.202 65.760 ;
+      RECT 0.048 66.432 33.202 66.528 ;
+      RECT 0.048 67.200 33.202 67.296 ;
+      RECT 0.048 67.968 33.202 68.064 ;
+      RECT 0.048 68.736 33.202 68.832 ;
+      RECT 0.048 69.504 33.202 69.600 ;
+      RECT 0.048 70.272 33.202 70.368 ;
+      RECT 0.048 71.040 33.202 71.136 ;
+      RECT 0.048 71.808 33.202 71.904 ;
+      RECT 0.048 72.576 33.202 72.672 ;
+      RECT 0.048 73.344 33.202 73.440 ;
+      RECT 0.048 74.112 33.202 74.208 ;
+      RECT 0.048 74.880 33.202 74.976 ;
+      RECT 0.048 75.648 33.202 75.744 ;
+      RECT 0.048 76.416 33.202 76.512 ;
+      RECT 0.048 77.184 33.202 77.280 ;
+      RECT 0.048 77.952 33.202 78.048 ;
+      RECT 0.048 78.720 33.202 78.816 ;
+      RECT 0.048 79.488 33.202 79.584 ;
+      RECT 0.048 80.256 33.202 80.352 ;
+      RECT 0.048 81.024 33.202 81.120 ;
+      RECT 0.048 81.792 33.202 81.888 ;
+      RECT 0.048 82.560 33.202 82.656 ;
+      RECT 0.048 83.328 33.202 83.424 ;
+    END
+  END VDD
   PIN VSS
     DIRECTION INOUT ;
     USE GROUND ;
@@ -4829,122 +4945,6 @@ MACRO sprf_256x256
       RECT 0.048 83.712 33.202 83.808 ;
     END
   END VSS
-  PIN VDD
-    DIRECTION INOUT ;
-    USE POWER ;
-    PORT
-      LAYER M4 ;
-      RECT 0.048 0.384 33.202 0.480 ;
-      RECT 0.048 1.152 33.202 1.248 ;
-      RECT 0.048 1.920 33.202 2.016 ;
-      RECT 0.048 2.688 33.202 2.784 ;
-      RECT 0.048 3.456 33.202 3.552 ;
-      RECT 0.048 4.224 33.202 4.320 ;
-      RECT 0.048 4.992 33.202 5.088 ;
-      RECT 0.048 5.760 33.202 5.856 ;
-      RECT 0.048 6.528 33.202 6.624 ;
-      RECT 0.048 7.296 33.202 7.392 ;
-      RECT 0.048 8.064 33.202 8.160 ;
-      RECT 0.048 8.832 33.202 8.928 ;
-      RECT 0.048 9.600 33.202 9.696 ;
-      RECT 0.048 10.368 33.202 10.464 ;
-      RECT 0.048 11.136 33.202 11.232 ;
-      RECT 0.048 11.904 33.202 12.000 ;
-      RECT 0.048 12.672 33.202 12.768 ;
-      RECT 0.048 13.440 33.202 13.536 ;
-      RECT 0.048 14.208 33.202 14.304 ;
-      RECT 0.048 14.976 33.202 15.072 ;
-      RECT 0.048 15.744 33.202 15.840 ;
-      RECT 0.048 16.512 33.202 16.608 ;
-      RECT 0.048 17.280 33.202 17.376 ;
-      RECT 0.048 18.048 33.202 18.144 ;
-      RECT 0.048 18.816 33.202 18.912 ;
-      RECT 0.048 19.584 33.202 19.680 ;
-      RECT 0.048 20.352 33.202 20.448 ;
-      RECT 0.048 21.120 33.202 21.216 ;
-      RECT 0.048 21.888 33.202 21.984 ;
-      RECT 0.048 22.656 33.202 22.752 ;
-      RECT 0.048 23.424 33.202 23.520 ;
-      RECT 0.048 24.192 33.202 24.288 ;
-      RECT 0.048 24.960 33.202 25.056 ;
-      RECT 0.048 25.728 33.202 25.824 ;
-      RECT 0.048 26.496 33.202 26.592 ;
-      RECT 0.048 27.264 33.202 27.360 ;
-      RECT 0.048 28.032 33.202 28.128 ;
-      RECT 0.048 28.800 33.202 28.896 ;
-      RECT 0.048 29.568 33.202 29.664 ;
-      RECT 0.048 30.336 33.202 30.432 ;
-      RECT 0.048 31.104 33.202 31.200 ;
-      RECT 0.048 31.872 33.202 31.968 ;
-      RECT 0.048 32.640 33.202 32.736 ;
-      RECT 0.048 33.408 33.202 33.504 ;
-      RECT 0.048 34.176 33.202 34.272 ;
-      RECT 0.048 34.944 33.202 35.040 ;
-      RECT 0.048 35.712 33.202 35.808 ;
-      RECT 0.048 36.480 33.202 36.576 ;
-      RECT 0.048 37.248 33.202 37.344 ;
-      RECT 0.048 38.016 33.202 38.112 ;
-      RECT 0.048 38.784 33.202 38.880 ;
-      RECT 0.048 39.552 33.202 39.648 ;
-      RECT 0.048 40.320 33.202 40.416 ;
-      RECT 0.048 41.088 33.202 41.184 ;
-      RECT 0.048 41.856 33.202 41.952 ;
-      RECT 0.048 42.624 33.202 42.720 ;
-      RECT 0.048 43.392 33.202 43.488 ;
-      RECT 0.048 44.160 33.202 44.256 ;
-      RECT 0.048 44.928 33.202 45.024 ;
-      RECT 0.048 45.696 33.202 45.792 ;
-      RECT 0.048 46.464 33.202 46.560 ;
-      RECT 0.048 47.232 33.202 47.328 ;
-      RECT 0.048 48.000 33.202 48.096 ;
-      RECT 0.048 48.768 33.202 48.864 ;
-      RECT 0.048 49.536 33.202 49.632 ;
-      RECT 0.048 50.304 33.202 50.400 ;
-      RECT 0.048 51.072 33.202 51.168 ;
-      RECT 0.048 51.840 33.202 51.936 ;
-      RECT 0.048 52.608 33.202 52.704 ;
-      RECT 0.048 53.376 33.202 53.472 ;
-      RECT 0.048 54.144 33.202 54.240 ;
-      RECT 0.048 54.912 33.202 55.008 ;
-      RECT 0.048 55.680 33.202 55.776 ;
-      RECT 0.048 56.448 33.202 56.544 ;
-      RECT 0.048 57.216 33.202 57.312 ;
-      RECT 0.048 57.984 33.202 58.080 ;
-      RECT 0.048 58.752 33.202 58.848 ;
-      RECT 0.048 59.520 33.202 59.616 ;
-      RECT 0.048 60.288 33.202 60.384 ;
-      RECT 0.048 61.056 33.202 61.152 ;
-      RECT 0.048 61.824 33.202 61.920 ;
-      RECT 0.048 62.592 33.202 62.688 ;
-      RECT 0.048 63.360 33.202 63.456 ;
-      RECT 0.048 64.128 33.202 64.224 ;
-      RECT 0.048 64.896 33.202 64.992 ;
-      RECT 0.048 65.664 33.202 65.760 ;
-      RECT 0.048 66.432 33.202 66.528 ;
-      RECT 0.048 67.200 33.202 67.296 ;
-      RECT 0.048 67.968 33.202 68.064 ;
-      RECT 0.048 68.736 33.202 68.832 ;
-      RECT 0.048 69.504 33.202 69.600 ;
-      RECT 0.048 70.272 33.202 70.368 ;
-      RECT 0.048 71.040 33.202 71.136 ;
-      RECT 0.048 71.808 33.202 71.904 ;
-      RECT 0.048 72.576 33.202 72.672 ;
-      RECT 0.048 73.344 33.202 73.440 ;
-      RECT 0.048 74.112 33.202 74.208 ;
-      RECT 0.048 74.880 33.202 74.976 ;
-      RECT 0.048 75.648 33.202 75.744 ;
-      RECT 0.048 76.416 33.202 76.512 ;
-      RECT 0.048 77.184 33.202 77.280 ;
-      RECT 0.048 77.952 33.202 78.048 ;
-      RECT 0.048 78.720 33.202 78.816 ;
-      RECT 0.048 79.488 33.202 79.584 ;
-      RECT 0.048 80.256 33.202 80.352 ;
-      RECT 0.048 81.024 33.202 81.120 ;
-      RECT 0.048 81.792 33.202 81.888 ;
-      RECT 0.048 82.560 33.202 82.656 ;
-      RECT 0.048 83.328 33.202 83.424 ;
-    END
-  END VDD
   OBS
     LAYER M1 ;
     RECT 0 0 33.250 84.000 ;
@@ -4964,24 +4964,24 @@ module sprf_256x256
     addr_a,
     din_a,
     dout_a,
-    clk
+    clk_a
 );
     parameter DATA_WIDTH = 256;
     parameter ADDR_WIDTH = 8;
 
     // Port A
-    input  wire                     we_a,
-    input  wire [ADDR_WIDTH-1:0]    addr_a,
-    input  wire [DATA_WIDTH-1:0]    din_a,
-    output reg  [DATA_WIDTH-1:0]    dout_a,
+    input  wire                     we_a;
+    input  wire [ADDR_WIDTH-1:0]    addr_a;
+    input  wire [DATA_WIDTH-1:0]    din_a;
+    output reg  [DATA_WIDTH-1:0]    dout_a;
+    input  wire                     clk_a;
 
-    input  wire                     clk,
 
     // Memory array: 256 words of 256 bits
     reg [DATA_WIDTH-1:0] mem [0:(1 << ADDR_WIDTH)-1];
 
     // Synchronous Port A
-     always @(posedge clk) begin
+     always @(posedge clk_a) begin
         if (we_a) begin
             mem[addr_a] <= din_a;
         end
@@ -4995,7 +4995,7 @@ module sprf_256x256 (
     input [7:0] addr_a,
     input [255:0] din_a,
     output reg [255:0] dout_a,
-    clk
+    input clk_a
 );
 endmodule
 library(sprf_256x256) {
@@ -5093,7 +5093,7 @@ cell(sprf_256x256) {
         direction : input;
         capacitance : 0.005;
         timing() {
-            related_pin : clk;
+            related_pin : clk_a;
             timing_type : setup_rising ;
             rise_constraint(sprf_256x256_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -5113,7 +5113,7 @@ cell(sprf_256x256) {
             }
         } 
         timing() {
-            related_pin : clk;
+            related_pin : clk_a;
             timing_type : hold_rising ;
             rise_constraint(sprf_256x256_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -5148,7 +5148,7 @@ cell(sprf_256x256) {
         direction : input;
         capacitance : 0.005;
         timing() {
-            related_pin : clk;
+            related_pin : clk_a;
             timing_type : setup_rising ;
             rise_constraint(sprf_256x256_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -5168,7 +5168,7 @@ cell(sprf_256x256) {
             }
         } 
         timing() {
-            related_pin : clk;
+            related_pin : clk_a;
             timing_type : hold_rising ;
             rise_constraint(sprf_256x256_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -5203,7 +5203,7 @@ cell(sprf_256x256) {
         direction : input;
         capacitance : 0.005;
         timing() {
-            related_pin : clk;
+            related_pin : clk_a;
             timing_type : setup_rising ;
             rise_constraint(sprf_256x256_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -5223,7 +5223,7 @@ cell(sprf_256x256) {
             }
         } 
         timing() {
-            related_pin : clk;
+            related_pin : clk_a;
             timing_type : hold_rising ;
             rise_constraint(sprf_256x256_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -5270,7 +5270,7 @@ cell(sprf_256x256) {
         direction : output;
         max_capacitance : 0.500;
         timing() {
-            related_pin : "clk" ;
+            related_pin : "clk_a" ;
             timing_type : rising_edge;
             timing_sense : non_unate;
             cell_rise(sprf_256x256_mem_out_delay_template) {
@@ -5299,7 +5299,7 @@ cell(sprf_256x256) {
             }
         }
     }
-    pin(clk)   {
+    pin(clk_a)   {
         direction : input;
         capacitance : 0.025;
         clock : true;

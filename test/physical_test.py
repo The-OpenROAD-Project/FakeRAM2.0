@@ -77,10 +77,10 @@ class PhysicalDataTest(unittest.TestCase):
         physical.set_pin_pitches("bogus", num_pins, min_pin_pitch, y_offset)
         # just enough space, so pin pitch is the minimum pitch and there's no
         # group pitch
-        self.assertAlmostEqual(physical.get_pin_pitch(), min_pin_pitch, delta=self._threshold)
+        self.assertAlmostEqual(
+            physical.get_pin_pitch(), min_pin_pitch, delta=self._threshold
+        )
         self.assertAlmostEqual(physical.get_group_pitch(), 0, delta=self._threshold)
-        
-        
 
     def test_pin_pitches_exception(self):
         """Tests get_pin_pitches when there's no enough room for the pins"""
@@ -108,7 +108,9 @@ class PhysicalDataTest(unittest.TestCase):
         physical.snap_to_grid(1, 1)
         physical.set_pin_pitches("bogus", num_pins, min_pin_pitch, y_offset)
         # just enough space, so pin pitch is the minimum pitch
-        self.assertAlmostEqual(physical.get_pin_pitch(), min_pin_pitch, delta=self._threshold)
+        self.assertAlmostEqual(
+            physical.get_pin_pitch(), min_pin_pitch, delta=self._threshold
+        )
         self.assertAlmostEqual(physical.get_group_pitch(), 0.24, delta=self._threshold)
 
 

@@ -303,7 +303,7 @@ MACRO sprf_256x32_h
     END
   END dout_a[31]
   PIN din_a[0]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -312,7 +312,7 @@ MACRO sprf_256x32_h
     END
   END din_a[0]
   PIN din_a[1]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -321,7 +321,7 @@ MACRO sprf_256x32_h
     END
   END din_a[1]
   PIN din_a[2]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -330,7 +330,7 @@ MACRO sprf_256x32_h
     END
   END din_a[2]
   PIN din_a[3]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -339,7 +339,7 @@ MACRO sprf_256x32_h
     END
   END din_a[3]
   PIN din_a[4]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -348,7 +348,7 @@ MACRO sprf_256x32_h
     END
   END din_a[4]
   PIN din_a[5]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -357,7 +357,7 @@ MACRO sprf_256x32_h
     END
   END din_a[5]
   PIN din_a[6]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -366,7 +366,7 @@ MACRO sprf_256x32_h
     END
   END din_a[6]
   PIN din_a[7]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -375,7 +375,7 @@ MACRO sprf_256x32_h
     END
   END din_a[7]
   PIN din_a[8]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -384,7 +384,7 @@ MACRO sprf_256x32_h
     END
   END din_a[8]
   PIN din_a[9]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -393,7 +393,7 @@ MACRO sprf_256x32_h
     END
   END din_a[9]
   PIN din_a[10]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -402,7 +402,7 @@ MACRO sprf_256x32_h
     END
   END din_a[10]
   PIN din_a[11]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -411,7 +411,7 @@ MACRO sprf_256x32_h
     END
   END din_a[11]
   PIN din_a[12]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -420,7 +420,7 @@ MACRO sprf_256x32_h
     END
   END din_a[12]
   PIN din_a[13]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -429,7 +429,7 @@ MACRO sprf_256x32_h
     END
   END din_a[13]
   PIN din_a[14]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -438,7 +438,7 @@ MACRO sprf_256x32_h
     END
   END din_a[14]
   PIN din_a[15]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -447,7 +447,7 @@ MACRO sprf_256x32_h
     END
   END din_a[15]
   PIN din_a[16]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -456,7 +456,7 @@ MACRO sprf_256x32_h
     END
   END din_a[16]
   PIN din_a[17]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -465,7 +465,7 @@ MACRO sprf_256x32_h
     END
   END din_a[17]
   PIN din_a[18]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -474,7 +474,7 @@ MACRO sprf_256x32_h
     END
   END din_a[18]
   PIN din_a[19]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -483,7 +483,7 @@ MACRO sprf_256x32_h
     END
   END din_a[19]
   PIN din_a[20]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -492,7 +492,7 @@ MACRO sprf_256x32_h
     END
   END din_a[20]
   PIN din_a[21]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -501,7 +501,7 @@ MACRO sprf_256x32_h
     END
   END din_a[21]
   PIN din_a[22]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -510,7 +510,7 @@ MACRO sprf_256x32_h
     END
   END din_a[22]
   PIN din_a[23]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -519,7 +519,7 @@ MACRO sprf_256x32_h
     END
   END din_a[23]
   PIN din_a[24]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -528,7 +528,7 @@ MACRO sprf_256x32_h
     END
   END din_a[24]
   PIN din_a[25]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -537,7 +537,7 @@ MACRO sprf_256x32_h
     END
   END din_a[25]
   PIN din_a[26]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -546,7 +546,7 @@ MACRO sprf_256x32_h
     END
   END din_a[26]
   PIN din_a[27]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -555,7 +555,7 @@ MACRO sprf_256x32_h
     END
   END din_a[27]
   PIN din_a[28]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -564,7 +564,7 @@ MACRO sprf_256x32_h
     END
   END din_a[28]
   PIN din_a[29]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -573,7 +573,7 @@ MACRO sprf_256x32_h
     END
   END din_a[29]
   PIN din_a[30]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -582,7 +582,7 @@ MACRO sprf_256x32_h
     END
   END din_a[30]
   PIN din_a[31]
-    DIRECTION OUTPUT ;
+    DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
     PORT
@@ -671,7 +671,7 @@ MACRO sprf_256x32_h
       RECT 0.000 59.808 0.024 59.832 ;
     END
   END we_a
-  PIN clk
+  PIN clk_a
     DIRECTION INPUT ;
     USE SIGNAL ;
     SHAPE ABUTMENT ;
@@ -679,7 +679,94 @@ MACRO sprf_256x32_h
       LAYER M4 ;
       RECT 0.000 60.624 0.024 60.648 ;
     END
-  END clk
+  END clk_a
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER M4 ;
+      RECT 0.048 0.384 8.312 0.480 ;
+      RECT 0.048 1.152 8.312 1.248 ;
+      RECT 0.048 1.920 8.312 2.016 ;
+      RECT 0.048 2.688 8.312 2.784 ;
+      RECT 0.048 3.456 8.312 3.552 ;
+      RECT 0.048 4.224 8.312 4.320 ;
+      RECT 0.048 4.992 8.312 5.088 ;
+      RECT 0.048 5.760 8.312 5.856 ;
+      RECT 0.048 6.528 8.312 6.624 ;
+      RECT 0.048 7.296 8.312 7.392 ;
+      RECT 0.048 8.064 8.312 8.160 ;
+      RECT 0.048 8.832 8.312 8.928 ;
+      RECT 0.048 9.600 8.312 9.696 ;
+      RECT 0.048 10.368 8.312 10.464 ;
+      RECT 0.048 11.136 8.312 11.232 ;
+      RECT 0.048 11.904 8.312 12.000 ;
+      RECT 0.048 12.672 8.312 12.768 ;
+      RECT 0.048 13.440 8.312 13.536 ;
+      RECT 0.048 14.208 8.312 14.304 ;
+      RECT 0.048 14.976 8.312 15.072 ;
+      RECT 0.048 15.744 8.312 15.840 ;
+      RECT 0.048 16.512 8.312 16.608 ;
+      RECT 0.048 17.280 8.312 17.376 ;
+      RECT 0.048 18.048 8.312 18.144 ;
+      RECT 0.048 18.816 8.312 18.912 ;
+      RECT 0.048 19.584 8.312 19.680 ;
+      RECT 0.048 20.352 8.312 20.448 ;
+      RECT 0.048 21.120 8.312 21.216 ;
+      RECT 0.048 21.888 8.312 21.984 ;
+      RECT 0.048 22.656 8.312 22.752 ;
+      RECT 0.048 23.424 8.312 23.520 ;
+      RECT 0.048 24.192 8.312 24.288 ;
+      RECT 0.048 24.960 8.312 25.056 ;
+      RECT 0.048 25.728 8.312 25.824 ;
+      RECT 0.048 26.496 8.312 26.592 ;
+      RECT 0.048 27.264 8.312 27.360 ;
+      RECT 0.048 28.032 8.312 28.128 ;
+      RECT 0.048 28.800 8.312 28.896 ;
+      RECT 0.048 29.568 8.312 29.664 ;
+      RECT 0.048 30.336 8.312 30.432 ;
+      RECT 0.048 31.104 8.312 31.200 ;
+      RECT 0.048 31.872 8.312 31.968 ;
+      RECT 0.048 32.640 8.312 32.736 ;
+      RECT 0.048 33.408 8.312 33.504 ;
+      RECT 0.048 34.176 8.312 34.272 ;
+      RECT 0.048 34.944 8.312 35.040 ;
+      RECT 0.048 35.712 8.312 35.808 ;
+      RECT 0.048 36.480 8.312 36.576 ;
+      RECT 0.048 37.248 8.312 37.344 ;
+      RECT 0.048 38.016 8.312 38.112 ;
+      RECT 0.048 38.784 8.312 38.880 ;
+      RECT 0.048 39.552 8.312 39.648 ;
+      RECT 0.048 40.320 8.312 40.416 ;
+      RECT 0.048 41.088 8.312 41.184 ;
+      RECT 0.048 41.856 8.312 41.952 ;
+      RECT 0.048 42.624 8.312 42.720 ;
+      RECT 0.048 43.392 8.312 43.488 ;
+      RECT 0.048 44.160 8.312 44.256 ;
+      RECT 0.048 44.928 8.312 45.024 ;
+      RECT 0.048 45.696 8.312 45.792 ;
+      RECT 0.048 46.464 8.312 46.560 ;
+      RECT 0.048 47.232 8.312 47.328 ;
+      RECT 0.048 48.000 8.312 48.096 ;
+      RECT 0.048 48.768 8.312 48.864 ;
+      RECT 0.048 49.536 8.312 49.632 ;
+      RECT 0.048 50.304 8.312 50.400 ;
+      RECT 0.048 51.072 8.312 51.168 ;
+      RECT 0.048 51.840 8.312 51.936 ;
+      RECT 0.048 52.608 8.312 52.704 ;
+      RECT 0.048 53.376 8.312 53.472 ;
+      RECT 0.048 54.144 8.312 54.240 ;
+      RECT 0.048 54.912 8.312 55.008 ;
+      RECT 0.048 55.680 8.312 55.776 ;
+      RECT 0.048 56.448 8.312 56.544 ;
+      RECT 0.048 57.216 8.312 57.312 ;
+      RECT 0.048 57.984 8.312 58.080 ;
+      RECT 0.048 58.752 8.312 58.848 ;
+      RECT 0.048 59.520 8.312 59.616 ;
+      RECT 0.048 60.288 8.312 60.384 ;
+      RECT 0.048 61.056 8.312 61.152 ;
+    END
+  END VDD
   PIN VSS
     DIRECTION INOUT ;
     USE GROUND ;
@@ -768,93 +855,6 @@ MACRO sprf_256x32_h
       RECT 0.048 61.440 8.312 61.536 ;
     END
   END VSS
-  PIN VDD
-    DIRECTION INOUT ;
-    USE POWER ;
-    PORT
-      LAYER M4 ;
-      RECT 0.048 0.384 8.312 0.480 ;
-      RECT 0.048 1.152 8.312 1.248 ;
-      RECT 0.048 1.920 8.312 2.016 ;
-      RECT 0.048 2.688 8.312 2.784 ;
-      RECT 0.048 3.456 8.312 3.552 ;
-      RECT 0.048 4.224 8.312 4.320 ;
-      RECT 0.048 4.992 8.312 5.088 ;
-      RECT 0.048 5.760 8.312 5.856 ;
-      RECT 0.048 6.528 8.312 6.624 ;
-      RECT 0.048 7.296 8.312 7.392 ;
-      RECT 0.048 8.064 8.312 8.160 ;
-      RECT 0.048 8.832 8.312 8.928 ;
-      RECT 0.048 9.600 8.312 9.696 ;
-      RECT 0.048 10.368 8.312 10.464 ;
-      RECT 0.048 11.136 8.312 11.232 ;
-      RECT 0.048 11.904 8.312 12.000 ;
-      RECT 0.048 12.672 8.312 12.768 ;
-      RECT 0.048 13.440 8.312 13.536 ;
-      RECT 0.048 14.208 8.312 14.304 ;
-      RECT 0.048 14.976 8.312 15.072 ;
-      RECT 0.048 15.744 8.312 15.840 ;
-      RECT 0.048 16.512 8.312 16.608 ;
-      RECT 0.048 17.280 8.312 17.376 ;
-      RECT 0.048 18.048 8.312 18.144 ;
-      RECT 0.048 18.816 8.312 18.912 ;
-      RECT 0.048 19.584 8.312 19.680 ;
-      RECT 0.048 20.352 8.312 20.448 ;
-      RECT 0.048 21.120 8.312 21.216 ;
-      RECT 0.048 21.888 8.312 21.984 ;
-      RECT 0.048 22.656 8.312 22.752 ;
-      RECT 0.048 23.424 8.312 23.520 ;
-      RECT 0.048 24.192 8.312 24.288 ;
-      RECT 0.048 24.960 8.312 25.056 ;
-      RECT 0.048 25.728 8.312 25.824 ;
-      RECT 0.048 26.496 8.312 26.592 ;
-      RECT 0.048 27.264 8.312 27.360 ;
-      RECT 0.048 28.032 8.312 28.128 ;
-      RECT 0.048 28.800 8.312 28.896 ;
-      RECT 0.048 29.568 8.312 29.664 ;
-      RECT 0.048 30.336 8.312 30.432 ;
-      RECT 0.048 31.104 8.312 31.200 ;
-      RECT 0.048 31.872 8.312 31.968 ;
-      RECT 0.048 32.640 8.312 32.736 ;
-      RECT 0.048 33.408 8.312 33.504 ;
-      RECT 0.048 34.176 8.312 34.272 ;
-      RECT 0.048 34.944 8.312 35.040 ;
-      RECT 0.048 35.712 8.312 35.808 ;
-      RECT 0.048 36.480 8.312 36.576 ;
-      RECT 0.048 37.248 8.312 37.344 ;
-      RECT 0.048 38.016 8.312 38.112 ;
-      RECT 0.048 38.784 8.312 38.880 ;
-      RECT 0.048 39.552 8.312 39.648 ;
-      RECT 0.048 40.320 8.312 40.416 ;
-      RECT 0.048 41.088 8.312 41.184 ;
-      RECT 0.048 41.856 8.312 41.952 ;
-      RECT 0.048 42.624 8.312 42.720 ;
-      RECT 0.048 43.392 8.312 43.488 ;
-      RECT 0.048 44.160 8.312 44.256 ;
-      RECT 0.048 44.928 8.312 45.024 ;
-      RECT 0.048 45.696 8.312 45.792 ;
-      RECT 0.048 46.464 8.312 46.560 ;
-      RECT 0.048 47.232 8.312 47.328 ;
-      RECT 0.048 48.000 8.312 48.096 ;
-      RECT 0.048 48.768 8.312 48.864 ;
-      RECT 0.048 49.536 8.312 49.632 ;
-      RECT 0.048 50.304 8.312 50.400 ;
-      RECT 0.048 51.072 8.312 51.168 ;
-      RECT 0.048 51.840 8.312 51.936 ;
-      RECT 0.048 52.608 8.312 52.704 ;
-      RECT 0.048 53.376 8.312 53.472 ;
-      RECT 0.048 54.144 8.312 54.240 ;
-      RECT 0.048 54.912 8.312 55.008 ;
-      RECT 0.048 55.680 8.312 55.776 ;
-      RECT 0.048 56.448 8.312 56.544 ;
-      RECT 0.048 57.216 8.312 57.312 ;
-      RECT 0.048 57.984 8.312 58.080 ;
-      RECT 0.048 58.752 8.312 58.848 ;
-      RECT 0.048 59.520 8.312 59.616 ;
-      RECT 0.048 60.288 8.312 60.384 ;
-      RECT 0.048 61.056 8.312 61.152 ;
-    END
-  END VDD
   OBS
     LAYER M1 ;
     RECT 0 0 8.360 61.600 ;
@@ -874,24 +874,24 @@ module sprf_256x32_h
     addr_a,
     din_a,
     dout_a,
-    clk
+    clk_a
 );
     parameter DATA_WIDTH = 32;
     parameter ADDR_WIDTH = 8;
 
     // Port A
-    input  wire                     we_a,
-    input  wire [ADDR_WIDTH-1:0]    addr_a,
-    input  wire [DATA_WIDTH-1:0]    din_a,
-    output reg  [DATA_WIDTH-1:0]    dout_a,
+    input  wire                     we_a;
+    input  wire [ADDR_WIDTH-1:0]    addr_a;
+    input  wire [DATA_WIDTH-1:0]    din_a;
+    output reg  [DATA_WIDTH-1:0]    dout_a;
+    input  wire                     clk_a;
 
-    input  wire                     clk,
 
     // Memory array: 256 words of 32 bits
     reg [DATA_WIDTH-1:0] mem [0:(1 << ADDR_WIDTH)-1];
 
     // Synchronous Port A
-     always @(posedge clk) begin
+     always @(posedge clk_a) begin
         if (we_a) begin
             mem[addr_a] <= din_a;
         end
@@ -905,7 +905,7 @@ module sprf_256x32_h (
     input [7:0] addr_a,
     input [31:0] din_a,
     output reg [31:0] dout_a,
-    clk
+    input clk_a
 );
 endmodule
 library(sprf_256x32_h) {
@@ -1003,7 +1003,7 @@ cell(sprf_256x32_h) {
         direction : input;
         capacitance : 0.005;
         timing() {
-            related_pin : clk;
+            related_pin : clk_a;
             timing_type : setup_rising ;
             rise_constraint(sprf_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -1023,7 +1023,7 @@ cell(sprf_256x32_h) {
             }
         } 
         timing() {
-            related_pin : clk;
+            related_pin : clk_a;
             timing_type : hold_rising ;
             rise_constraint(sprf_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -1058,7 +1058,7 @@ cell(sprf_256x32_h) {
         direction : input;
         capacitance : 0.005;
         timing() {
-            related_pin : clk;
+            related_pin : clk_a;
             timing_type : setup_rising ;
             rise_constraint(sprf_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -1078,7 +1078,7 @@ cell(sprf_256x32_h) {
             }
         } 
         timing() {
-            related_pin : clk;
+            related_pin : clk_a;
             timing_type : hold_rising ;
             rise_constraint(sprf_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -1113,7 +1113,7 @@ cell(sprf_256x32_h) {
         direction : input;
         capacitance : 0.005;
         timing() {
-            related_pin : clk;
+            related_pin : clk_a;
             timing_type : setup_rising ;
             rise_constraint(sprf_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -1133,7 +1133,7 @@ cell(sprf_256x32_h) {
             }
         } 
         timing() {
-            related_pin : clk;
+            related_pin : clk_a;
             timing_type : hold_rising ;
             rise_constraint(sprf_256x32_h_constraint_template) {
                 index_1 ("0.009, 0.227");
@@ -1180,7 +1180,7 @@ cell(sprf_256x32_h) {
         direction : output;
         max_capacitance : 0.500;
         timing() {
-            related_pin : "clk" ;
+            related_pin : "clk_a" ;
             timing_type : rising_edge;
             timing_sense : non_unate;
             cell_rise(sprf_256x32_h_mem_out_delay_template) {
@@ -1209,7 +1209,7 @@ cell(sprf_256x32_h) {
             }
         }
     }
-    pin(clk)   {
+    pin(clk_a)   {
         direction : input;
         capacitance : 0.025;
         clock : true;

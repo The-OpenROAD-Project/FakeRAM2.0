@@ -2,6 +2,7 @@
 
 from class_memory import Memory
 from reg_file import RegFile
+from rw_port_group import RWPortGroup
 
 
 class SinglePortRegFile(RegFile):
@@ -27,7 +28,8 @@ class SinglePortRegFile(RegFile):
         timing_data (TimingData): timing data container
         """
         RegFile.__init__(self, mem_config, process_data, timing_data)
-        self.num_rw_ports = 1
+        self.add_rw_port_group(RWPortGroup("a"))
+        self.create_ports()
 
     def get_num_pins(self):
         """Returns the total number of logical pins"""
