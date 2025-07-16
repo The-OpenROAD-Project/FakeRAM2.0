@@ -6,6 +6,7 @@ import math
 import shutil
 import unittest
 import subprocess
+from collections import Counter
 from test_utils import TestUtils
 
 
@@ -25,6 +26,7 @@ class FlowTest(unittest.TestCase):
         self._size_re = re.compile("^\s+SIZE\s+(\S+)\s+BY\s+(\S+)")
         self._start_pin_re = re.compile("^\s+PIN\s+(\S+)")
         self._macro_name_re = re.compile("\S+_(\d+)x(\d+)")
+        self._pin_dir_re = re.compile("^\s*DIRECTION\s+(\S+)")
 
     def _getLefPin(self, fh, pin_name):
         """Extracts data for given LEF pin and returns it in a dict"""
@@ -43,6 +45,10 @@ class FlowTest(unittest.TestCase):
                 pin_data["layer"] = line.split()[1]
                 line = fh.readline()
                 pin_data["rect"] = list(map(float, line.split()[1:-1]))
+            else:
+                result = self._pin_dir_re.match(line)
+                if result:
+                    pin_data["dir"] = result.group(1)
 
     def _getLefData(self, ram_file):
         """Extracts data from LEF and returns it in a dict"""
@@ -66,12 +72,12 @@ class FlowTest(unittest.TestCase):
         return lef_data
 
     def _checkPinShape(
-        self, pin_name, pin_data, current_x, current_y, pin_width, layer_name
+        self, mem_name, pin_name, pin_data, current_x, current_y, pin_width, layer_name
     ):
         self.assertEqual(
             pin_data["layer"],
             layer_name,
-            f"{pin_name}'s layer is not {layer_name}: {pin_data['layer']}",
+            f"{mem_name} {pin_name}'s layer is not {layer_name}: {pin_data['layer']}",
         )
         expected_rect = [
             current_x,
@@ -82,14 +88,15 @@ class FlowTest(unittest.TestCase):
         self.assertListEqual(
             expected_rect,
             pin_data["rect"],
-            f"{pin_name}'s rect is not {expected_rect}: {pin_data['rect']}",
+            f"{mem_name} {pin_name}'s rect is not {expected_rect}: {pin_data['rect']}",
         )
 
     def _checkLef(self, ram_file, mem_width, mem_depth):
         """Checks the LEF data against expected values for a given RAM"""
 
         lef_data = self._getLefData(ram_file)
-        self.assertEqual(lef_data["macro_name"], "fakeram7_2048x39")
+        macro_name = lef_data["macro_name"]
+        self.assertEqual(macro_name, "fakeram7_2048x39")
         self.assertEqual(lef_data["width"], "20.330")
         self.assertEqual(lef_data["height"], "166.600")
         pin_layer = "M4"
@@ -116,11 +123,21 @@ class FlowTest(unittest.TestCase):
         self.assertEqual(len(read_pins), read_pin_ct)
         self.assertEqual(len(write_pins), write_pin_ct)
         self.assertEqual(len(addr_pins), addr_pin_ct)
+        total_inputs = (
+            read_pin_ct + write_enable_ct + read_enable_ct + clk_ct + addr_pin_ct
+        )
+        total_outputs = write_pin_ct
+        total_inouts = power_pin_ct
+        dir_counts = Counter(entry["dir"] for entry in lef_data["pins"].values())
+        self.assertEqual(total_inputs, dir_counts["INPUT"])
+        self.assertEqual(total_outputs, dir_counts["OUTPUT"])
+        self.assertEqual(total_inouts, dir_counts["INOUT"])
         ct = 0
         current_x = 0
         current_y = pin_width * 2
         for pin_name in read_pins:
             self._checkPinShape(
+                macro_name,
                 pin_name,
                 lef_data["pins"][pin_name],
                 current_x,
@@ -133,6 +150,7 @@ class FlowTest(unittest.TestCase):
         current_y += pin_group_spacing
         for pin_name in write_pins:
             self._checkPinShape(
+                macro_name,
                 pin_name,
                 lef_data["pins"][pin_name],
                 current_x,
@@ -145,6 +163,7 @@ class FlowTest(unittest.TestCase):
         current_y += pin_group_spacing
         for pin_name in addr_pins:
             self._checkPinShape(
+                macro_name,
                 pin_name,
                 lef_data["pins"][pin_name],
                 current_x,
@@ -155,6 +174,7 @@ class FlowTest(unittest.TestCase):
             current_y += pin_spacing
         current_y += pin_group_spacing
         self._checkPinShape(
+            macro_name,
             "we_in",
             lef_data["pins"]["we_in"],
             current_x,
@@ -164,8 +184,9 @@ class FlowTest(unittest.TestCase):
         )
         current_y += pin_spacing
         self._checkPinShape(
-            "ce_in",
-            lef_data["pins"]["ce_in"],
+            macro_name,
+            "clk",
+            lef_data["pins"]["clk"],
             current_x,
             current_y,
             pin_width,
@@ -173,7 +194,13 @@ class FlowTest(unittest.TestCase):
         )
         current_y += pin_spacing
         self._checkPinShape(
-            "clk", lef_data["pins"]["clk"], current_x, current_y, pin_width, pin_layer
+            macro_name,
+            "ce_in",
+            lef_data["pins"]["ce_in"],
+            current_x,
+            current_y,
+            pin_width,
+            pin_layer,
         )
         current_y += pin_spacing
         # Skip checking power pins

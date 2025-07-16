@@ -19,7 +19,5 @@ class RegFileLibertyExporter(LibertyExporter):
         """
 
         name = self._memory.get_name()
-        for i in range(0, self._memory.get_num_rw_ports()):
-            suffix = chr(ord("a") + i)
-            self.write_rw_pin_set(out_fh, name, suffix, False)
-        self.write_clk_pin("clk", out_fh)
+        for rw_port_group in self._memory.get_rw_port_groups():
+            self.write_rw_pin_set(out_fh, name, rw_port_group, False)

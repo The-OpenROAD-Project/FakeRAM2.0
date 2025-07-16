@@ -8,7 +8,7 @@ from class_memory import Memory
 from ram import RAM
 from single_port_ram_verilog_exporter import SinglePortRAMVerilogExporter
 from single_port_ram_liberty_exporter import SinglePortRAMLibertyExporter
-from single_port_ram_lef_exporter import SinglePortRAMLefExporter
+from rw_port_group import RWPortGroup
 
 
 class SinglePortRAM(RAM):
@@ -35,7 +35,15 @@ class SinglePortRAM(RAM):
         timing_data (TimingData): timing data container
         """
         RAM.__init__(self, mem_config, process_data, timing_data)
-        self.num_rw_ports = 1
+        rw_port_group = RWPortGroup()
+        rw_port_group.set_write_enable_name("we_in")
+        rw_port_group.set_address_bus_name("addr_in")
+        rw_port_group.set_data_input_bus_name("wd_in")
+        rw_port_group.set_data_output_bus_name("rd_out")
+        rw_port_group.set_clock_name("clk")
+        self.add_rw_port_group(rw_port_group)
+        self.add_misc_port("ce_in")
+        self.create_ports()
 
     def get_num_pins(self):
         """Returns the total number of logical pins"""
@@ -55,11 +63,6 @@ class SinglePortRAM(RAM):
     def write_liberty_file(self, out_file_name):
         """Writes a Liberty file"""
         exporter = SinglePortRAMLibertyExporter(self)
-        exporter.export_file(out_file_name)
-
-    def write_lef_file(self, out_file_name):
-        """Writes a LEF file"""
-        exporter = SinglePortRAMLefExporter(self)
         exporter.export_file(out_file_name)
 
 

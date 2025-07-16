@@ -4,7 +4,12 @@ from exporter import Exporter
 
 
 class VerilogExporter(Exporter):
-    """Verilog exporter base"""
+    """
+    Verilog exporter base
+
+    The blackbox support is required since yosys doesn't pipe the RAM module
+    definition when using Verific. yosys-slang doesn't require the definition.
+    """
 
     def __init__(self, memory):
         """Initializer"""
@@ -35,22 +40,43 @@ class VerilogExporter(Exporter):
             self.export_module(out_fh)
 
     # -------------- Utilities --------------
-    def write_rw_port_decl_set(self, suffix, out_fh):
-        """Writes the RW port group declarations"""
+    def write_rw_port_decl_set(self, rw_port_group, out_fh, index):
+        """
+        Writes the RW port group declarations
 
-        out_fh.write(f"    we_{suffix},\n")
-        out_fh.write(f"    addr_{suffix},\n")
-        out_fh.write(f"    din_{suffix},\n")
-        out_fh.write(f"    dout_{suffix},\n")
+        index is used to determine if we need to add a comma and a new line
+        since we don't write it out for the clock pin in case this rw_port_group
+        is the last one
+        """
 
-    def write_rw_port_defn_set(self, suffix, out_fh):
+        if index != 0:
+            out_fh.write(",\n")
+        out_fh.write(f"    {rw_port_group.get_write_enable_name()},\n")
+        out_fh.write(f"    {rw_port_group.get_address_bus_name()},\n")
+        out_fh.write(f"    {rw_port_group.get_data_input_bus_name()},\n")
+        out_fh.write(f"    {rw_port_group.get_data_output_bus_name()},\n")
+        out_fh.write(f"    {rw_port_group.get_clock_name()}")
+
+    def write_rw_port_defn_set(self, rw_port_group, out_fh):
         """Writes the RW port group definitions"""
 
+        suffix = rw_port_group.get_suffix()
         out_fh.write(f"    // Port {suffix.upper()}\n")
-        out_fh.write(f"    input  wire                     we_{suffix},\n")
-        out_fh.write(f"    input  wire [ADDR_WIDTH-1:0]    addr_{suffix},\n")
-        out_fh.write(f"    input  wire [DATA_WIDTH-1:0]    din_{suffix},\n")
-        out_fh.write(f"    output reg  [DATA_WIDTH-1:0]    dout_{suffix},\n")
+        out_fh.write(
+            f"    input  wire                     {rw_port_group.get_write_enable_name()};\n"
+        )
+        out_fh.write(
+            f"    input  wire [ADDR_WIDTH-1:0]    {rw_port_group.get_address_bus_name()};\n"
+        )
+        out_fh.write(
+            f"    input  wire [DATA_WIDTH-1:0]    {rw_port_group.get_data_input_bus_name()};\n"
+        )
+        out_fh.write(
+            f"    output reg  [DATA_WIDTH-1:0]    {rw_port_group.get_data_output_bus_name()};\n"
+        )
+        out_fh.write(
+            f"    input  wire                     {rw_port_group.get_clock_name()};\n"
+        )
         out_fh.write("\n")
 
     def export_bb_header(self, out_fh):
@@ -65,23 +91,31 @@ class VerilogExporter(Exporter):
         out_fh.write(");\n")
         out_fh.write("endmodule\n")
 
-    def export_bb_port_decl_set(self, suffix, out_fh):
+    def export_bb_port_decl_set(self, rw_port_group, out_fh, index):
         """Writes the SystemVerilog port declarations"""
 
         mem = self.get_memory()
         addr_bus_msb = mem.get_addr_bus_msb()
         data_bus_msb = mem.get_data_bus_msb()
-        out_fh.write(f"    input we_{suffix},\n")
-        out_fh.write(f"    input [{addr_bus_msb}:0] addr_{suffix},\n")
-        out_fh.write(f"    input [{data_bus_msb}:0] din_{suffix},\n")
-        out_fh.write(f"    output reg [{data_bus_msb}:0] dout_{suffix},\n")
+        if index != 0:
+            out_fh.write(",\n")
+        out_fh.write(f"    input {rw_port_group.get_write_enable_name()},\n")
+        out_fh.write(
+            f"    input [{addr_bus_msb}:0] {rw_port_group.get_address_bus_name()},\n"
+        )
+        out_fh.write(
+            f"    input [{data_bus_msb}:0] {rw_port_group.get_data_input_bus_name()},\n"
+        )
+        out_fh.write(
+            f"    output reg [{data_bus_msb}:0] {rw_port_group.get_data_output_bus_name()},\n"
+        )
+        out_fh.write(f"    input {rw_port_group.get_clock_name()}")
 
     def export_blackbox(self, out_fh):
         """Writes the blackbox content to the output stream"""
 
         self.export_bb_header(out_fh)
-        for i in range(0, self.get_memory().get_num_rw_ports()):
-            suffix = chr(ord("a") + i)
-            self.export_bb_port_decl_set(suffix, out_fh)
-        out_fh.write("    clk\n")
+        for index, rw_port_group in enumerate(self.get_memory().get_rw_port_groups()):
+            self.export_bb_port_decl_set(rw_port_group, out_fh, index)
+        out_fh.write("\n")
         self.export_bb_footer(out_fh)

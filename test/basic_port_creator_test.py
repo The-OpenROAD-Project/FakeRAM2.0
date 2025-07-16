@@ -7,7 +7,8 @@ import sys
 import unittest
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "utils")))
-from lef_exporter import LefExporter
+from port import Port
+from basic_port_creator import BasicPortCreator
 from class_process import Process
 from timing_data import TimingData
 from memory_config import MemoryConfig
@@ -15,8 +16,8 @@ from memory_factory import MemoryFactory
 from test_utils import TestUtils
 
 
-class LefExporterTest(unittest.TestCase):
-    """Tests specific cases for the LEF exporter"""
+class BasicPortCreatorTest(unittest.TestCase):
+    """Tests specific cases for the basic port creator"""
 
     def setUp(self):
         """Define a bunch of variables used later in the tests"""
@@ -35,23 +36,6 @@ class LefExporterTest(unittest.TestCase):
         self._supply_pin_width = self._process.get_pin_width_um() * 4
         self._supply_pin_half_width = self._supply_pin_width / 2
         self._supply_pin_pitch = self._process.get_pin_width_um() * 8
-
-    def _get_rect_list(self, out_strm):
-        """Extracts and returns the list of rectangles in the output stream"""
-
-        out_strm.seek(0)
-        rect_list = []
-        for line in out_strm:
-            result = self._rect_re.match(line)
-            if result:
-                rect = [
-                    float(result.group(1)),
-                    float(result.group(2)),
-                    float(result.group(3)),
-                    float(result.group(4)),
-                ]
-                rect_list.append(rect)
-        return rect_list
 
     def _check_pin(self, rect, exp_width, exp_height, start_x, start_y):
         """
@@ -90,14 +74,15 @@ class LefExporterTest(unittest.TestCase):
         mem = MemoryFactory.create(
             mem_config, "RAM", "SP", self._process, self._timing_data
         )
-        exporter = LefExporter(mem)
+        exporter = BasicPortCreator(mem)
         self.assertEqual(exporter._rect_pin_mode, False)
-        out_strm = io.StringIO()
 
         # Test the pin first. Should be pin_width x pin_width
-        pitch = exporter.add_pin(out_strm, "A", True, self._start_y, self._start_pitch)
+        pitch = exporter.add_pin(
+            "A", Port.Direction.INPUT, self._start_y, self._start_pitch
+        )
         self.assertEqual(pitch, self._start_pitch + self._start_y)
-        rect_list = self._get_rect_list(out_strm)
+        rect_list = mem.get_port("A").get_rects()
         self.assertEqual(len(rect_list), 1)
         exp_width = self._process.get_pin_width_um()
         self._check_pin(
@@ -105,10 +90,7 @@ class LefExporterTest(unittest.TestCase):
         )
 
         # Test the pg pin
-        out_strm.seek(0)
-        out_strm.truncate(0)
         exporter.create_pg_pin(
-            out_strm,
             "VSS",
             "GROUND",
             self._process.get_metal_layer(),
@@ -120,7 +102,7 @@ class LefExporterTest(unittest.TestCase):
             self._supply_pin_half_width,
             self._supply_pin_pitch,
         )
-        rect_list = self._get_rect_list(out_strm)
+        rect_list = mem.get_pg_port("VSS").get_rects()
         self._check_pg_pin(
             rect_list, self._mem_width - 2 * self._x_offset, self._supply_pin_width
         )
@@ -140,14 +122,15 @@ class LefExporterTest(unittest.TestCase):
         mem = MemoryFactory.create(
             mem_config, "RAM", "SP", self._process, self._timing_data
         )
-        exporter = LefExporter(mem)
+        exporter = BasicPortCreator(mem)
         self.assertEqual(exporter._rect_pin_mode, True)
-        out_strm = io.StringIO()
 
         # Test the pin first. Should be pin_width * 1.5 x pin_width
-        pitch = exporter.add_pin(out_strm, "A", True, self._start_y, self._start_pitch)
+        pitch = exporter.add_pin(
+            "A", Port.Direction.INPUT, self._start_y, self._start_pitch
+        )
         self.assertEqual(pitch, self._start_pitch + self._start_y)
-        rect_list = self._get_rect_list(out_strm)
+        rect_list = mem.get_port("A").get_rects()
         self.assertEqual(len(rect_list), 1)
         exp_width = self._process.get_pin_width_um()
         self._check_pin(
@@ -159,10 +142,7 @@ class LefExporterTest(unittest.TestCase):
         )
 
         # Test the pg pin
-        out_strm.seek(0)
-        out_strm.truncate(0)
         exporter.create_pg_pin(
-            out_strm,
             "VSS",
             "GROUND",
             self._process.get_metal_layer(),
@@ -174,7 +154,7 @@ class LefExporterTest(unittest.TestCase):
             self._supply_pin_half_width,
             self._supply_pin_pitch,
         )
-        rect_list = self._get_rect_list(out_strm)
+        rect_list = mem.get_pg_port("VSS").get_rects()
         self._check_pg_pin(
             rect_list, self._mem_width - 4 * self._x_offset, self._supply_pin_width
         )

@@ -147,6 +147,13 @@ class LibertyExporter(Exporter):
         addr_bus_msb = mem.get_addr_bus_msb()
         self.write_bus_def(out_fh, name + "_DATA", bits, data_bus_msb)
         self.write_bus_def(out_fh, name + "_ADDRESS", addr_width, addr_bus_msb)
+        for bus_name, bus_data in mem.get_misc_busses().items():
+            self.write_bus_def(
+                out_fh,
+                mem.get_name() + "_" + bus_name,
+                bus_data["msb"] - bus_data["lsb"] + 1,
+                bus_data["msb"],
+            )
 
     def write_bus_def(self, out_fh, bus_name, width, msb):
         out_fh.write(f"    type ({bus_name}) {{\n")
@@ -157,7 +164,6 @@ class LibertyExporter(Exporter):
         out_fh.write("        bit_to : 0 ;\n")
         out_fh.write("        downto : true ;\n")
         out_fh.write("    }\n")
-        
 
     def write_int_power_table(
         self, out_fh, rise_fall, template_name, slew_indices, dynamic
@@ -181,7 +187,7 @@ class LibertyExporter(Exporter):
         self.write_int_power_table(out_fh, "fall", template_name, slew_indices, dynamic)
         out_fh.write("        }\n")
 
-    def write_clk_pin(self, pin_name, out_fh):
+    def write_clk_pin(self, out_fh, pin_name):
         """Writes the clock pin section"""
 
         int_power_template = self.get_memory().get_name() + "_energy_template_clkslew"
@@ -243,8 +249,9 @@ class LibertyExporter(Exporter):
         out_fh.write("                )\n")
         out_fh.write("            }\n")
 
-    def write_output_bus(self, out_fh, name, pin_name, clk_pin_name,
-                         include_memory_read):
+    def write_output_bus(
+        self, out_fh, name, pin_name, clk_pin_name, include_memory_read
+    ):
         """Writes the output bus definition"""
 
         delay_template_name = name + "_mem_out_delay_template"
@@ -340,8 +347,9 @@ class LibertyExporter(Exporter):
         )
         out_fh.write("    }\n")
 
-    def write_data_bus(self, out_fh, name, bus_name, clk_pin_name,
-                       we_pin_name, include_memory_write):
+    def write_data_bus(
+        self, out_fh, name, bus_name, we_pin_name, clk_pin_name, include_memory_write
+    ):
         """Writes the data bus"""
 
         timing_data = self.get_memory().get_timing_data()
@@ -376,13 +384,44 @@ class LibertyExporter(Exporter):
         )
         out_fh.write("    }\n")
 
-    def write_rw_pin_set(self, out_fh, name, suffix, is_ram):
-        """Writes the rw pin group to the output stream"""
+    def write_generic_bus(self, out_fh, name, bus_name, clk_pin_name):
+        """Writes the generic bus"""
 
-        clk_pin_name = "clk"
-        self.write_pin(out_fh, name, f"we_{suffix}", clk_pin_name)
-        self.write_address_bus(out_fh, name, f"addr_{suffix}", clk_pin_name)
-        self.write_data_bus(out_fh, name, f"din_{suffix}", clk_pin_name,
-                            f"we_{suffix}", is_ram)
-        self.write_output_bus(out_fh, name, f"dout_{suffix}", clk_pin_name,
-                              is_ram)
+        timing_data = self.get_memory().get_timing_data()
+        min_driver_in_cap = timing_data.min_driver_in_cap
+        slew_indices = timing_data.slew_indices
+        tsetup = timing_data.t_setup_ns
+        thold = timing_data.t_hold_ns
+        pindynamic = timing_data.pin_dynamic
+        out_fh.write("    bus(%s)   {\n" % bus_name)
+        out_fh.write(f"        bus_type : {name}_{bus_name};\n")
+        out_fh.write("        direction : input;\n")
+        out_fh.write("        capacitance : %.3f;\n" % (min_driver_in_cap))
+        self.write_timing(out_fh, name, slew_indices, tsetup, thold, clk_pin_name)
+        self.write_internal_power(
+            out_fh, name + "_energy_template_sigslew", slew_indices, pindynamic
+        )
+        out_fh.write("    }\n")
+
+    def write_rw_pin_set(self, out_fh, name, rw_port_group, is_ram):
+        """Writes the rw port group to the output stream"""
+
+        clk_pin_name = rw_port_group.get_clock_name()
+        self.write_pin(
+            out_fh, name, rw_port_group.get_write_enable_name(), clk_pin_name
+        )
+        self.write_address_bus(
+            out_fh, name, rw_port_group.get_address_bus_name(), clk_pin_name
+        )
+        self.write_data_bus(
+            out_fh,
+            name,
+            rw_port_group.get_data_input_bus_name(),
+            rw_port_group.get_write_enable_name(),
+            clk_pin_name,
+            is_ram,
+        )
+        self.write_output_bus(
+            out_fh, name, rw_port_group.get_data_output_bus_name(), clk_pin_name, is_ram
+        )
+        self.write_clk_pin(out_fh, clk_pin_name)
