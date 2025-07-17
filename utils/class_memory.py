@@ -38,17 +38,21 @@ class Memory(NamedObject):
         self.additional_height = mem_config.get_additional_height()
         self.timing_data = timing_data
         self.physical = PhysicalData()
-        (width_um, height_um) = self.process.get_macro_dimensions(
-            self.width_in_bits, self.depth, self.num_banks, self.additional_height
-        )
-        self.physical.set_extents(width_um, height_um)
-        self.physical.snap_to_grid(
-            self.process.snap_width_nm, self.process.snap_height_nm
-        )
-        num_pins = self.get_num_pins()
-        self.physical.set_pin_pitches(
-            self.get_name(), num_pins, self.process.pin_pitch_um, self.process.y_offset
-        )
+        if self.process.calc_dimensions():
+            (width_um, height_um) = self.process.get_macro_dimensions(
+                self.width_in_bits, self.depth, self.num_banks, self.additional_height
+            )
+            self.physical.set_extents(width_um, height_um)
+            self.physical.snap_to_grid(
+                self.process.snap_width_nm, self.process.snap_height_nm
+            )
+            num_pins = self.get_num_pins()
+            self.physical.set_pin_pitches(
+                self.get_name(),
+                num_pins,
+                self.process.pin_pitch_um,
+                self.process.y_offset,
+            )
 
         # collection of logical connections
         #   rw_port_groups: write enable, address bus, data in bus,

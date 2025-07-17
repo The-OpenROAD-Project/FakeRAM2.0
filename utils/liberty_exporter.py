@@ -320,7 +320,7 @@ class LibertyExporter(Exporter):
         out_fh.write("            timing_type : setup_rising ;\n")
         self.write_cell_constraint(out_fh, "rise", template_name, slew_indices, tsetup)
         self.write_cell_constraint(out_fh, "fall", template_name, slew_indices, tsetup)
-        out_fh.write("        } \n")
+        out_fh.write("        }\n")
         out_fh.write("        timing() {\n")
         out_fh.write(f"            related_pin : {clk_pin_name};\n")
         out_fh.write("            timing_type : hold_rising ;\n")
@@ -397,7 +397,7 @@ class LibertyExporter(Exporter):
         out_fh.write(f"        bus_type : {name}_{bus_name};\n")
         out_fh.write("        direction : input;\n")
         out_fh.write("        capacitance : %.3f;\n" % (min_driver_in_cap))
-        self.write_timing(out_fh, name, slew_indices, tsetup, thold, clk_pin_name)
+        self.write_timing(out_fh, name, clk_pin_name, slew_indices, tsetup, thold)
         self.write_internal_power(
             out_fh, name + "_energy_template_sigslew", slew_indices, pindynamic
         )

@@ -13,24 +13,8 @@ class RAMVerilogExporter(VerilogExporter):
     def export_module(self, out_fh):
         """Exports the verilog module to the output stream"""
 
-        mem = self.get_memory()
-        out_fh.write(f"module {mem.get_name()}\n")
-        out_fh.write("(\n")
-        clk_pin_name = mem.get_rw_port_groups()[0].get_clock_name()
-        for index, rw_port_group in enumerate(mem.get_rw_port_groups()):
-            self.write_rw_port_decl_set(rw_port_group, out_fh, index)
-        out_fh.write("\n);\n")
-        out_fh.write(f"    parameter DATA_WIDTH = {mem.get_width()};\n")
-        out_fh.write(f"    parameter ADDR_WIDTH = {mem.get_addr_width()};\n")
-        out_fh.write("\n")
-        for rw_port_group in mem.get_rw_port_groups():
-            self.write_rw_port_defn_set(rw_port_group, out_fh)
-        out_fh.write("\n")
-        out_fh.write(
-            f"    // Memory array: {mem.get_depth()} words of {mem.get_width()} bits\n"
-        )
-        out_fh.write("    reg [DATA_WIDTH-1:0] mem [0:(1 << ADDR_WIDTH)-1];\n")
-        out_fh.write("\n")
+        clk_pin_name = self.get_memory().get_rw_port_groups()[0].get_clock_name()
+        self.write_module_header(out_fh)
         out_fh.write("    // Registers for synchronous reads\n")
         out_fh.write("    reg [ADDR_WIDTH-1:0] addr_a_reg;\n")
         out_fh.write("    reg [ADDR_WIDTH-1:0] addr_b_reg;\n")
@@ -38,11 +22,8 @@ class RAMVerilogExporter(VerilogExporter):
         out_fh.write("    integer i;\n")
         out_fh.write("\n")
         out_fh.write(f"    always @(posedge {clk_pin_name}) begin\n")
-        for rw_port_group in mem.get_rw_port_groups():
-            self.write_rw_port_always(rw_port_group, out_fh)
-        out_fh.write("        // Synchronous readback\n")
-        for rw_port_group in mem.get_rw_port_groups():
-            self.write_readback(rw_port_group, out_fh)
+        self.write_always(out_fh)
+        self.write_readback(out_fh)
         out_fh.write("    end\n")
         out_fh.write("endmodule\n")
 
@@ -67,7 +48,14 @@ class RAMVerilogExporter(VerilogExporter):
         )
         out_fh.write("        end\n")
 
-    def write_readback(self, rw_port_group, out_fh):
+    def write_readback(self, out_fh):
+        """Writes the readback section for the memory"""
+
+        out_fh.write("        // Synchronous readback\n")
+        for rw_port_group in self.get_memory().get_rw_port_groups():
+            self.write_rw_port_readback(rw_port_group, out_fh)
+
+    def write_rw_port_readback(self, rw_port_group, out_fh):
         """Writes readback section for the port group"""
 
         out_fh.write(
