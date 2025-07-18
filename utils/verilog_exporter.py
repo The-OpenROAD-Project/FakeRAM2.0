@@ -81,11 +81,16 @@ class VerilogExporter(Exporter):
 
         if index != 0:
             out_fh.write(",\n")
-        out_fh.write(f"    {rw_port_group.get_write_enable_name()},\n")
-        out_fh.write(f"    {rw_port_group.get_address_bus_name()},\n")
-        out_fh.write(f"    {rw_port_group.get_data_input_bus_name()},\n")
-        out_fh.write(f"    {rw_port_group.get_data_output_bus_name()},\n")
-        out_fh.write(f"    {rw_port_group.get_clock_name()}")
+        if rw_port_group.get_write_enable_name():
+            out_fh.write(f"    {rw_port_group.get_write_enable_name()},\n")
+        if rw_port_group.get_address_bus_name():
+            out_fh.write(f"    {rw_port_group.get_address_bus_name()},\n")
+        if rw_port_group.get_data_input_bus_name():
+            out_fh.write(f"    {rw_port_group.get_data_input_bus_name()},\n")
+        if rw_port_group.get_data_output_bus_name():
+            out_fh.write(f"    {rw_port_group.get_data_output_bus_name()},\n")
+        if rw_port_group.get_clock_name():
+            out_fh.write(f"    {rw_port_group.get_clock_name()}")
 
     def write_misc_decl_set(self, mem, out_fh):
         """Write the misc bus/port declarations"""
@@ -100,21 +105,26 @@ class VerilogExporter(Exporter):
 
         suffix = rw_port_group.get_suffix()
         out_fh.write(f"    // Port {suffix.upper()}\n")
-        out_fh.write(
-            f"    input  wire                     {rw_port_group.get_write_enable_name()};\n"
-        )
-        out_fh.write(
-            f"    input  wire [ADDR_WIDTH-1:0]    {rw_port_group.get_address_bus_name()};\n"
-        )
-        out_fh.write(
-            f"    input  wire [DATA_WIDTH-1:0]    {rw_port_group.get_data_input_bus_name()};\n"
-        )
-        out_fh.write(
-            f"    output reg  [DATA_WIDTH-1:0]    {rw_port_group.get_data_output_bus_name()};\n"
-        )
-        out_fh.write(
-            f"    input  wire                     {rw_port_group.get_clock_name()};\n"
-        )
+        if rw_port_group.get_write_enable_name():
+            out_fh.write(
+                f"    input  wire                     {rw_port_group.get_write_enable_name()};\n"
+            )
+        if rw_port_group.get_address_bus_name():
+            out_fh.write(
+                f"    input  wire [ADDR_WIDTH-1:0]    {rw_port_group.get_address_bus_name()};\n"
+            )
+        if rw_port_group.get_data_input_bus_name():
+            out_fh.write(
+                f"    input  wire [DATA_WIDTH-1:0]    {rw_port_group.get_data_input_bus_name()};\n"
+            )
+        if rw_port_group.get_data_output_bus_name():
+            out_fh.write(
+                f"    output reg  [DATA_WIDTH-1:0]    {rw_port_group.get_data_output_bus_name()};\n"
+            )
+        if rw_port_group.get_clock_name():
+            out_fh.write(
+                f"    input  wire                     {rw_port_group.get_clock_name()};\n"
+            )
         out_fh.write("\n")
 
     def write_misc_defn_set(self, mem, out_fh):
@@ -147,17 +157,22 @@ class VerilogExporter(Exporter):
         data_bus_msb = mem.get_data_bus_msb()
         if index != 0:
             out_fh.write(",\n")
-        out_fh.write(f"    input {rw_port_group.get_write_enable_name()},\n")
-        out_fh.write(
-            f"    input [{addr_bus_msb}:0] {rw_port_group.get_address_bus_name()},\n"
-        )
-        out_fh.write(
-            f"    input [{data_bus_msb}:0] {rw_port_group.get_data_input_bus_name()},\n"
-        )
-        out_fh.write(
-            f"    output reg [{data_bus_msb}:0] {rw_port_group.get_data_output_bus_name()},\n"
-        )
-        out_fh.write(f"    input {rw_port_group.get_clock_name()}")
+        if rw_port_group.get_write_enable_name():
+            out_fh.write(f"    input {rw_port_group.get_write_enable_name()},\n")
+        if rw_port_group.get_address_bus_name():
+            out_fh.write(
+                f"    input [{addr_bus_msb}:0] {rw_port_group.get_address_bus_name()},\n"
+            )
+        if rw_port_group.get_data_input_bus_name():
+            out_fh.write(
+                f"    input [{data_bus_msb}:0] {rw_port_group.get_data_input_bus_name()},\n"
+            )
+        if rw_port_group.get_data_output_bus_name():
+            out_fh.write(
+                f"    output reg [{data_bus_msb}:0] {rw_port_group.get_data_output_bus_name()},\n"
+            )
+        if rw_port_group.get_clock_name():
+            out_fh.write(f"    input {rw_port_group.get_clock_name()}")
 
     def export_blackbox(self, out_fh):
         """Writes the blackbox content to the output stream"""

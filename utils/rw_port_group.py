@@ -36,6 +36,14 @@ class RWPortGroup:
             self._data_output_bus_name = None
             self._clk_name = None
 
+    def set_suffix(self, suffix):
+        """
+        Sets the suffix, but does not apply it to the rest of the names.
+
+        If you call it this way, it's basically a tag
+        """
+        self._suffix = suffix
+
     def set_clock_name(self, name):
         """Sets the clock port name"""
         self._clk_name = name
