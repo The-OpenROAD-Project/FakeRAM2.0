@@ -12,10 +12,10 @@ from utils.class_process import Process
 from utils.run_utils import RunUtils
 from utils.rw_port_group import RWPortGroup
 from utils.ss_port_creator import SSPortCreator
+from utils.ss_port_organizer import SSPortOrganizer
 from utils.single_port_ssram import SinglePortSSRAM
 
 # TODO
-# support dual port
 # support reg file
 
 #
@@ -103,22 +103,13 @@ class SSRAMGenerator:
         self._pin_type_map = self._util_module.get_pin_type_map()
         self._key_map = self._util_module.get_key_map()
 
-    def classify_pin(self, pin_name):
-        """
-        Returns the pin classification to help identify whether the pin or bus
-        is the address, data in, data out, write enable, clock or power pin or
-        bus
-        """
-        if pin_name in self._pin_type_map:
-            return self._pin_type_map[pin_name]
-        return None
-
     def create_memory(self, mem_config, physical):
         """Extracts the data from the CSV files and returns the memory object"""
 
         # Get the physical data and organize it
         phys_data = self.read_physical_file(physical)
-        pins = self.organize_pins(phys_data)
+        pin_org = SSPortOrganizer(self._pin_type_map)
+        pin_org.organize_ports(phys_data)
         num_pins = len(phys_data["pin_data"])
 
         # Get the metrics data and organize it
@@ -127,7 +118,7 @@ class SSRAMGenerator:
         mem_config = MemoryConfig.from_json(macro_metrics)
 
         mem = SinglePortSSRAM(mem_config, self._process, timing_data, num_pins)
-        self.set_logical_pins(mem, pins)
+        self.set_logical_pins(mem, pin_org)
         port_creator = SSPortCreator(mem, self._pin_type_map)
         port_creator.create_ports(phys_data["pin_data"])
         if "obs" in phys_data:
@@ -194,36 +185,6 @@ class SSRAMGenerator:
                     )
         return macro_data
 
-    def organize_pins(self, macro_data):
-        """
-        Iterates through the macro_data and creates a pin dictionary that
-        maps the pin or bus name to a dictionary that includes the pin name,
-        msb, lsb, and type
-        """
-
-        pins = {}
-        bus_name_re = re.compile("^(\S+)\[(\d+)\]")
-        for pin_name, pin_data in macro_data["pin_data"].items():
-            result = bus_name_re.match(pin_name)
-            if result:
-                bus_name = result.group(1)
-                bit_num = int(result.group(2))
-                if bus_name in pins:
-                    pins[bus_name]["lsb"] = min(bit_num, pins[bus_name]["lsb"])
-                    pins[bus_name]["msb"] = max(bit_num, pins[bus_name]["msb"])
-                else:
-                    pins[bus_name] = {
-                        "name": bus_name,
-                        "msb": bit_num,
-                        "lsb": bit_num,
-                        "type": self.classify_pin(bus_name),
-                    }
-            else:
-                if pin_name in pins: # pragma: no cover
-                    raise Exception(f"pin {pin_name} appears twice")
-                pins[pin_name] = {"name": pin_name, "type": self.classify_pin(pin_name)}
-
-        return pins
 
     def get_size_keys(self):
         """Returns the keys that map to depth and width"""
@@ -270,30 +231,30 @@ class SSRAMGenerator:
                             )
         return macro_metrics
 
-    def set_logical_pins(self, mem, pins):
+    def set_logical_pins(self, mem, pin_org):
         """Sets the pins to be used for Verilog and Liberty output"""
-        rw_port_group = RWPortGroup()
-        mem.add_rw_port_group(rw_port_group)
-        for pin_name, pin_data in pins.items():
-            pin_type = pin_data["type"]
-            if pin_type == "clock":
-                rw_port_group.set_clock_name(pin_name)
-            elif pin_type in ["power", "ground"]:
-                # skip
-                pass
-            elif pin_type == "address_bus":
-                rw_port_group.set_address_bus_name(pin_name)
-            elif pin_type == "data_bus":
-                rw_port_group.set_data_input_bus_name(pin_name)
-            elif pin_type == "output_bus":
-                rw_port_group.set_data_output_bus_name(pin_name)
-            elif pin_type == "write_enable":
-                rw_port_group.set_write_enable_name(pin_name)
-            elif "msb" in pin_data:
-                bus = {"name": pin_name, "msb": pin_data["msb"], "lsb": pin_data["lsb"]}
-                mem.add_misc_bus(bus)
-            else:
-                mem.add_misc_port(pin_name)
+
+        for suffix,src in pin_org.get_rw_groups().items():
+            rw_port_group = RWPortGroup()
+            rw_port_group.set_suffix(suffix)
+            for pin_type,port_data in src.items():
+                pin_name = port_data["name"]
+                if pin_type == "clock":
+                    rw_port_group.set_clock_name(pin_name)
+                elif pin_type == "address_bus":
+                    rw_port_group.set_address_bus_name(pin_name)
+                elif pin_type == "data_bus":
+                    rw_port_group.set_data_input_bus_name(pin_name)
+                elif pin_type == "output_bus":
+                    rw_port_group.set_data_output_bus_name(pin_name)
+                elif pin_type == "write_enable":
+                    rw_port_group.set_write_enable_name(pin_name)
+            mem.add_rw_port_group(rw_port_group)
+        for src in pin_org.get_misc_busses():
+            mem.add_misc_bus(src)
+        for src in pin_org.get_misc_ports():
+            if src["type"] not in ["power", "ground"]:
+                mem.add_misc_port(src["name"])
 
     @staticmethod
     def main():

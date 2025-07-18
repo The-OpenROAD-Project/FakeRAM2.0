@@ -132,11 +132,19 @@ class LefExporter(Exporter):
         """Writes rw signal bundle, comprised of dout, din, addr busses"""
 
         bits = self.get_memory().get_width()
-        self.write_signal_bus(fid, rw_port_group.get_data_output_bus_name(), 0, bits)
-        self.write_signal_bus(fid, rw_port_group.get_data_input_bus_name(), 0, bits)
-        self.write_signal_bus(
-            fid, rw_port_group.get_address_bus_name(), 0, self._memory.get_addr_width()
-        )
+        if rw_port_group.get_data_output_bus_name():
+            self.write_signal_bus(
+                fid, rw_port_group.get_data_output_bus_name(), 0, bits
+            )
+        if rw_port_group.get_data_input_bus_name():
+            self.write_signal_bus(fid, rw_port_group.get_data_input_bus_name(), 0, bits)
+        if rw_port_group.get_address_bus_name():
+            self.write_signal_bus(
+                fid,
+                rw_port_group.get_address_bus_name(),
+                0,
+                self._memory.get_addr_width(),
+            )
 
     def write_signal_pins(self, fid):
         """LEF SIGNAL PINS"""
@@ -145,10 +153,12 @@ class LefExporter(Exporter):
         for rw_port_group in mem.get_rw_port_groups():
             self.write_signals(fid, rw_port_group)
         for rw_port_group in mem.get_rw_port_groups():
-            port = mem.get_port(rw_port_group.get_write_enable_name())
-            self.write_pin(fid, port)
-            port = mem.get_port(rw_port_group.get_clock_name())
-            self.write_pin(fid, port)
+            if rw_port_group.get_write_enable_name():
+                port = mem.get_port(rw_port_group.get_write_enable_name())
+                self.write_pin(fid, port)
+            if rw_port_group.get_clock_name():
+                port = mem.get_port(rw_port_group.get_clock_name())
+                self.write_pin(fid, port)
         for bus_name, bus_data in mem.get_misc_busses().items():
             self.write_signal_bus(fid, bus_name, bus_data["lsb"], bus_data["msb"] + 1)
         for port_name in sorted(mem.get_misc_ports()):
