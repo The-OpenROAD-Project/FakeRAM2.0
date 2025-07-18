@@ -1661,7 +1661,7 @@ cell(dprf_256x32) {
                   "0.050, 0.050" \
                 )
             }
-        } 
+        }
         timing() {
             related_pin : clk_a;
             timing_type : hold_rising ;
@@ -1716,7 +1716,7 @@ cell(dprf_256x32) {
                   "0.050, 0.050" \
                 )
             }
-        } 
+        }
         timing() {
             related_pin : clk_a;
             timing_type : hold_rising ;
@@ -1771,7 +1771,7 @@ cell(dprf_256x32) {
                   "0.050, 0.050" \
                 )
             }
-        } 
+        }
         timing() {
             related_pin : clk_a;
             timing_type : hold_rising ;
@@ -1888,7 +1888,7 @@ cell(dprf_256x32) {
                   "0.050, 0.050" \
                 )
             }
-        } 
+        }
         timing() {
             related_pin : clk_b;
             timing_type : hold_rising ;
@@ -1943,7 +1943,7 @@ cell(dprf_256x32) {
                   "0.050, 0.050" \
                 )
             }
-        } 
+        }
         timing() {
             related_pin : clk_b;
             timing_type : hold_rising ;
@@ -1998,7 +1998,7 @@ cell(dprf_256x32) {
                   "0.050, 0.050" \
                 )
             }
-        } 
+        }
         timing() {
             related_pin : clk_b;
             timing_type : hold_rising ;

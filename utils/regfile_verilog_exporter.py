@@ -13,25 +13,8 @@ class RegFileVerilogExporter(VerilogExporter):
     def export_module(self, out_fh):
         """Exports the verilog module to the output stream"""
 
-        mem = self.get_memory()
-        out_fh.write(f"module {mem.get_name()}\n")
-        out_fh.write("(\n")
-        for index, rw_port_group in enumerate(mem.get_rw_port_groups()):
-            self.write_rw_port_decl_set(rw_port_group, out_fh, index)
-        out_fh.write("\n);\n")
-        out_fh.write(f"    parameter DATA_WIDTH = {mem.get_width()};\n")
-        out_fh.write(f"    parameter ADDR_WIDTH = {mem.get_addr_width()};\n")
-        out_fh.write("\n")
-        for rw_port_group in self.get_memory().get_rw_port_groups():
-            self.write_rw_port_defn_set(rw_port_group, out_fh)
-        out_fh.write("\n")
-        out_fh.write(
-            f"    // Memory array: {mem.get_depth()} words of {mem.get_width()} bits\n"
-        )
-        out_fh.write("    reg [DATA_WIDTH-1:0] mem [0:(1 << ADDR_WIDTH)-1];\n")
-        out_fh.write("\n")
-        for rw_port_group in self.get_memory().get_rw_port_groups():
-            self.write_rw_port_always(rw_port_group, out_fh)
+        self.write_module_header(out_fh)
+        self.write_always(out_fh)
         out_fh.write("endmodule\n")
 
     def write_rw_port_always(self, rw_port_group, out_fh):

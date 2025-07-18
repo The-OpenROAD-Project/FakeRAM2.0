@@ -38,15 +38,6 @@ class LefExporter(Exporter):
         pin_pitch = physical.get_pin_pitch()
         group_pitch = physical.get_group_pitch()
 
-        # Process parameters
-        process = mem.get_process_data()
-        min_pin_width = process.get_pin_width_um()
-        min_pin_pitch = process.get_pin_pitch_um()
-        metal_prefix = process.get_metal_prefix()
-        metal_layer = process.get_metal_layer()
-        x_offset = process.get_x_offset()
-        y_offset = process.get_y_offset()
-
         self.write_header(
             out_fh,
             name,
@@ -151,7 +142,6 @@ class LefExporter(Exporter):
         """LEF SIGNAL PINS"""
 
         mem = self.get_memory()
-        y_step = mem.get_process_data().y_step
         for rw_port_group in mem.get_rw_port_groups():
             self.write_signals(fid, rw_port_group)
         for rw_port_group in mem.get_rw_port_groups():
@@ -160,7 +150,7 @@ class LefExporter(Exporter):
             port = mem.get_port(rw_port_group.get_clock_name())
             self.write_pin(fid, port)
         for bus_name, bus_data in mem.get_misc_busses().items():
-            self.write_signal_bus(bus_name, bus_data["lsb"], bus_data["msb"])
-        for port_name in mem.get_misc_ports():
+            self.write_signal_bus(fid, bus_name, bus_data["lsb"], bus_data["msb"] + 1)
+        for port_name in sorted(mem.get_misc_ports()):
             port = mem.get_port(port_name)
             self.write_pin(fid, port)

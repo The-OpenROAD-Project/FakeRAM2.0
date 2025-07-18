@@ -5111,7 +5111,7 @@ cell(sprf_256x256) {
                   "0.050, 0.050" \
                 )
             }
-        } 
+        }
         timing() {
             related_pin : clk_a;
             timing_type : hold_rising ;
@@ -5166,7 +5166,7 @@ cell(sprf_256x256) {
                   "0.050, 0.050" \
                 )
             }
-        } 
+        }
         timing() {
             related_pin : clk_a;
             timing_type : hold_rising ;
@@ -5221,7 +5221,7 @@ cell(sprf_256x256) {
                   "0.050, 0.050" \
                 )
             }
-        } 
+        }
         timing() {
             related_pin : clk_a;
             timing_type : hold_rising ;

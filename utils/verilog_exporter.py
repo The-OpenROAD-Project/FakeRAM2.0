@@ -40,6 +40,36 @@ class VerilogExporter(Exporter):
             self.export_module(out_fh)
 
     # -------------- Utilities --------------
+    def write_module_header(self, out_fh):
+        """Writes the module header"""
+
+        mem = self.get_memory()
+        out_fh.write(f"module {mem.get_name()}\n")
+        out_fh.write("(\n")
+        clk_pin_name = mem.get_rw_port_groups()[0].get_clock_name()
+        for index, rw_port_group in enumerate(mem.get_rw_port_groups()):
+            self.write_rw_port_decl_set(rw_port_group, out_fh, index)
+        self.write_misc_decl_set(mem, out_fh)
+        out_fh.write("\n);\n")
+        out_fh.write(f"    parameter DATA_WIDTH = {mem.get_width()};\n")
+        out_fh.write(f"    parameter ADDR_WIDTH = {mem.get_addr_width()};\n")
+        out_fh.write("\n")
+        for rw_port_group in mem.get_rw_port_groups():
+            self.write_rw_port_defn_set(rw_port_group, out_fh)
+        self.write_misc_defn_set(mem, out_fh)
+        out_fh.write("\n")
+        out_fh.write(
+            f"    // Memory array: {mem.get_depth()} words of {mem.get_width()} bits\n"
+        )
+        out_fh.write("    reg [DATA_WIDTH-1:0] mem [0:(1 << ADDR_WIDTH)-1];\n")
+        out_fh.write("\n")
+
+    def write_always(self, out_fh):
+        """Writes the always section for the memory"""
+
+        for rw_port_group in self.get_memory().get_rw_port_groups():
+            self.write_rw_port_always(rw_port_group, out_fh)
+
     def write_rw_port_decl_set(self, rw_port_group, out_fh, index):
         """
         Writes the RW port group declarations
@@ -56,6 +86,14 @@ class VerilogExporter(Exporter):
         out_fh.write(f"    {rw_port_group.get_data_input_bus_name()},\n")
         out_fh.write(f"    {rw_port_group.get_data_output_bus_name()},\n")
         out_fh.write(f"    {rw_port_group.get_clock_name()}")
+
+    def write_misc_decl_set(self, mem, out_fh):
+        """Write the misc bus/port declarations"""
+
+        for bus_name, bus_data in mem.get_misc_busses().items():
+            out_fh.write(f"\n,   {bus_name}")
+        for pin in sorted(mem.get_misc_ports()):
+            out_fh.write(f"\n,   {pin}")
 
     def write_rw_port_defn_set(self, rw_port_group, out_fh):
         """Writes the RW port group definitions"""
@@ -78,6 +116,16 @@ class VerilogExporter(Exporter):
             f"    input  wire                     {rw_port_group.get_clock_name()};\n"
         )
         out_fh.write("\n")
+
+    def write_misc_defn_set(self, mem, out_fh):
+        """Write the misc bus/port definitions"""
+
+        for bus_name, bus_data in mem.get_misc_busses().items():
+            out_fh.write(
+                f"    input wire [{bus_data['msb']}:{bus_data['lsb']}] {bus_name};\n"
+            )
+        for pin in sorted(mem.get_misc_ports()):
+            out_fh.write(f"    input wire                     {pin};\n")
 
     def export_bb_header(self, out_fh):
         """Writes the SystemVerilog blackbox header"""
@@ -117,5 +165,11 @@ class VerilogExporter(Exporter):
         self.export_bb_header(out_fh)
         for index, rw_port_group in enumerate(self.get_memory().get_rw_port_groups()):
             self.export_bb_port_decl_set(rw_port_group, out_fh, index)
+        for bus_name, bus_data in self.get_memory().get_misc_busses().items():
+            out_fh.write(
+                f",\n    input [{bus_data['msb']}:{bus_data['lsb']}] {bus_name}"
+            )
+        for pin in sorted(self.get_memory().get_misc_ports()):
+            out_fh.write(f",\n    input {pin}")
         out_fh.write("\n")
         self.export_bb_footer(out_fh)

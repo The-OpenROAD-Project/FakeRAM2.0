@@ -1078,7 +1078,7 @@ cell(spsram_256x32) {
                   "0.050, 0.050" \
                 )
             }
-        } 
+        }
         timing() {
             related_pin : clk;
             timing_type : hold_rising ;
@@ -1132,7 +1132,7 @@ cell(spsram_256x32) {
                   "0.050, 0.050" \
                 )
             }
-        } 
+        }
         timing() {
             related_pin : clk;
             timing_type : hold_rising ;
@@ -1187,7 +1187,7 @@ cell(spsram_256x32) {
                   "0.050, 0.050" \
                 )
             }
-        } 
+        }
         timing() {
             related_pin : clk;
             timing_type : hold_rising ;
@@ -1246,7 +1246,7 @@ cell(spsram_256x32) {
                   "0.050, 0.050" \
                 )
             }
-        } 
+        }
         timing() {
             related_pin : clk;
             timing_type : hold_rising ;

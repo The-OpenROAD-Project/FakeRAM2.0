@@ -61,6 +61,11 @@ class Process:
         self.bitcell_width_um = json_data.get("bitcell_width_um", None)
         self.bitcell_height_um = json_data.get("bitcell_height_um", None)
 
+        # Set to True when we want to use the process parameters or bitcell
+        # sizes to calculate the macro dimensions. Set to False for spreadsheet
+        # mode
+        self._calc_dimensions = True
+
     def _calc_y_step(self):
         """
         Calculates y_step, which is really the y location for the center of
@@ -199,3 +204,15 @@ class Process:
     def get_column_mux_factor(self):
         """Returns the column mux factor"""
         return self.column_mux_factor
+
+    def set_calc_dimensions(self, val):
+        """
+        Sets a predicate to indicate if we should calculate the dimensions
+        """
+        self._calc_dimensions = val
+
+    def calc_dimensions(self):
+        """
+        Returns a predicate to indicate if we should calculate the dimensions
+        """
+        return self._calc_dimensions
