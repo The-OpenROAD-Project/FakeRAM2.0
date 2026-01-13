@@ -874,7 +874,7 @@ module spsram_256x32_h
          end
          else if (we_in)
          begin
-            mem[addr_in] <= (wd_in) | (mem[addr_in]);
+            mem[addr_in] <= wd_in;
          end
          // read
          rd_out <= mem[addr_in];

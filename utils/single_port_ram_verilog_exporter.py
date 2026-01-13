@@ -60,7 +60,7 @@ class SinglePortRAMVerilogExporter(VerilogExporter):
         out_fh.write(f"         else if ({we_pin})\n")
         out_fh.write("         begin\n")
         out_fh.write(
-            f"            mem[{addr_bus}] <= ({din_bus}) | (mem[{addr_bus}]);\n"
+            f"            mem[{addr_bus}] <= {din_bus};\n"
         )
         out_fh.write("         end\n")
         out_fh.write("         // read\n")
