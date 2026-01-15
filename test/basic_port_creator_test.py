@@ -24,7 +24,7 @@ class BasicPortCreatorTest(unittest.TestCase):
 
         self._process = Process(TestUtils.get_base_process_data())
         self._timing_data = TimingData()
-        self._rect_re = re.compile("^\s*RECT\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+\;")
+        self._rect_re = re.compile(r"^\s*RECT\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+\;")
         self._start_y = 0.48
         self._start_pitch = 0.0
         self._threshold = 0.001
