@@ -22,11 +22,11 @@ class FlowTest(unittest.TestCase):
         self._results_dir = os.path.join(self._test_dir, "results")
         if os.path.isdir(self._results_dir):
             shutil.rmtree(self._results_dir)
-        self._macro_re = re.compile("^MACRO\s+(\S+)")
-        self._size_re = re.compile("^\s+SIZE\s+(\S+)\s+BY\s+(\S+)")
-        self._start_pin_re = re.compile("^\s+PIN\s+(\S+)")
-        self._macro_name_re = re.compile("\S+_(\d+)x(\d+)")
-        self._pin_dir_re = re.compile("^\s*DIRECTION\s+(\S+)")
+        self._macro_re = re.compile(r"^MACRO\s+(\S+)")
+        self._size_re = re.compile(r"^\s+SIZE\s+(\S+)\s+BY\s+(\S+)")
+        self._start_pin_re = re.compile(r"^\s+PIN\s+(\S+)")
+        self._macro_name_re = re.compile(r"\S+_(\d+)x(\d+)")
+        self._pin_dir_re = re.compile(r"^\s*DIRECTION\s+(\S+)")
 
     def _getLefPin(self, fh, pin_name):
         """Extracts data for given LEF pin and returns it in a dict"""

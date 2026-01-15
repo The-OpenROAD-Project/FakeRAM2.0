@@ -23,7 +23,7 @@ class SVBBoxDataTest(unittest.TestCase):
         self._process = Process(TestUtils.get_base_process_data())
         self._timing_data = TimingData()
         self._bus_re = re.compile(
-            "^\s*\S+\s+(?:reg)?\s*\[\s*(\d+)\:(\d+)\\s*]\s*(\S+)\s*\,"
+            r"^\s*\S+\s+(?:reg)?\s*\[\s*(\d+)\:(\d+)\s*]\s*(\S+)\s*\,"
         )
 
     def _extract_bus_msb(self, content):

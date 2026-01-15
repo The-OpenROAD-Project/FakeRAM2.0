@@ -10,7 +10,7 @@ class SSPortOrganizer:
         self._misc_busses = []
         self._misc_ports = []
         self._port_dict = {}
-        self._bus_name_re = re.compile("^(\S+)\[(\d+)\]")
+        self._bus_name_re = re.compile(r"^(\S+)\[(\d+)\]")
         self._pin_type_map = pin_type_map
 
     def get_rw_groups(self):
