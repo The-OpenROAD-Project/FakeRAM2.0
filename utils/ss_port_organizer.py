@@ -81,6 +81,11 @@ class SSPortOrganizer:
                     "write_enable",
                     "output_bus",
                     "data_bus",
+                    "toggle_power",
+                    "self_time_bypass",
+                    "mem_enable",
+                    "write_margin_enable",
+                    "write_margin_input",
                 ]:
                     last_char = port_data["name"][-1]
                     self._rw_groups[last_char][port_data["type"]] = port_data

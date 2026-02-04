@@ -249,6 +249,11 @@ class SSRAMGenerator:
                     rw_port_group.set_data_output_bus_name(pin_name)
                 elif pin_type == "write_enable":
                     rw_port_group.set_write_enable_name(pin_name)
+                else:
+                    if "msb" in port_data:
+                        rw_port_group.add_related_bus(port_data)
+                    else:
+                        rw_port_group.add_related_pin(pin_name)
             mem.add_rw_port_group(rw_port_group)
         for src in pin_org.get_misc_busses():
             mem.add_misc_bus(src)

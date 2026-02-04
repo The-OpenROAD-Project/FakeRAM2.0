@@ -35,6 +35,8 @@ class RWPortGroup:
             self._data_input_bus_name = None
             self._data_output_bus_name = None
             self._clk_name = None
+        self._related_pin_list = []
+        self._related_busses = {}
 
     def set_suffix(self, suffix):
         """
@@ -83,6 +85,22 @@ class RWPortGroup:
     def get_data_output_bus_name(self):
         """Gets the data output bus name"""
         return self._data_output_bus_name
+
+    def add_related_pin(self, name):
+        """Adds related pin"""
+        self._related_pin_list.append(name)
+
+    def get_related_pins(self):
+        """Gets the related pin list"""
+        return self._related_pin_list
+
+    def add_related_bus(self, bus):
+        """Adds related bus"""
+        self._related_busses[bus["name"]] = bus
+
+    def get_related_busses(self):
+        """Gets the related bus dictionary"""
+        return self._related_busses
 
     def _set_names_by_suffix(self, suffix):
         """
