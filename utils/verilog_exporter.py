@@ -91,6 +91,11 @@ class VerilogExporter(Exporter):
             out_fh.write(f"    {rw_port_group.get_data_output_bus_name()},\n")
         if rw_port_group.get_clock_name():
             out_fh.write(f"    {rw_port_group.get_clock_name()}")
+        for port_name in rw_port_group.get_related_pins():
+            out_fh.write(f"    {port_name}")
+        for bus_name in rw_port_group.get_related_busses():
+            out_fh.write(f"    {bus_name}")
+            
 
     def write_misc_decl_set(self, mem, out_fh):
         """Write the misc bus/port declarations"""
@@ -125,6 +130,15 @@ class VerilogExporter(Exporter):
             out_fh.write(
                 f"    input  wire                     {rw_port_group.get_clock_name()};\n"
             )
+        for pin_name in rw_port_group.get_related_pins():
+            out_fh.write(
+                f"    input  wire                     {pin_name};\n"
+            )
+        for bus_name,bus_data in rw_port_group.get_related_busses().items():
+            out_fh.write(
+                f"    input  wire [{bus_data['msb']}:{bus_data['lsb']}] {bus_name};\n"
+            )
+            
         out_fh.write("\n")
 
     def write_misc_defn_set(self, mem, out_fh):
@@ -170,6 +184,14 @@ class VerilogExporter(Exporter):
         if rw_port_group.get_data_output_bus_name():
             out_fh.write(
                 f"    output reg [{data_bus_msb}:0] {rw_port_group.get_data_output_bus_name()},\n"
+            )
+        for pin_name in rw_port_group.get_related_pins():
+            out_fh.write(
+                f"    input {pin_name},\n"
+            )
+        for bus_name, bus_data in rw_port_group.get_related_busses().items():
+            out_fh.write(
+                f"    input [{bus_data['msb']}:{bus_data['lsb']}] {bus_name},\n"
             )
         if rw_port_group.get_clock_name():
             out_fh.write(f"    input {rw_port_group.get_clock_name()}")
