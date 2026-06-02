@@ -62,8 +62,8 @@ class FlowTest(unittest.TestCase):
                 else:
                     result = self._size_re.match(line)
                     if result:
-                        lef_data["width"] = result.group(1)
-                        lef_data["height"] = result.group(2)
+                        lef_data["width"] = float(result.group(1))
+                        lef_data["height"] = float(result.group(2))
                     else:
                         result = self._start_pin_re.match(line)
                         if result:
@@ -97,8 +97,8 @@ class FlowTest(unittest.TestCase):
         lef_data = self._getLefData(ram_file)
         macro_name = lef_data["macro_name"]
         self.assertEqual(macro_name, "fakeram7_2048x39")
-        self.assertEqual(lef_data["width"], "20.330")
-        self.assertEqual(lef_data["height"], "166.600")
+        self.assertAlmostEqual(lef_data["width"], 20.33, places=3)
+        self.assertAlmostEqual(lef_data["height"], 166.6, places=3)
         pin_layer = "M4"
         pin_width = 0.024  # from config
         pin_spacing = 1.776  # config pin_pitch * calculated track count

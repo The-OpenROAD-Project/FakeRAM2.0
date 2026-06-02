@@ -28,7 +28,12 @@ class SSPortCreator:
             port = Port(pin_name)
             port.set_use(pin_data["use"])
             port.set_layer(pin_data["layer"])
-            port.add_rect(pin_data["rect"])
+            rect_data = pin_data["rect"]
+            if isinstance(rect_data[0], list):
+                for rect in rect_data:
+                    port.add_rect(rect)
+            else:
+                port.add_rect(rect_data)
             (pin_type, direction) = self.get_direction(pin_name)
             port.set_direction(direction)
             if pin_type in ["power", "ground"]:
