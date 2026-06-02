@@ -69,7 +69,7 @@ class LefExporter(Exporter):
         fid.write(f"  PROPERTY banks {banks} ;\n")
         fid.write("  FOREIGN %s 0 0 ;\n" % (name))
         fid.write("  SYMMETRY X Y R90 ;\n")
-        fid.write("  SIZE %.3f BY %.3f ;\n" % (w, h))
+        fid.write("  SIZE %.4f BY %.4f ;\n" % (w, h))
         fid.write("  CLASS BLOCK ;\n")
 
     def write_pin(self, fid, port, write_abutment=True):
@@ -87,7 +87,7 @@ class LefExporter(Exporter):
         fid.write(f"      LAYER {port.get_layer()} ;\n")
         for rect in port.get_rects():
             fid.write(
-                f"      RECT {rect[0]:.3f} {rect[1]:.3f} {rect[2]:.3f} {rect[3]:.3f} ;\n"
+                f"      RECT {rect[0]:.5f} {rect[1]:.5f} {rect[2]:.5f} {rect[3]:.5f} ;\n"
             )
         fid.write("    END\n")
         fid.write(f"  END {pin_name}\n")
@@ -101,7 +101,7 @@ class LefExporter(Exporter):
             fid.write(f"    LAYER {layer_name} ;\n")
             for rect in obs_data[layer_name]:
                 fid.write(
-                    f"    RECT {rect[0]} {rect[1]} {rect[2]:.3f} {rect[3]:.3f} ;\n"
+                    f"    RECT {rect[0]} {rect[1]} {rect[2]:.5f} {rect[3]:.5f} ;\n"
                 )
         fid.write("  END\n")
 

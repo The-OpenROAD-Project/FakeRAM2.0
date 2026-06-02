@@ -34,7 +34,7 @@ class LibertyExporter(Exporter):
         name = self.get_memory().get_name()
         area = self.get_memory().physical.get_area(False)
         out_fh.write("cell(%s) {\n" % name)
-        out_fh.write("    area : %.3f;\n" % area)
+        out_fh.write("    area : %.6f;\n" % area)
         out_fh.write("    interface_timing : true;\n")
 
     def write_cell_footer(self, out_fh):
@@ -66,13 +66,13 @@ class LibertyExporter(Exporter):
         out_fh.write('    leakage_power_unit : "1uW";\n')
         out_fh.write("    nom_process : 1;\n")
         out_fh.write("    nom_temperature : 25.000;\n")
-        out_fh.write("    nom_voltage : %.1f;\n" % voltage)
+        out_fh.write("    nom_voltage : %.3f;\n" % voltage)
         out_fh.write("    capacitive_load_unit (1,pf);\n\n")
         out_fh.write('    pulling_resistance_unit : "1kohm";\n\n')
         out_fh.write("    operating_conditions(tt_1.0_25.0) {\n")
         out_fh.write("        process : 1;\n")
         out_fh.write("        temperature : 25.000;\n")
-        out_fh.write("        voltage : %.1f;\n" % voltage)
+        out_fh.write("        voltage : %.3f;\n" % voltage)
         out_fh.write("        tree_type : balanced_tree;\n")
         out_fh.write("    }\n")
         out_fh.write("\n")
@@ -203,7 +203,7 @@ class LibertyExporter(Exporter):
         out_fh.write(f"    pin({pin_name})   {{\n")
         out_fh.write("        direction : input;\n")
         out_fh.write(
-            "        capacitance : %.3f;\n" % (timing_data.min_driver_in_cap * 5)
+            "        capacitance : %.6f;\n" % (timing_data.min_driver_in_cap * 5)
         )
         # Clk pin is usually higher cap for fanout control, assuming an x5 driver.
         out_fh.write("        clock : true;\n")
@@ -275,7 +275,7 @@ class LibertyExporter(Exporter):
         out_fh.write("    bus(%s)   {\n" % pin_name)
         out_fh.write("        bus_type : %s_DATA;\n" % name)
         out_fh.write("        direction : output;\n")
-        out_fh.write("        max_capacitance : %.3f;\n" % max_load)
+        out_fh.write("        max_capacitance : %.6f;\n" % max_load)
         # Based on 32x inverter being a common max (or near max) inverter
         if include_memory_read:
             out_fh.write("        memory_read() {\n")
@@ -312,7 +312,7 @@ class LibertyExporter(Exporter):
         pindynamic = timing_data.pin_dynamic
         out_fh.write("    pin(%s){\n" % pin_name)
         out_fh.write("        direction : input;\n")
-        out_fh.write("        capacitance : %.3f;\n" % (min_driver_in_cap))
+        out_fh.write("        capacitance : %.6f;\n" % (min_driver_in_cap))
         self.write_timing(out_fh, name, clk_pin_name, slew_indices, tsetup, thold)
         self.write_internal_power(
             out_fh, name + "_energy_template_sigslew", slew_indices, pindynamic
@@ -348,7 +348,7 @@ class LibertyExporter(Exporter):
         out_fh.write("    bus(%s)   {\n" % bus_name)
         out_fh.write("        bus_type : %s_ADDRESS;\n" % name)
         out_fh.write("        direction : input;\n")
-        out_fh.write("        capacitance : %.3f;\n" % (min_driver_in_cap))
+        out_fh.write("        capacitance : %.6f;\n" % (min_driver_in_cap))
         self.write_timing(out_fh, name, clk_pin_name, slew_indices, tsetup, thold)
         self.write_internal_power(
             out_fh, name + "_energy_template_sigslew", slew_indices, pindynamic
@@ -374,7 +374,7 @@ class LibertyExporter(Exporter):
             out_fh.write(f'            clocked_on : "{clk_pin_name}";\n')
             out_fh.write("        }\n")
         out_fh.write("        direction : input;\n")
-        out_fh.write("        capacitance : %.3f;\n" % (min_driver_in_cap))
+        out_fh.write("        capacitance : %.6f;\n" % (min_driver_in_cap))
         self.write_timing(out_fh, name, clk_pin_name, slew_indices, tsetup, thold)
         self.write_internal_power(
             out_fh,
@@ -404,7 +404,7 @@ class LibertyExporter(Exporter):
         out_fh.write("    bus(%s)   {\n" % bus_name)
         out_fh.write(f"        bus_type : {name}_{bus_name};\n")
         out_fh.write("        direction : input;\n")
-        out_fh.write("        capacitance : %.3f;\n" % (min_driver_in_cap))
+        out_fh.write("        capacitance : %.6f;\n" % (min_driver_in_cap))
         self.write_timing(out_fh, name, clk_pin_name, slew_indices, tsetup, thold)
         self.write_internal_power(
             out_fh, name + "_energy_template_sigslew", slew_indices, pindynamic

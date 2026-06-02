@@ -42,8 +42,9 @@ class SSRAMGenerator:
     def __init__(self, config_file, util_file):
         """Initializer"""
         self._import_custom_mappings(util_file)
-        # Process is required for the voltage
-        self._process = Process(RunUtils.get_config(config_file))
+        if config_file:
+            # Use config to get voltage
+            self._process = Process(RunUtils.get_config(config_file))
 
     def _import_custom_mappings(self, file_name):
         """
