@@ -43,4 +43,4 @@ class SSPortCreator:
 
     def create_obs(self, ss_data):
         for obs in ss_data:
-            self._mem.add_obstruction(obs["layer"], obs["rect"])
+            self._mem.add_obstruction(obs["layer"], obs["rect"], obs["layer_attr"])
