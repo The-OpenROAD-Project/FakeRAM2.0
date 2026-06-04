@@ -170,6 +170,7 @@ class SSRAMGenerator:
                 elif source == "OBS":
                     obs_data = {
                         "layer": row["LAYER"],
+                        "layer_attr": None,
                         "rect": [
                             float(row["x1"]),
                             float(row["y1"]),

@@ -72,7 +72,7 @@ class LefExporter(Exporter):
         fid.write("  SIZE %.4f BY %.4f ;\n" % (w, h))
         fid.write("  CLASS BLOCK ;\n")
 
-    def write_pin(self, fid, port, write_abutment=True):
+    def write_pin(self, fid, port):
         """
         Writes a port/pin
         """
@@ -81,8 +81,6 @@ class LefExporter(Exporter):
         fid.write(f"  PIN {pin_name}\n")
         fid.write(f"    DIRECTION {port.get_direction().get_lef_name()} ;\n")
         fid.write(f"    USE {port.get_use()} ;\n")
-        if write_abutment:
-            fid.write("    SHAPE ABUTMENT ;\n")
         fid.write("    PORT\n")
         fid.write(f"      LAYER {port.get_layer()} ;\n")
         for rect in port.get_rects():
@@ -98,8 +96,12 @@ class LefExporter(Exporter):
         fid.write("  OBS\n")
         obs_data = self.get_memory().get_obstructions()
         for layer_name in sorted(obs_data.keys()):
-            fid.write(f"    LAYER {layer_name} ;\n")
-            for rect in obs_data[layer_name]:
+            layer_data = obs_data[layer_name]
+            if layer_data["layer_attr"]:
+                fid.write(f"    LAYER {layer_name} {layer_data['layer_attr']} ;\n")
+            else:
+                fid.write(f"    LAYER {layer_name} ;\n")
+            for rect in layer_data["rects"]:
                 fid.write(
                     f"    RECT {rect[0]} {rect[1]} {rect[2]:.5f} {rect[3]:.5f} ;\n"
                 )
@@ -111,7 +113,7 @@ class LefExporter(Exporter):
         pg_ports = self.get_memory().get_pg_ports()
         for port_name in sorted(pg_ports.keys()):
             port = pg_ports[port_name]
-            self.write_pin(fid, port, False)
+            self.write_pin(fid, port)
 
     def write_signal_bus(self, fid, name, lsb, msb):
         """Writes the individual pins for a signal bus"""

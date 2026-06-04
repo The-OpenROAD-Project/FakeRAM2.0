@@ -187,12 +187,15 @@ class Memory(NamedObject):
     def get_misc_ports(self):
         return self._misc_ports
 
-    def add_obstruction(self, layer, rect):
+    def add_obstruction(self, layer, rect, layer_attr=None):
         """Adds a obs"""
         if layer in self._obs_dict:
-            self._obs_dict[layer].append(rect)
+            self._obs_dict[layer]["rects"].append(rect)
         else:
-            self._obs_dict[layer] = [rect]
+            self._obs_dict[layer] = {
+                "layer_attr": layer_attr,
+                "rects": [rect]
+            }
 
     def get_obstructions(self):
         """Returns the obs dict"""
