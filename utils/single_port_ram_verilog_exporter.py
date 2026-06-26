@@ -111,9 +111,6 @@ class SinglePortRAMVerilogExporter(VerilogExporter):
         )
         out_fh.write("   reg notifier;\n")
         out_fh.write("   specify\n")
-        out_fh.write(f"      // Delay from {clk_pin} to {dout_bus}\n")
-        out_fh.write(f"      (posedge {clk_pin} *> {dout_bus}) = (0, 0);\n")
-        out_fh.write("\n")
         out_fh.write("      // Timing checks\n")
         out_fh.write(
             f"      $width     (posedge {clk_pin},            0, 0, notifier);\n"
