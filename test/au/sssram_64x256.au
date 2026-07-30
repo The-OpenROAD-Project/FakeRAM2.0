@@ -4563,7 +4563,7 @@ cell(sssram_64x256) {
     bus(din_i)   {
         bus_type : sssram_64x256_DATA;
         memory_write() {
-            address : addr_in;
+            address : addr_i;
             clocked_on : "clk";
         }
         direction : input;
@@ -4636,7 +4636,7 @@ cell(sssram_64x256) {
         direction : output;
         max_capacitance : 0.500000;
         memory_read() {
-            address : addr_in;
+            address : addr_i;
         }
         timing() {
             related_pin : "clk" ;

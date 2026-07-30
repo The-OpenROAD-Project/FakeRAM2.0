@@ -258,7 +258,7 @@ class LibertyExporter(Exporter):
         out_fh.write("            }\n")
 
     def write_output_bus(
-        self, out_fh, name, pin_name, clk_pin_name, include_memory_read
+        self, out_fh, name, pin_name, clk_pin_name, include_memory_read, addr_bus_name
     ):
         """Writes the output bus definition"""
 
@@ -279,7 +279,7 @@ class LibertyExporter(Exporter):
         # Based on 32x inverter being a common max (or near max) inverter
         if include_memory_read:
             out_fh.write("        memory_read() {\n")
-            out_fh.write("            address : addr_in;\n")
+            out_fh.write(f"            address : {addr_bus_name};\n")
             out_fh.write("        }\n")
         out_fh.write("        timing() {\n")
         out_fh.write(f'            related_pin : "{clk_pin_name}" ;\n')
@@ -356,7 +356,14 @@ class LibertyExporter(Exporter):
         out_fh.write("    }\n")
 
     def write_data_bus(
-        self, out_fh, name, bus_name, we_pin_name, clk_pin_name, include_memory_write
+        self,
+        out_fh,
+        name,
+        bus_name,
+        we_pin_name,
+        clk_pin_name,
+        include_memory_write,
+        addr_bus_name,
     ):
         """Writes the data bus"""
 
@@ -370,7 +377,7 @@ class LibertyExporter(Exporter):
         out_fh.write("        bus_type : %s_DATA;\n" % name)
         if include_memory_write:
             out_fh.write("        memory_write() {\n")
-            out_fh.write("            address : addr_in;\n")
+            out_fh.write(f"            address : {addr_bus_name};\n")
             out_fh.write(f'            clocked_on : "{clk_pin_name}";\n')
             out_fh.write("        }\n")
         out_fh.write("        direction : input;\n")
@@ -415,14 +422,13 @@ class LibertyExporter(Exporter):
         """Writes the rw port group to the output stream"""
 
         clk_pin_name = rw_port_group.get_clock_name()
+        addr_bus_name = rw_port_group.get_address_bus_name()
         if rw_port_group.get_write_enable_name():
             self.write_pin(
                 out_fh, name, rw_port_group.get_write_enable_name(), clk_pin_name
             )
-        if rw_port_group.get_address_bus_name():
-            self.write_address_bus(
-                out_fh, name, rw_port_group.get_address_bus_name(), clk_pin_name
-            )
+        if addr_bus_name:
+            self.write_address_bus(out_fh, name, addr_bus_name, clk_pin_name)
         if (
             rw_port_group.get_data_input_bus_name()
             and rw_port_group.get_write_enable_name()
@@ -434,6 +440,7 @@ class LibertyExporter(Exporter):
                 rw_port_group.get_write_enable_name(),
                 clk_pin_name,
                 is_ram,
+                addr_bus_name,
             )
         if rw_port_group.get_data_output_bus_name():
             self.write_output_bus(
@@ -442,9 +449,10 @@ class LibertyExporter(Exporter):
                 rw_port_group.get_data_output_bus_name(),
                 clk_pin_name,
                 is_ram,
+                addr_bus_name,
             )
         for related_pin in rw_port_group.get_related_pins():
             self.write_pin(out_fh, name, related_pin, clk_pin_name)
-        for bus_name,bus_data in rw_port_group.get_related_busses().items():
+        for bus_name, bus_data in rw_port_group.get_related_busses().items():
             self.write_generic_bus(out_fh, name, bus_name, clk_pin_name)
         self.write_clk_pin(out_fh, clk_pin_name)

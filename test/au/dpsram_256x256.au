@@ -8898,7 +8898,7 @@ cell(dpsram_256x256) {
     bus(din_a)   {
         bus_type : dpsram_256x256_DATA;
         memory_write() {
-            address : addr_in;
+            address : addr_a;
             clocked_on : "clk_a";
         }
         direction : input;
@@ -8971,7 +8971,7 @@ cell(dpsram_256x256) {
         direction : output;
         max_capacitance : 0.500000;
         memory_read() {
-            address : addr_in;
+            address : addr_a;
         }
         timing() {
             related_pin : "clk_a" ;
@@ -9132,7 +9132,7 @@ cell(dpsram_256x256) {
     bus(din_b)   {
         bus_type : dpsram_256x256_DATA;
         memory_write() {
-            address : addr_in;
+            address : addr_b;
             clocked_on : "clk_b";
         }
         direction : input;
@@ -9205,7 +9205,7 @@ cell(dpsram_256x256) {
         direction : output;
         max_capacitance : 0.500000;
         memory_read() {
-            address : addr_in;
+            address : addr_b;
         }
         timing() {
             related_pin : "clk_b" ;
